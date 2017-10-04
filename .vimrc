@@ -9,6 +9,7 @@ Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-commentary'
 Plug 'bling/vim-airline'
