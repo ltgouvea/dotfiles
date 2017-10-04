@@ -1,7 +1,3 @@
-find us
-find dow
-find pi
-search
 touch luckynumbers
 open_with vim
 find ht
@@ -37,7 +33,6 @@ find va
 find w
 mkdir Projects
 mkdir The Vim Saga
-
 e chapter1.md
 rename title.md
 touch chapter_1.md
@@ -48,3 +43,8 @@ find Pi
 find ra
 find .confi
 search termite
+search 
+reload_cwd 
+!./update_dotfiles.sh
+
+shell ./update_dotfiles.sh

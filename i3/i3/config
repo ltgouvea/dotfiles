@@ -95,7 +95,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i4 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+backspace reboot
 # exit i3 (logs you out of your X session)
@@ -125,9 +125,9 @@ bindsym $mod+Shift+Return exec $term -e tmux
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        font pango:Source Code Pro for Powerline 10
+        font pango:Inconsolata for Powerline 10
         position top
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify sensors cpu memory disk:root battery brightness pasink date time -p brightness.wheel-up="light -A 5" brightness.wheel-down="light -U 5" root.path=/ time.format="%H:%M" date.format="%d/%m/%Y" -t powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify disk sensors cpu memory battery brightness pasink date time -p memory.format="{used}/{total}" brightness.wheel-up="light -A 5" brightness.wheel-down="light -U 5" disk.path=/ disk.format="{used}/{size}" time.format="%H:%M" spotify.format="{album} >> {title}" date.format="%d/%m/%Y" -t powerline
         }
 exec --no-startup-id compton
 exec --no-startup-id feh --bg-fill ~/.config/wall.png
