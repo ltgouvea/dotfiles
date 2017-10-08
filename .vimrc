@@ -10,14 +10,11 @@ Plug 'junegunn/vim-easy-align'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'vim-scripts/matchit.zip'
-Plug 'tpope/vim-fireplace'
 Plug 'tpope/vim-commentary'
 Plug 'bling/vim-airline'
 Plug 'junegunn/fzf'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'powerline/fonts'
-Plug 'flazz/vim-colorschemes'
 Plug 'leafgarland/typescript-vim'
 Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
@@ -27,30 +24,30 @@ Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'xsbeats/vim-blade'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'jacoborus/tender'
 call plug#end()
-colorscheme tender
+colorscheme wal
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
 highlight LineNr ctermfg=LightGreen
 let g:airline_powerline_fonts = 1
-let g:airline_theme='badwolf'
+let g:airline_theme='wal'
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
 nmap <F5> ;edit<CR>
 nnoremap <F9> :FZF<CR>
 let mapleader=","
-nmap <leader>s :w<CR>
+nnoremap <leader>q viw<esc>a"<esc>bi"<esc>lel
+nmap <leader>. :w<CR>
 nmap <Left> <C-W><Left>
 nmap <Right> <C-W><Right>
 nnoremap ; :
 inoremap ((<tab> (<CR><CR>);<ESC>k<S-S>
 inoremap {{<tab> {<CR><CR>};<ESC>k<S-S>
 inoremap [[<tab> [<CR><CR>];<ESC>k<S-S>
-inoremap ,,<tab> ,<CR>,<ESC>h<S-I>
 nnoremap <F10> :NERDTreeToggle<CR>
 let g:user_emmet_leader_key='<C-Z>'
 "EasyAlign

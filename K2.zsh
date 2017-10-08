@@ -16,7 +16,7 @@ alias tldr='sudo tldr'
 alias gad='gatsby develop'
 alias cnpj='xsel -b < ~/.cnpj.txt'
 
-alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194-config.ovpn'
+alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194.ovpn'
 source ~/devops/devops
 alias dit='docker exec -it'
 alias dps='docker ps'

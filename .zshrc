@@ -1,4 +1,5 @@
 export PATH=~/bin:$PATH
+PATH="${PATH}:${HOME}/.local/bin"
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="bullet-train"
 export UPDATE_ZSH_DAYS=2
@@ -13,4 +14,4 @@ set -s escape-time 0
 function homestead () {
 	( cd ~/Homestead && vagrant $* )
 }
-
+(wal -r -t &)
