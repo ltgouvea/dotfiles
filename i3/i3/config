@@ -28,7 +28,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+bindsym $mod+d exec dmenu_run -b -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -134,8 +134,14 @@ bindsym $mod+r exec $term -e ranger
 bindsym $mod+Shift+Return exec $term -e tmux
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+bar {
+        position top
+        font pango:Source Code Pro for Powerline 10
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu memory battery brightness pasink date time -t wal-powerline
+}
  exec --no-startup-id compton
+ exec --no-startup-id nm-applet
  # exec --no-startup-id feh --bg-fill ~/.config/wall.png
 # PrintScreen
  bindsym --release Print exec scrot ~/Pictures/Captura_de_tela_%Y-%m-%d-%T.png
