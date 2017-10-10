@@ -139,7 +139,7 @@ bindsym $mod+Shift+Return exec $term -e tmux
 bar {
         position top
         font pango:Source Code Pro for Powerline 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -t wal-powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -p brightness.wheel-up="light -A 5" brightness.wheel-down="light -U 5" -t wal-powerline
 }
  exec --no-startup-id compton
  exec --no-startup-id nm-applet
