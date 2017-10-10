@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 set $mod Mod4
+set $term termite
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
@@ -22,7 +23,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+q kill
@@ -138,7 +139,7 @@ bindsym $mod+Shift+Return exec $term -e tmux
 bar {
         position top
         font pango:Source Code Pro for Powerline 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu memory battery brightness pasink date time -t wal-powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -t wal-powerline
 }
  exec --no-startup-id compton
  exec --no-startup-id nm-applet
