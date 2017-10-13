@@ -12,7 +12,6 @@ alias abenepi="cd ~/var/www/projeto-abenepi"
 alias artisan="php artisan"
 alias zshconf='subl ~/.zshrc'
 alias tmux='tmux -2'
-alias tldr='sudo tldr'
 alias gad='gatsby develop'
 alias cnpj='xsel -b < ~/.cnpj.txt'
 

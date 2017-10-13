@@ -33,6 +33,7 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
 highlight LineNr ctermfg=LightGreen
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wal'
 set signcolumn=yes
 nmap <TAB> gt
@@ -49,6 +50,7 @@ inoremap ((<tab> (<CR><CR>);<ESC>k<S-S>
 inoremap {{<tab> {<CR><CR>};<ESC>k<S-S>
 inoremap [[<tab> [<CR><CR>];<ESC>k<S-S>
 nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap <leader>fj :%!python -m json.tool<CR>
 let g:user_emmet_leader_key='<C-Z>'
 "EasyAlign
 xmap ga <Plug>(EasyAlign)
@@ -56,7 +58,7 @@ nmap ga <Plug>(EasyAlign)
 "EasyAlign
 command! Sw :w !sudo tee %
 command! Gst :Gstatus
-command! QQ :q!
+command! E :e!
 " pra não quebrar o youcompletemE
 let g:ycm_server_python_interpreter='/usr/bin/python'
 set ic
