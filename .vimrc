@@ -31,7 +31,6 @@ call plug#end()
 colorscheme wal
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
-highlight LineNr ctermfg=LightGreen
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wal'
