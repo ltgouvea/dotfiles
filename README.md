@@ -1,9 +1,10 @@
 # These dotfiles are free to be copied and improved as willing
+##### because I stole some of those as well, of course
 ---
 ## List of softwares used currently:
 - [Ranger](https://github.com/ranger/ranger)
 - [i3wm](i3wm.org)
-- [Polybar](https://github.com/jaagr/polybar)
+- [Polybar](https://github.com/jaagr/polybar) [ Not using this anymore, only bumblebee-status ]
 - [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
 - [VIM](https://github.com/vim/vim)
 - [Zsh/Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
