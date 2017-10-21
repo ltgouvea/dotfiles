@@ -7,8 +7,9 @@
 # $Id: Xsession 967 2005-12-27 07:20:55Z dnusinow $
 
 set -e
-xrdb -merge ~/.Xresources
 wal -i "$(< "${HOME}/.cache/wal/wal")"
+xrdb -merge ~/.Xresources
+xrdb -merge ~/.cache/wal/colors.Xresources
 
 PROGNAME=Xsession
 
