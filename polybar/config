@@ -264,12 +264,12 @@ label-muted = sound muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = ${xrdb:color1}
-bar-volume-foreground-1 = ${xrdb:color2}
+bar-volume-foreground-1 = ${xrdb:color1}
 bar-volume-foreground-2 = ${xrdb:color3}
-bar-volume-foreground-3 = ${xrdb:color4}
-bar-volume-foreground-4 = ${xrdb:color5}
-bar-volume-foreground-5 = ${xrdb:color6}
-bar-volume-foreground-6 = ${xrdb:color7}
+bar-volume-foreground-3 = ${xrdb:color3}
+bar-volume-foreground-4 = ${xrdb:color4}
+bar-volume-foreground-5 = ${xrdb:color5}
+bar-volume-foreground-6 = ${xrdb:color5}
 bar-volume-gradient = true
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
