@@ -12,12 +12,12 @@ alias abenepi="cd ~/var/www/projeto-abenepi"
 alias artisan="php artisan"
 alias zshconf='subl ~/.zshrc'
 alias tmux='tmux -2'
+alias tldr='sudo tldr'
 alias gad='gatsby develop'
 alias cnpj='xsel -b < ~/.cnpj.txt'
 
 alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194.ovpn'
 source ~/devops/devops
-source ~/update_dotfiles.sh
 alias dit='docker exec -it'
 alias dps='docker ps'
 alias dcu='docker-compose up'
@@ -25,8 +25,3 @@ alias dcd='docker-compose down'
 alias dab='docker exec -it arteris_php bash'
 alias vimrc='vim ~/.vimrc'
 alias ssn='sudo shutdown now'
-alias laraup='docker-compose up -d workspace postgres pgadmin php-fpm nginx'
-alias ticsol='cd /var/www/tic-sms/laradock'
-alias ticup='cd /var/www/tic-sms/laradock && docker-compose up -d workspace postgres pgadmin php-fpm nginx'
-alias cmatrix='cmatrix -bas'
-alias v='vim'
