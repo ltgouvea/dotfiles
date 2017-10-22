@@ -47,6 +47,7 @@ nmap <S-TAB> gT
 nmap <F5> ;edit<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <leader>t :tabe<CR>
+nnoremap <leader>k K
 
 " Selection shortcuts
 " - inside motions
@@ -102,10 +103,24 @@ nnoremap <leader>fpp =a(
 nnoremap <leader>fvv =a[
 nnoremap <leader>ftt =at
 
+" - operator pending maps
+onoremap z a<
+onoremap \ i<
+onoremap q ip
+onoremap c i{
+onoremap v i[
+onoremap p i(
+
+onoremap <space>q ap
+onoremap <space>c a{
+onoremap <space>v a[
+onoremap <space>p a(
 
 nnoremap <leader>aa A
 nnoremap <leader>b B
 nnoremap <leader>c C
+nnoremap <leader>i I
+nnoremap <leader>y Y
 nnoremap <leader>d D
 nnoremap <leader>g G
 nnoremap <leader>s S
@@ -118,10 +133,16 @@ nnoremap <leader>x :e!<CR>
 
 nnoremap ç ~
 vnoremap ç ~
+
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
+vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
+vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
+vnoremap <leader>4 $
+vnoremap <leader>5 $
 
 cnoremap <leader>. w !sudo tee %
+cnoremap <leader>5 %
 cnoremap <leader>v tabe ~/.vimrc<CR>
 
 nnoremap <space>v :vsplit<CR>
@@ -138,6 +159,8 @@ noremap <Up> <C-W><Up>
 noremap <Down> <C-W><Down>
 nnoremap ; :
 
+inoremap 99 (
+inoremap 00 )
 inoremap =. =>
 inoremap çç <ESC>
 inoremap ((<tab> (<CR><CR>);<ESC>k<S-S>
