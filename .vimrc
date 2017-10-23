@@ -141,6 +141,13 @@ vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>4 $
 vnoremap <leader>5 $
 
+vnoremap <leader>q ap
+vnoremap <leader>c a{
+vnoremap <leader>v a[
+vnoremap <leader>p a(
+vnoremap <leader>z i<
+vnoremap <leader>\ a<
+
 cnoremap <leader>. w !sudo tee %
 cnoremap <leader>5 %
 cnoremap <leader>v tabe ~/.vimrc<CR>
@@ -184,6 +191,7 @@ vnoremap <leader>e E
 vnoremap <leader>p P
 vnoremap <leader>o O
 vnoremap <leader>r R
+vnoremap <leader>v <C-v>
 vnoremap <space> <esc>
 
 let g:user_emmet_leader_key='<C-Z>'
