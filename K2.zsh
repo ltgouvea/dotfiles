@@ -4,6 +4,7 @@ function watch {
 
 alias zshconfig="nano ~/.zshrc"
 alias c="clear"
+alias top='glances'
 alias pega="sudo aptitude install -y"
 alias larga="sudo apt-get remove"
 alias atualiza="sudo apt-get update && sudo apt-get upgrade"

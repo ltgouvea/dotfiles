@@ -136,6 +136,7 @@ mode "resize" {
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
+        bindsym Space  mode "default"
         bindsym Escape mode "default"
 }
 set $term termite

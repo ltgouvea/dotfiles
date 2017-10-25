@@ -12,7 +12,7 @@ antigen bundle git
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen theme  agnoster
+antigen theme  refined
 antigen apply
 
 if [[ $TERM == xterm-termite ]]; then
