@@ -19,6 +19,7 @@ alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194
 source ~/devops/devops
 source ~/update_dotfiles.sh
 alias dit='docker exec -it'
+alias d='docker-compose exec workspace'
 alias dps='docker ps'
 alias dcu='docker-compose up'
 alias dcd='docker-compose down'

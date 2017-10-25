@@ -142,6 +142,8 @@ vnoremap <leader>4 $
 vnoremap <leader>5 $
 
 vnoremap <leader>q ap
+vnoremap 9 i(
+vnoremap 0 a(
 vnoremap <leader>c a{
 vnoremap <leader>v a[
 vnoremap <leader>p a(
@@ -157,6 +159,7 @@ nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
 nnoremap <space>wq :wq<CR>
+nnoremap <space>ww <C-w>r
 nnoremap <space>r :so ~/.vimrc<CR>
 
 noremap <leader>. :w<CR>

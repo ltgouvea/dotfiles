@@ -149,7 +149,7 @@ bindsym $mod+Shift+Tab workspace prev
 bar {
         position top
         font pango:Source Code Pro for Powerline 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m title spotify cpu sensors memory battery brightness pasink date time -p date.left-click="gsimplecal" brightness.wheel-up="light -A 5" brightness.wheel-down="light -U 5" -t wal-powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify weather cpu sensors memory battery brightness pasink date time -p date.left-click="gsimplecal" brightness.wheel-up="light -A 5" brightness.wheel-down="light -U 5" -t wal-powerline
 }
  exec --no-startup-id compton
  exec --no-startup-id nm-applet

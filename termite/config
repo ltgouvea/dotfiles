@@ -1,9 +1,9 @@
 [options]
-allow_bold = false
+allow_bold = true
 #audible_bell = false
 #clickable_url = true
 #dynamic_title = true
-font = Source Code Pro for Powerline 9
+font = Source Code Pro for Powerline 10
 #fullscreen = true
 #geometry = 640x480
 #icon_name = terminal
