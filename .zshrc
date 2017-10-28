@@ -15,6 +15,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme  refined
 antigen apply
 
+
 if [[ $TERM == xterm-termite ]]; then
   . /etc/profile.d/vte.sh
   __vte_osc7

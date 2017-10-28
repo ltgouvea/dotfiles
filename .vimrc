@@ -157,7 +157,6 @@ cnoremap 33 #
 cnoremap <leader>v tabe ~/.vimrc<CR>
 
 nnoremap <space>v :vsplit<CR>
-nnoremap <space><space> :w<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
@@ -165,14 +164,13 @@ nnoremap <space>wq :wq<CR>
 nnoremap <space>ww <C-w>r
 nnoremap <space>r :so ~/.vimrc<CR>
 
-noremap <leader>. :w<CR>
-noremap <Left> <C-W><Left>
-noremap <Right> <C-W><Right>
-noremap <Up> <C-W><Up>
-noremap <Down> <C-W><Down>
+nnoremap <Left> <C-W><Left>
+nnoremap <Right> <C-W><Right>
+nnoremap <Up> <C-W><Up>
+nnoremap <Down> <C-W><Down>
 nnoremap ; :
 
-inoremap \\ |
+inoremap zz \|
 inoremap ç' "
 inoremap 99 (
 inoremap 00 )
@@ -186,6 +184,8 @@ nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
 nnoremap <leader>; @:
 nnoremap <leader><space> @@
+nnoremap     <leader>. :w<CR>
+nnoremap     <space><space> :w<CR>
 
 " VISUAL MODE RATPACK
 vnoremap <leader>aa A
