@@ -151,10 +151,13 @@ vnoremap <leader>z i<
 vnoremap <leader>\ a<
 
 cnoremap <leader>. w !sudo tee %
-cnoremap <leader>5 %
+cnoremap 55 %
+cnoremap 22 @
+cnoremap 33 #
 cnoremap <leader>v tabe ~/.vimrc<CR>
 
 nnoremap <space>v :vsplit<CR>
+nnoremap <space><space> :w<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
@@ -169,6 +172,8 @@ noremap <Up> <C-W><Up>
 noremap <Down> <C-W><Down>
 nnoremap ; :
 
+inoremap \\ |
+inoremap ç' "
 inoremap 99 (
 inoremap 00 )
 inoremap =. =>

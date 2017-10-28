@@ -80,6 +80,6 @@ background = rgba(0, 0, 0, 0.87)
 #padding = 2
 #border = #3f3f3f
 #border_width = 0.5
-#roundness = 2.0
+roundness = 2.0
 
 # vim: ft=dosini cms=#%s

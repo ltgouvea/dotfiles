@@ -1,8 +1,5 @@
-function watch {
-	peerflix \'$1\' --vlc 
-}
-
 alias zshconfig="nano ~/.zshrc"
+alias apt="sudo apt"
 alias c="clear"
 alias top='glances'
 alias pega="sudo aptitude install -y"
@@ -33,3 +30,4 @@ alias ticup='cd /var/www/tic-sms/laradock && docker-compose up -d workspace post
 alias cmatrix='cmatrix -bs'
 alias v='vim'
 alias r='ranger'
+

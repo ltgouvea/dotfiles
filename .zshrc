@@ -1,7 +1,7 @@
 export PATH=~/bin:$PATH
 PATH="${PATH}:${HOME}/.local/bin"
 export TERM="xterm-256color"
-source ~/.oh-my-zsh/custom/K2.zsh
+source ~/K2.zsh
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 set -s escape-time 0
