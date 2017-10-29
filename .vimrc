@@ -204,42 +204,36 @@ vnoremap <space> <esc>
 
 let g:user_emmet_leader_key='<C-Z>'
 let NERDTreeMapActivateNode='l'
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "EasyAlign
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
 "EasyAlign
 command! Sw :w !sudo tee %
 command! Gst :Gstatus
 command! E :e!
+
 " pra não quebrar o youcompletemE
 let g:ycm_server_python_interpreter='/usr/bin/python'
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+
 " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabDefaultCompletionType    = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsExpandTrigger       = "<tab>"
+let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " The Silver Searcher
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  set grepprg=ag\ --nogroup
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
-" K = grep under cursor.
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set relativenumber             " Show relative line numbers
