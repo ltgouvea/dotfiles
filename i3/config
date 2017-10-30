@@ -140,17 +140,16 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 set $term termite
+
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 bar {
         position top
         font pango:Source Code Pro for Powerline 11
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}'  time.format='%H:%M' -t wal-powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}' time.format='%H:%M' -t wal-powerline
 }
  exec --no-startup-id compton
  exec --no-startup-id nm-applet
