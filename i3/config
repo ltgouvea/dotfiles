@@ -139,21 +139,24 @@ mode "resize" {
         bindsym Space  mode "default"
         bindsym Escape mode "default"
 }
+
 set $term termite
 
 bindsym $mod+r exec $term -e ranger
+bindsym $mod+n exec dolphin
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
-        font pango:Source Code Pro for Powerline 11
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spotify cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}' time.format='%H:%M' -t wal-powerline
+        font pango:Meslo LG M dz for Powerline 9
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}' time.format='%H:%M' -t wal-powerline
 }
+
  exec --no-startup-id compton
  exec --no-startup-id nm-applet
- # exec --no-startup-id feh --bg-fill ~/.config/wall.png
+
 # PrintScreen
  bindsym --release Print exec scrot ~/Pictures/Captura_de_tela_%Y-%m-%d-%T.png
  bindsym --release Shift+Print exec scrot -s ~/Pictures/Captura_de_area_%Y-%m-%d-%T.png

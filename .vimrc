@@ -45,6 +45,7 @@ set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
 nmap <F5> ;edit<CR>
+nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>k K

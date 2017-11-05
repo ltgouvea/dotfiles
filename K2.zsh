@@ -31,3 +31,4 @@ alias cmatrix='cmatrix -bs'
 alias v='vim'
 alias r='ranger'
 
+alias wr='wal -R'

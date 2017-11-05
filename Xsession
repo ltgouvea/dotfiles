@@ -7,9 +7,6 @@
 # $Id: Xsession 967 2005-12-27 07:20:55Z dnusinow $
 
 set -e
-wal -i "$(< "${HOME}/.cache/wal/wal")"
-xrdb -merge ~/.Xresources
-xrdb -merge ~/.cache/wal/colors.Xresources
 
 PROGNAME=Xsession
 
@@ -82,6 +79,10 @@ if [ "`stat -c%s \"$ERRFILE\"`" -gt 500000 ]; then
   T=`mktemp -p "$HOME"`
   tail -c 500000 "$ERRFILE" > "$T" && mv -f "$T" "$ERRFILE" || rm -f "$T"
 fi
+
+wal -R
+xrdb -merge ~/.Xresources
+xrdb -merge ~/.cache/wal/colors.Xresources
 
 exec >>"$ERRFILE" 2>&1
 
