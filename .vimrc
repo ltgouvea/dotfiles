@@ -148,14 +148,16 @@ vnoremap 0 a(
 vnoremap <leader>c a{
 vnoremap <leader>v a[
 vnoremap <leader>p a(
-vnoremap <leader>z i<
-vnoremap <leader>\ a<
+vnoremap zz i<
+vnoremap z a<
 
 cnoremap <leader>. w !sudo tee %
 cnoremap 55 %
 cnoremap 22 @
 cnoremap 33 #
 cnoremap <leader>v tabe ~/.vimrc<CR>
+cnoremap gp Git push origin
+cnoremap gpm Git push origin master<CR>
 
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
@@ -172,26 +174,26 @@ nnoremap <Down> <C-W><Down>
 nnoremap ; :
 
 inoremap zz \|
+inoremap ,s $
 inoremap ç' "
-inoremap 99 (
+inoremap 99 ()
 inoremap 00 )
 inoremap =. =>
 inoremap çç <ESC>
-inoremap ((<tab> (<CR><CR>);<ESC>k<S-S>
-inoremap {{<tab> {<CR><CR>};<ESC>k<S-S>
-inoremap [[<tab> [<CR><CR>];<ESC>k<S-S>
+inoremap ( (<CR><CR>);<ESC>k<S-S>
+inoremap { {<CR><CR>};<ESC>k<S-S>
+inoremap [ [<CR><CR>];<ESC>k<S-S>
 nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
 nnoremap <leader>; @:
 nnoremap <leader><space> @@
-nnoremap     <leader>. :w<CR>
-nnoremap     <space><space> :w<CR>
+nnoremap <leader>. :w<CR>
+nnoremap <space><space> :w<CR>
 
 " VISUAL MODE RATPACK
 vnoremap <leader>aa A
 vnoremap <leader>b B
-vnoremap <leader>c C
 vnoremap <leader>d D
 vnoremap <leader>g G
 vnoremap <leader>s S

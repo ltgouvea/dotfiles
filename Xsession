@@ -75,9 +75,9 @@ else
 fi
 
 # truncate ERRFILE if it is too big to avoid disk usage DoS
-if [ "`stat -c%s \"$ERRFILE\"`" -gt 500000 ]; then
+if [ "`stat -c%s \"$ERRFILE\"`" -gt 100000 ]; then
   T=`mktemp -p "$HOME"`
-  tail -c 500000 "$ERRFILE" > "$T" && mv -f "$T" "$ERRFILE" || rm -f "$T"
+  tail -c 100000 "$ERRFILE" > "$T" && mv -f "$T" "$ERRFILE" || rm -f "$T"
 fi
 
 wal -R
