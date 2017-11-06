@@ -207,6 +207,9 @@ vnoremap <space> <esc>
 
 let g:user_emmet_leader_key='<C-Z>'
 let NERDTreeMapActivateNode='l'
+let NERDTreeShowLineNumbers=1
+autocmd FileType nerdtree setlocal relativenumber
+
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "EasyAlign
