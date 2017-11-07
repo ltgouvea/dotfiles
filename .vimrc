@@ -28,7 +28,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'xsbeats/vim-blade'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
@@ -177,7 +176,13 @@ inoremap zz \|
 inoremap ,s $
 inoremap ç' "
 inoremap 99 ()
-inoremap 00 )
+inoremap 88 {}
+inoremap 77 []
+inoremap 00 _
+inoremap 55 %
+inoremap 44 $
+inoremap 22 @
+inoremap 33 #
 inoremap =. =>
 inoremap çç <ESC>
 inoremap ( (<CR><CR>);<ESC>k<S-S>
