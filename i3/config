@@ -70,7 +70,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Shift+w layout stacked
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -118,7 +118,16 @@ bindsym $mod+Shift+backspace reboot
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
+bindsym $mod+s mode "system"
 bindsym $mod+m exec $term -e mutt
+
+mode "system" {
+        bindsym Shift+s exec systemctl poweroff
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+}
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -150,7 +159,7 @@ bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
-        font pango:Meslo LG M dz for Powerline 9
+        font pango:Source Code Pro for Powerline, FontAwesome 10
         status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}' time.format='%H:%M' -t wal-powerline
 }
 

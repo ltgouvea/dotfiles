@@ -1,3 +1,4 @@
+filetype plugin on
 set nu
 set ic
 set incsearch
@@ -43,7 +44,10 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nmap <F5> ;edit<CR>
+nmap <F4> ;q<CR>
+nmap <F5> ;w<CR>
+nmap <F6> ;wq<CR>
+nmap <F7> ;e<CR>
 nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <leader>t :tabe<CR>
@@ -102,6 +106,9 @@ nnoremap <leader>fcc =a{
 nnoremap <leader>fpp =a(
 nnoremap <leader>fvv =a[
 nnoremap <leader>ftt =at
+
+" - lazy maps
+nnoremap <leader>8 *
 
 " - operator pending maps
 onoremap z a<
