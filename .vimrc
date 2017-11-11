@@ -44,10 +44,11 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
+nmap <F3> ;Gst<CR>
 nmap <F4> ;q<CR>
 nmap <F5> ;w<CR>
 nmap <F6> ;wq<CR>
-nmap <F7> ;e<CR>
+nmap <F7> ;e!<CR>
 nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <leader>t :tabe<CR>
