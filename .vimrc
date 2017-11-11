@@ -215,8 +215,10 @@ vnoremap <leader>e E
 vnoremap <leader>p P
 vnoremap <leader>o O
 vnoremap <leader>r R
+vnoremap <leader>l <S-v>
 vnoremap <leader>v <C-v>
 vnoremap <space> <esc>
+vnoremap ç <esc>
 
 let g:user_emmet_leader_key='<C-Z>'
 let NERDTreeMapActivateNode='l'
