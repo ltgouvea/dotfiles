@@ -120,6 +120,7 @@ bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
 bindsym $mod+s mode "system"
 bindsym $mod+Shift+m mode "music"
+bindsym $mod+Shift+b mode "brightness"
 
 bindsym $mod+m exec $term -e mutt
 
@@ -143,6 +144,14 @@ mode "music" {
         bindsym g exec cmus-remote -p
         bindsym q exec cmus-remote -S
         # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "brightness" {
+        bindsym k exec light -A 5
+        bindsym j exec light -U 5
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
@@ -175,8 +184,6 @@ bindsym $mod+n exec dolphin
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -D 5
 
 bar {
         position top
