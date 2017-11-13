@@ -162,6 +162,7 @@ cnoremap <leader>. w !sudo tee %
 cnoremap 55 %
 cnoremap 22 @
 cnoremap 33 #
+cnoremap pp <C-r>"
 cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
