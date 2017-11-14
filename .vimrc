@@ -181,6 +181,7 @@ nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 nnoremap ; :
 
+inoremap <F1> <C-o>
 inoremap zz \|
 inoremap ,s $
 inoremap ç' "

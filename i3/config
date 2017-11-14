@@ -188,7 +188,7 @@ bindsym $mod+Shift+Tab workspace prev
 bar {
         position top
         font pango:Source Code Pro for Powerline, FontAwesome 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink date time -p date.left-click='gsimplecal' spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date.format='%d/%m' memory.format='{used}/{total}' time.format='%H:%M' -t wal-powerline
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink uptime date-time -p spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m/%Y | %H:%M' memory.format='{used}({percent:05.02f}%)' -t wal-powerline
 }
 
  exec --no-startup-id compton
