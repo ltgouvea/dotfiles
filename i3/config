@@ -16,7 +16,7 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 client.background       $bg
 
 font pango:'Inconsolata for Powerline' 10
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -24,13 +24,13 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term
-bindsym $mod+x exec rxvt-unicode 
+bindsym $mod+x exec rxvt-unicode
 
 # kill focused window
 bindsym $mod+q kill
 
-# start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -b -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+bindsym $mod+d exec rofi -show run -opacity "75"
+bindsym $mod+t exec tilda
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -50,7 +50,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec firefox-esr
 bindsym $mod+Shift+p exec pgadmin3
 bindsym $mod+Shift+s exec spotify
 
@@ -126,6 +126,7 @@ bindsym $mod+m exec $term -e mutt
 
 mode "system" {
         bindsym Shift+s exec systemctl poweroff
+        bindsym Shift+r exec systemctl reboot
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Space  mode "default"
@@ -187,11 +188,11 @@ bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
-        font pango:Source Code Pro for Powerline, FontAwesome 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink uptime date-time -p spotify.format='{title} | {artist}' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m/%Y | %H:%M' memory.format='{used}({percent:05.02f}%)' -t wal-powerline
+        font pango:Source Code Pro for Powerline, FontAwesome 11
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m cmus cpu sensors memory battery brightness pasink uptime date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m/%Y | %H:%M' memory.format='{used}({percent:05.02f}%)' -t wal-powerline
 }
 
- exec --no-startup-id compton
+ exec --no-startup-id compton -c
  exec --no-startup-id nm-applet
 
 # PrintScreen
@@ -199,4 +200,5 @@ bar {
  bindsym --release Shift+Print exec scrot -s ~/Pictures/Captura_de_area_%Y-%m-%d-%T.png
  
 
-
+gaps inner 10
+gaps outer 10
