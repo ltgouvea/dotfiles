@@ -23,7 +23,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec $term 
 bindsym $mod+x exec rxvt-unicode
 
 # kill focused window
@@ -50,7 +50,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
-bindsym $mod+Shift+f exec firefox-esr
+bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+p exec pgadmin3
 bindsym $mod+Shift+s exec spotify
 
@@ -121,6 +121,47 @@ bindsym $mod+z mode "resize"
 bindsym $mod+s mode "system"
 bindsym $mod+Shift+m mode "music"
 bindsym $mod+Shift+b mode "brightness"
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym ç mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym ç mode "default"
+}
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym ç mode "default"
+}
 
 bindsym $mod+m exec $term -e mutt
 
@@ -188,7 +229,7 @@ bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
-        font pango:Source Code Pro for Powerline, FontAwesome 10
+        font pango:Source Code Pro for Powerline, FontAwesome 9
         status_command ~/.i3/bumblebee-status/bumblebee-status -m cmus cpu sensors memory battery brightness pasink uptime date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m/%Y | %H:%M' memory.format='{used}({percent:05.02f}%)' -t wal-powerline
 }
 

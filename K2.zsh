@@ -33,3 +33,4 @@ alias r='ranger'
 
 alias wr='wal -R'
 alias m='mutt'
+alias music='cmus'
