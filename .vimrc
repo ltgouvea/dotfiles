@@ -44,13 +44,16 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nmap <F3> ;Gst<CR>
-nmap <F4> ;q<CR>
-nmap <F5> ;w<CR>
-nmap <F6> ;wq<CR>
-nmap <F7> ;e!<CR>
+nnoremap <F1> @g
+nnoremap <F3> :Gst<CR>
+nnoremap <F4> :q<CR>
+nnoremap <F5> :w<CR>
+nnoremap <F6> :wq<CR>
+nnoremap <F7> :e!<CR>
 nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
+nnoremap <F11> @c
+nnoremap <F12> @z
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>k K
 
@@ -167,6 +170,7 @@ cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
 
+nnoremap ; :
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
@@ -179,25 +183,25 @@ nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
-nnoremap ; :
 
 inoremap <F1> <C-o>
 inoremap zz \|
-inoremap ,s $
 inoremap ç' "
 inoremap 99 ()
 inoremap 88 {}
-inoremap 77 []
 inoremap 00 _
 inoremap 55 %
 inoremap 44 $
 inoremap 22 @
 inoremap 33 #
 inoremap =. =>
+inoremap -. ->
+inoremap ,, <
+inoremap .. >
 inoremap çç <ESC>
-inoremap ( (<CR><CR>);<ESC>k<S-S>
-inoremap { {<CR><CR>};<ESC>k<S-S>
-inoremap [ [<CR><CR>];<ESC>k<S-S>
+inoremap ( ()<Left>
+inoremap { {}<Left>
+inoremap [ []<left>
 nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
