@@ -45,6 +45,8 @@ set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
 nnoremap <F1> @g
+nnoremap <F2> :Gpull<CR>
+nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
 nnoremap <F5> :w<CR>
@@ -54,6 +56,8 @@ nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <F11> @c
 nnoremap <F12> @z
+nnoremap + <C-a>
+nnoremap - <C-x>
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>k K
 
@@ -169,6 +173,9 @@ cnoremap pp <C-r>"
 cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
+cnoremap gco Git checkout 
+cnoremap glo Git log --stat
+cnoremap gst Gstatus<CR>
 
 nnoremap ; :
 nnoremap <space>v :vsplit<CR>
@@ -185,6 +192,8 @@ nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
 inoremap <F1> <C-o>
+inoremap <F5> <esc><F5>i
+inoremap <F6> <esc><F6>
 inoremap zz \|
 inoremap ç' "
 inoremap 99 ()
@@ -202,6 +211,8 @@ inoremap çç <ESC>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>
+inoremap ' ''<left>
+inoremap " ""<left>
 nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
