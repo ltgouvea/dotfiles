@@ -5,6 +5,7 @@ set incsearch
 set autoread
 set linebreak
 set ruler
+set showcmd
 set wildmenu
 set wildignorecase
 set mouse=a
@@ -174,7 +175,7 @@ cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
-cnoremap glo Git log --stat
+cnoremap glo Git log --stat<CR>
 cnoremap gst Gstatus<CR>
 
 nnoremap ; :
@@ -219,6 +220,7 @@ nnoremap <leader>v <C-V>
 nnoremap <leader>; @:
 nnoremap <leader><space> @@
 nnoremap <leader>. :w<CR>
+nnoremap <leader>l <S-v>
 nnoremap <space><space> :w<CR>
 
 " VISUAL MODE RATPACK

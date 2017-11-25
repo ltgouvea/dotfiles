@@ -52,7 +52,7 @@ bindsym $mod+Shift+l move right
 # Custom Launchers k2
 bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+p exec pgadmin3
-bindsym $mod+Shift+s exec spotify
+bindsym $mod+Shift+t exec qbittorrent
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -118,7 +118,7 @@ bindsym $mod+Shift+backspace reboot
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
-bindsym $mod+s mode "system"
+bindsym $mod+shift+s mode "system"
 bindsym $mod+Shift+m mode "music"
 bindsym $mod+Shift+b mode "brightness"
 bindsym $mod+Shift+g mode "$mode_gaps"
@@ -132,7 +132,6 @@ mode "$mode_gaps" {
         bindsym i      mode "$mode_gaps_inner"
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym ç mode "default"
 }
 
 mode "$mode_gaps_inner" {
@@ -146,7 +145,6 @@ mode "$mode_gaps_inner" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym ç mode "default"
 }
 
 mode "$mode_gaps_outer" {
@@ -160,14 +158,13 @@ mode "$mode_gaps_outer" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym ç mode "default"
 }
 
 bindsym $mod+m exec $term -e mutt
 
 mode "system" {
-        bindsym Shift+s exec systemctl poweroff
-        bindsym Shift+r exec systemctl reboot
+        bindsym s exec systemctl poweroff
+        bindsym r exec systemctl reboot
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Space  mode "default"
