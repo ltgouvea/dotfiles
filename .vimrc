@@ -126,6 +126,7 @@ onoremap q ip
 onoremap c i{
 onoremap v i[
 onoremap p i(
+onoremap ç <esc>
 
 onoremap <space>q ap
 onoremap <space>c a{
@@ -208,6 +209,7 @@ inoremap =. =>
 inoremap -. ->
 inoremap ,, <
 inoremap .. >
+inoremap ;; ::
 inoremap çç <ESC>
 inoremap ( ()<Left>
 inoremap { {}<Left>

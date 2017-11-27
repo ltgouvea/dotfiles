@@ -234,8 +234,7 @@ bar {
  exec --no-startup-id nm-applet
 
 # PrintScreen
- bindsym --release Print exec scrot ~/Pictures/Captura_de_tela_%Y-%m-%d-%T.png
- bindsym --release Shift+Print exec scrot -s ~/Pictures/Captura_de_area_%Y-%m-%d-%T.png
+ bindsym --release Print exec scrot -s ~/prints/print_%d_%m_%Y_%T.png
  
 
 gaps inner 10
