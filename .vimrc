@@ -40,16 +40,23 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_theme='wal'
+let g:syntastic_enable_highlighting = 1
 let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
 nnoremap <F1> @g
-nnoremap <F2> :Gpull<CR>
+nnoremap <F2> @p
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
+nnoremap <leader><F4> :qa<CR>
 nnoremap <F5> :w<CR>
 nnoremap <F6> :wq<CR>
 nnoremap <F7> :e!<CR>
@@ -126,6 +133,12 @@ onoremap q ip
 onoremap c i{
 onoremap v i[
 onoremap p i(
+onoremap <leader>f F
+onoremap <leader>t T
+onoremap <leader>w W
+onoremap <leader>e E
+onoremap <leader>b B
+onoremap <leader>b B
 onoremap ç <esc>
 
 onoremap <space>q ap
@@ -146,6 +159,7 @@ nnoremap <leader>e E
 nnoremap <leader>p P
 nnoremap <leader>o O
 nnoremap <leader>r R
+nnoremap <leader>h ^
 nnoremap <leader>x :e!<CR>
 
 nnoremap ç ~
@@ -159,13 +173,16 @@ vnoremap <leader>4 $
 vnoremap <leader>5 $
 
 vnoremap <leader>q ap
-vnoremap 9 i(
-vnoremap 0 a(
-vnoremap <leader>c a{
-vnoremap <leader>v a[
-vnoremap <leader>p a(
+vnoremap <leader>p i(
+vnoremap <leader><leader>p a(
+vnoremap <leader>c i{
+vnoremap <leader><leader>c a{
+vnoremap <leader>v i[
+vnoremap <leader><leader>v a[
 vnoremap zz i<
 vnoremap z a<
+vnoremap <leader>f F
+vnoremap <leader>t T
 
 cnoremap <leader>. w !sudo tee %
 cnoremap 55 %
@@ -180,6 +197,7 @@ cnoremap glo Git log --stat<CR>
 cnoremap gst Gstatus<CR>
 
 nnoremap ; :
+nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
@@ -237,7 +255,7 @@ vnoremap <leader>p P
 vnoremap <leader>o O
 vnoremap <leader>r R
 vnoremap <leader>l <S-v>
-vnoremap <leader>v <C-v>
+vnoremap vv <C-v>
 vnoremap <space> <esc>
 vnoremap ç <esc>
 
