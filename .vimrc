@@ -298,3 +298,14 @@ set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set relativenumber             " Show relative line numbers
 set encoding=utf-8
+
+" abbreviations
+iab shrug ¯\_(ツ)_/¯ 
+
+" MARCOS kkk
+let @y='OR/branchwyWq'
+let @p='@y;Git pull origin pp'
+let @g='@y;Git push origin pp'
+let @c='OR/branchwyW^zj-ccpa zz '
+let @z='OR/branchwyW^zj--ccpa zz '
+
