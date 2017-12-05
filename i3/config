@@ -226,10 +226,9 @@ bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
-        font pango:Meslo LG M dz for Powerline, FontAwesome 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spacer cmus cpu sensors memory battery brightness pasink date-time -p spacer.text='☭ will win' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        font pango:Meslo LG M dz for Powerline, FontAwesome 9
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m cmus cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 }
-
  exec --no-startup-id compton -cf
  exec --no-startup-id nm-applet
 
