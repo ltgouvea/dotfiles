@@ -2,12 +2,15 @@ filetype plugin on
 set nu
 set ic
 set incsearch
+set hlsearch
 set autoread
+set autochdir
 set linebreak
 set ruler
 set showcmd
 set wildmenu
 set wildignorecase
+set foldmethod=indent
 set mouse=a
 set timeoutlen=1000 ttimeoutlen=0
 
@@ -51,8 +54,10 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nnoremap <F1> @g
-nnoremap <F2> @p
+nnoremap _a :mks! ~/arteris.vim<CR>
+nnoremap __ :help 
+nnoremap <F1> @g<CR>
+nnoremap <F2> @p<CR>
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
@@ -66,6 +71,7 @@ nnoremap <F11> @c
 nnoremap <F12> @z
 nnoremap + <C-a>
 nnoremap - <C-x>
+nnoremap <leader>/ :noh<CR>
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>k K
 
@@ -185,16 +191,19 @@ vnoremap <leader>f F
 vnoremap <leader>t T
 
 cnoremap <leader>. w !sudo tee %
+cnoremap 11 !
 cnoremap 55 %
 cnoremap 22 @
 cnoremap 33 #
 cnoremap pp <C-r>"
+cnoremap qq q!<CR>
 cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
-cnoremap glo Git log --stat<CR>
+cnoremap glo Git log --stat<CR><CR>
 cnoremap gst Gstatus<CR>
+cnoremap -- <C-R>=expand("%:p:h")<CR>
 
 nnoremap ; :
 nnoremap <backspace> :shell<CR>

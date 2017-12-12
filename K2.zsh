@@ -8,6 +8,8 @@ alias atualiza="sudo apt-get update && sudo apt-get upgrade"
 
 alias abenepi="cd ~/var/www/projeto-abenepi"
 alias artisan="php artisan"
+alias arstart='sig-arteris;gfa;ggpull;dcu -d;api-arteris;gfa;ggpull;dcu -d;v -S ~/arteris.vim'
+alias arstop='sig-arteris;dcd;api-arteris;dcd;'
 alias zshconf='subl ~/.zshrc'
 alias tmux='tmux -2'
 alias gad='gatsby develop'
@@ -35,3 +37,4 @@ alias wr='wal -R'
 alias m='mutt'
 alias music='cmus'
 alias e='exit'
+alias u='apt update;apt upgrade'
