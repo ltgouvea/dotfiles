@@ -4,9 +4,9 @@ set ic
 set incsearch
 set hlsearch
 set autoread
-set autochdir
 set linebreak
 set ruler
+set autochdir
 set showcmd
 set wildmenu
 set wildignorecase
@@ -54,10 +54,11 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nnoremap _a :mks! ~/arteris.vim<CR>
+nnoremap _a :exec InitArteris()<CR>
 nnoremap __ :help 
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
+nnoremap <leader><F2> :exec UpdateBranch();
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
@@ -244,6 +245,7 @@ inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 nnoremap <F10> :NERDTreeFind<CR>
+nnoremap <leader><F10> :NERDTreeClose<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
 nnoremap <leader>; @:
@@ -318,3 +320,20 @@ let @g='@y;Git push origin pp'
 let @c='OR/branchwyW^zj-ccpa zz '
 let @z='OR/branchwyW^zj--ccpa zz '
 
+function! UpdateBranch() 
+	Git checkout develop
+	Git fetch --all
+	Git pull origin develop
+	Git checkout -
+	Git merge --no-ff --no-edit -
+endfunction
+
+function! InitArteris()
+	cd ~/HD/var/www/api-arteris/htdocs/
+	NERDTreeToggle
+	tabe
+	cd ~/HD/var/www/sig-arteris/htdocs/
+	NERDTreeToggle
+endfunction
+
+au BufWritePost ~/.vimrc :source ~/.vimrc

@@ -220,6 +220,7 @@ mode "resize" {
 }
 
 set $term termite
+set $transparent #00000000
 
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+n exec dolphin
@@ -229,12 +230,17 @@ bindsym $mod+Shift+Tab workspace prev
 
 bar {
         position top
+
         font pango:Meslo LG M dz for Powerline, FontAwesome 10
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m spacer cmus cpu sensors memory battery brightness pasink date-time -p spacer.text='Iniciar'  spacer.left-click='rofi -show run -opacity "75"' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+
+        colors {
+            background $transparent
+            }
 }
  exec --no-startup-id compton -cf
  exec --no-startup-id nm-applet
- exec --no-startup-id fluxgui
 
 # PrintScreen
  bindsym --release Print exec scrot -s ~/prints/print_%d_%m_%Y_%T.png
