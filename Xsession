@@ -79,9 +79,9 @@ if [ "`stat -c%s \"$ERRFILE\"`" -gt 100000 ]; then
   tail -c 100000 "$ERRFILE" > "$T" && mv -f "$T" "$ERRFILE" || rm -f "$T"
 fi
 
-wal -R
-xrdb -merge ~/.Xresources
+
 xrdb -merge ~/.cache/wal/colors.Xresources
+wal -R
 
 exec >>"$ERRFILE" 2>&1
 

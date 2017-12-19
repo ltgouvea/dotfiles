@@ -1,18 +1,3 @@
-filetype plugin on
-set nu
-set ic
-set incsearch
-set hlsearch
-set autoread
-set linebreak
-set ruler
-set autochdir
-set showcmd
-set wildmenu
-set wildignorecase
-set foldmethod=indent
-set mouse=a
-set timeoutlen=1000 ttimeoutlen=0
 
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
@@ -38,6 +23,23 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+filetype plugin on
+set nu
+set relativenumber
+set ic
+set incsearch
+set hlsearch
+set autoread
+set linebreak
+set ruler
+set autochdir
+set showcmd
+set wildmenu
+set wildignorecase
+set foldmethod=indent
+set mouse=a
+set timeoutlen=1000 ttimeoutlen=0
+
 colorscheme wal
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
@@ -56,6 +58,10 @@ nmap <TAB> gt
 nmap <S-TAB> gT
 nnoremap _a :exec InitArteris()<CR>
 nnoremap __ :help 
+nnoremap _w :help <C-r><C-w><CR>
+nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
+nnoremap <space>n :cn<CR>
+nnoremap <space>p :cp<CR>
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch();
@@ -72,6 +78,8 @@ nnoremap <F11> @c
 nnoremap <F12> @z
 nnoremap + <C-a>
 nnoremap - <C-x>
+nnoremap <space>d <C-d>
+nnoremap <space>u <C-u>
 nnoremap <leader>/ :noh<CR>
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>k K
@@ -205,6 +213,7 @@ cnoremap gco Git checkout
 cnoremap glo Git log --stat<CR><CR>
 cnoremap gst Gstatus<CR>
 cnoremap -- <C-R>=expand("%:p:h")<CR>
+cnoremap sg s///g<C-LEFT><Right><Right>
 
 nnoremap ; :
 nnoremap <backspace> :shell<CR>
@@ -215,6 +224,7 @@ nnoremap <space>q :q<CR>
 nnoremap <space>wq :wq<CR>
 nnoremap <space>ww <C-w>r
 nnoremap <space>r :so ~/.vimrc<CR>
+nnoremap <space>o :options<CR>
 
 nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
@@ -239,6 +249,7 @@ inoremap ,, <
 inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
+inoremap çs <ESC>:w<CR>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>
@@ -307,11 +318,10 @@ endif
 
 set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
-set relativenumber             " Show relative line numbers
 set encoding=utf-8
 
 " abbreviations
-iab shrug ¯\_(ツ)_/¯ 
+iab shrug ¯\_\|ツ\|_/¯ 
 
 " MARCOS kkk
 let @y='OR/branchwyWq'
@@ -335,5 +345,3 @@ function! InitArteris()
 	cd ~/HD/var/www/sig-arteris/htdocs/
 	NERDTreeToggle
 endfunction
-
-au BufWritePost ~/.vimrc :source ~/.vimrc
