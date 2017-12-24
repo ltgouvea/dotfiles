@@ -62,6 +62,7 @@ nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap <space>n :cn<CR>
 nnoremap <space>p :cp<CR>
+nnoremap <space>f :copen<CR>
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch();
@@ -211,6 +212,7 @@ cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
 cnoremap glo Git log --stat<CR><CR>
+cnoremap grhh Git reset --hard HEAD<CR>
 cnoremap gst Gstatus<CR>
 cnoremap -- <C-R>=expand("%:p:h")<CR>
 cnoremap sg s///g<C-LEFT><Right><Right>
@@ -249,7 +251,10 @@ inoremap ,, <
 inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
+inoremap jj <ESC>A
+inoremap hh <ESC>I
 inoremap çs <ESC>:w<CR>
+inoremap çq <ESC>:wq<CR>
 inoremap ( ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>

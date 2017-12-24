@@ -71,7 +71,6 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+w layout stacked
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -84,7 +83,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+Shift+a focus child
+bindsym $mod+Shift+a focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -118,7 +117,9 @@ bindsym $mod+Shift+backspace reboot
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
-bindsym $mod+shift+s mode "system"
+bindsym $mod+s mode "system"
+bindsym $mod+w mode "wallpapers"
+bindsym $mod+p mode "programs"
 bindsym $mod+Shift+m mode "music"
 bindsym $mod+Shift+b mode "brightness"
 bindsym $mod+Shift+g mode "$mode_gaps"
@@ -127,7 +128,23 @@ set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 
-popup_during_fullscreen smart
+mode "wallpapers" {
+        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave -o wal-set"
+        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant -o wal-set"
+        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o wal-set"
+        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o wal-set"
+        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o wal-set"
+        bindsym Return mode "default"
+}
+
+mode "programs" {
+        bindsym f exec firefox
+        bindsym p exec pgadmin3
+        bindsym q exec qbittorrent
+        bindsym w exec playonlinux
+        bindsym Shift+p exec postman
+        bindsym Return mode "default"
+}
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -225,6 +242,10 @@ mode "resize" {
 
 set $term termite
 
+bindsym $mod+Ctrl+Right resize shrink width  10px or  10ppt
+bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
+bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
+bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+n exec dolphin
 bindsym $mod+Shift+Return exec $term -e tmux
@@ -234,15 +255,15 @@ bindsym --release Print exec scrot -s ~/prints/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec scrot ~/prints/print_%d_%m_%Y_%T.png
 gaps inner 10
 gaps outer 10
+exec --no-startup-id compton -cfb
+exec --no-startup-id nm-applet
+
 
  bar {
          position top
 
          font pango:Meslo LG M dz for Powerline, FontAwesome 10
 
-         status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr cmus cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' cmus.format='{artist} | {title}' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+         status_command ~/.i3/bumblebee-status/bumblebee-status -m mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
  }
 
-
-exec --no-startup-id compton -cfb
-exec --no-startup-id nm-applet
