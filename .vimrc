@@ -24,6 +24,8 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin on
+set nobackup
+set noswapfile
 set nu
 set relativenumber
 set ic
@@ -234,8 +236,8 @@ nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
 inoremap <F1> <C-o>
-inoremap <F5> <esc><F5>i
-inoremap <F6> <esc><F6>
+inoremap <F5> <esc>:w<CR>i
+inoremap <F6> <esc>:wq<CR>
 inoremap zz \|
 inoremap ç' "
 inoremap 99 ()

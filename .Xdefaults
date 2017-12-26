@@ -1,0 +1,6 @@
+/* URxvt*depth: 32 */
+URxvt*transparent: true
+URxvt*shading: 30
+URxvt*scrollBar_right: false
+URxvt*font: xft: Meslo LG M DZ for Powerline:size=10
+URxvt*scrollBar: false

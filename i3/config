@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 set $mod Mod4
-set $term termite
+set $term rxvt-unicode
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
@@ -24,7 +24,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec $term 
-bindsym $mod+x exec rxvt-unicode
 
 # kill focused window
 bindsym $mod+q kill
@@ -240,7 +239,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-set $term termite
 
 bindsym $mod+Ctrl+Right resize shrink width  10px or  10ppt
 bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
