@@ -1,4 +1,3 @@
-
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
@@ -95,11 +94,11 @@ nnoremap <leader>iv vi[
 nnoremap <leader>it vit
 
 " - around motions
-nnoremap <leader>aa ggvG
-nnoremap <leader>ac va{
-nnoremap <leader>ap va(
-nnoremap <leader>av va[
-nnoremap <leader>at vat
+nnoremap <space>aa ggvG
+nnoremap <space>ac va{
+nnoremap <space>ap va(
+nnoremap <space>av va[
+nnoremap <space>at vat
 
 " Deletion shortcuts
 " - inside motions
@@ -164,7 +163,7 @@ onoremap <space>c a{
 onoremap <space>v a[
 onoremap <space>p a(
 
-nnoremap <leader>aa A
+nnoremap <leader>a A
 nnoremap <leader>b B
 nnoremap <leader>c C
 nnoremap <leader>i I
@@ -254,6 +253,8 @@ inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
 inoremap jj <ESC>A
+inoremap kk <Left>
+inoremap ll <Right>
 inoremap hh <ESC>I
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>

@@ -1,6 +1,9 @@
 /* URxvt*depth: 32 */
 URxvt*transparent: true
-URxvt*shading: 30
+URxvt*shading: 40
 URxvt*scrollBar_right: false
 URxvt*font: xft: Meslo LG M DZ for Powerline:size=10
 URxvt*scrollBar: false
+URxvt*perl-ext-common: default, clipboard, keyboard-select, url-select
+URxvt*keysym.M-Escape: perl:keyboard-select:activate
+

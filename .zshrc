@@ -33,7 +33,7 @@ bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
 bindkey 'ç' autosuggest-accept
 source ~/.cache/wal/colors.sh
-(wal -r -t &)
+cat ~/.cache/wal/sequences &>/dev/null
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Updates editor information when the keymap changes.
