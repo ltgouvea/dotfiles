@@ -4,22 +4,15 @@ export TERM="xterm-256color"
 source ~/K2.zsh
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND='ag -g ""'
-set -s escape-time 0
+set -s escape-time 1
 
 source ~/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
-antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen theme  agnoster
 antigen apply
-
-
-if [[ $TERM == xterm-termite ]]; then
-  . /etc/profile.d/vte.sh
-  __vte_osc7
-fi
 
 bindkey -v
 bindkey -M vicmd '?' history-incremental-search-backward

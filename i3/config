@@ -139,6 +139,8 @@ mode "wallpapers" {
 mode "programs" {
         bindsym f exec firefox
         bindsym p exec pgadmin3
+        bindsym s exec steam
+        bindsym m exec spotify
         bindsym q exec qbittorrent
         bindsym w exec playonlinux
         bindsym Shift+p exec postman
@@ -260,8 +262,8 @@ exec --no-startup-id nm-applet
  bar {
          position top
 
-         font pango:Meslo LG M dz for Powerline, FontAwesome 10
+         font pango:Hack, FontAwesome 11
 
-         status_command ~/.i3/bumblebee-status/bumblebee-status -m xrandr mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+         status_command ~/.i3/bumblebee-status/bumblebee-status -m mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
  }
 

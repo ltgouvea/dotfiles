@@ -1,9 +1,13 @@
-/* URxvt*depth: 32 */
 URxvt*transparent: true
-URxvt*shading: 40
+URxvt*shading: 20
 URxvt*scrollBar_right: false
-URxvt*font: xft: Meslo LG M DZ for Powerline:size=10
+URxvt*font: xft: Hack:size=10
 URxvt*scrollBar: false
-URxvt*perl-ext-common: default, clipboard, keyboard-select, url-select
-URxvt*keysym.M-Escape: perl:keyboard-select:activate
-
+URxvt*perl-ext-common: default, matcher,keyboard-select, resize-font
+URxvt*url-launcher: /usr/bin/xdg-open
+URxvt*matcher*button: 1
+URxvt*keysym*M-m: perl:keyboard-select:activate
+URxvt*keysym*C-j:     resize-font:smaller
+URxvt*keysym*C-k:      resize-font:bigger
+URxvt*keysym*C-equal:     resize-font:reset
+URxvt*keysym*C-minus:  resize-font:show
