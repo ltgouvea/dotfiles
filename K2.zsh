@@ -13,7 +13,7 @@ alias arstop='sig-arteris;dcd;api-arteris;dcd;'
 alias zshconf='subl ~/.zshrc'
 alias tmux='tmux -2'
 alias gad='gatsby develop'
-alias cnpj='xsel -b < ~/.cnpj.txt'
+alias cnpj='xclip ~/.cnpj'
 
 alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194.ovpn'
 source ~/devops/devops

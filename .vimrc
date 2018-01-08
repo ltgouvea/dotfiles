@@ -14,7 +14,6 @@ Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-surround'
 Plug 'xsbeats/vim-blade'
 Plug 'dylanaraps/wal.vim'
@@ -256,6 +255,7 @@ inoremap jj <ESC>A
 inoremap kk <Left>
 inoremap ll <Right>
 inoremap hh <ESC>I
+inoremap nn <C-n>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
 inoremap ( ()<Left>

@@ -29,7 +29,6 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 bindsym $mod+d exec rofi -show run -opacity "75"
-bindsym $mod+t exec tilda
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -49,7 +48,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+p exec pgadmin3
 bindsym $mod+Shift+t exec qbittorrent
 
@@ -138,6 +137,7 @@ mode "wallpapers" {
 
 mode "programs" {
         bindsym f exec firefox
+        bindsym c exec google-chrome
         bindsym p exec pgadmin3
         bindsym s exec steam
         bindsym m exec spotify
@@ -247,7 +247,7 @@ bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
 bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
 bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
 bindsym $mod+r exec $term -e ranger
-bindsym $mod+n exec dolphin
+bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
@@ -255,15 +255,15 @@ bindsym --release Print exec scrot -s ~/prints/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec scrot ~/prints/print_%d_%m_%Y_%T.png
 gaps inner 10
 gaps outer 10
+
+bar {
+        font pango:Hack, FontAwesome 9
+        position top
+        workspace_buttons no
+        status_command ~/.i3/bumblebee-status/bumblebee-status -m mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        
+        }
+
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id compton -cfb
 exec --no-startup-id nm-applet
-
-
- bar {
-         position top
-
-         font pango:Hack, FontAwesome 11
-
-         status_command ~/.i3/bumblebee-status/bumblebee-status -m mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
- }
-

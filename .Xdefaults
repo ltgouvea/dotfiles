@@ -1,7 +1,7 @@
 URxvt*transparent: true
-URxvt*shading: 20
+URxvt*shading: 30
 URxvt*scrollBar_right: false
-URxvt*font: xft: Hack:size=10
+URxvt*font: xft: Hack:size=12
 URxvt*scrollBar: false
 URxvt*perl-ext-common: default, matcher,keyboard-select, resize-font
 URxvt*url-launcher: /usr/bin/xdg-open

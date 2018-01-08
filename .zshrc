@@ -11,7 +11,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen theme  agnoster
+antigen theme  refined
 antigen apply
 
 bindkey -v
@@ -24,7 +24,7 @@ bindkey "^[OB" down-line-or-beginning-search
 bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
-bindkey 'ç' autosuggest-accept
+bindkey 'ç' autosuggest-execute
 source ~/.cache/wal/colors.sh
 cat ~/.cache/wal/sequences &>/dev/null
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -38,7 +38,7 @@ function zle-keymap-select() {
 zle -N zle-keymap-select
 
 function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
+  echo "${${KEYMAP/vicmd/[% JEDI-MODE]%}/(main|viins)/[% INSERT]%}"
 }
 
 # define right prompt, regardless of whether the theme defined it
