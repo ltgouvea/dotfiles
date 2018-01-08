@@ -200,13 +200,11 @@ mode "music" {
         bindsym Shift+j exec amixer -D pulse sset Master 15%-
         bindsym j exec amixer -D pulse sset Master 5%-
         
-        bindsym l exec cmus-remote -n
-        bindsym h exec cmus-remote -r
-        bindsym x exec cmus-remote -u
-        bindsym c exec cmus-remote -s
-        bindsym g exec cmus-remote -p
-        bindsym q exec cmus-remote -S
-        bindsym s exec cmus-remote -S
+        bindsym l exec mpc next
+        bindsym h exec mpc prev
+        bindsym x exec mpc toggle
+        bindsym c exec mpc stop
+        bindsym z exec mpc random
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Space  mode "default"
