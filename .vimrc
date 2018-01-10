@@ -187,7 +187,6 @@ nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>4 $
-vnoremap <leader>5 $
 
 vnoremap <leader>q ap
 vnoremap <leader>p i(
