@@ -24,6 +24,7 @@ call plug#end()
 filetype plugin on
 set nobackup
 set noswapfile
+set cwh=20
 set nu
 set relativenumber
 set ic

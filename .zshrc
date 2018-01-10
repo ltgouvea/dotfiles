@@ -22,8 +22,10 @@ bindkey -M vicmd '/' history-incremental-search-forward
 bindkey "^[OA" up-line-or-beginning-search
 bindkey "^[OB" down-line-or-beginning-search
 bindkey -M viins 'jj' vi-cmd-mode
+bindkey -M viins 'kk' edit-command-line
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
+bindkey 'jk' autosuggest-accept
 bindkey 'ç' autosuggest-execute
 source ~/.cache/wal/colors.sh
 cat ~/.cache/wal/sequences &>/dev/null

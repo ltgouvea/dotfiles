@@ -30,6 +30,7 @@ alias laraup='docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 alias ticsol='cd /var/www/tic-sms/laradock'
 alias ticup='cd /var/www/tic-sms/laradock && docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 alias cmatrix='cmatrix -bs'
+alias -g gp='| grep -i'
 alias v='vim'
 alias r='ranger'
 
