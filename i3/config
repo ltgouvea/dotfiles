@@ -258,10 +258,9 @@ bar {
         font pango:Hack, FontAwesome 9
         position top
         workspace_buttons no
-        status_command ~/.i3/bumblebee-status/bumblebee-status -m mpd cpu sensors memory battery brightness pasink date-time -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' date-time.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
-        
+        # status_command i3blocks
+        status_command ~/bumblebee-status/bumblebee-status -m xrandr mpd cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
         }
 
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id compton -cfb
 exec --no-startup-id nm-applet

@@ -25,6 +25,7 @@ bindkey -M viins 'jj' vi-cmd-mode
 bindkey -M viins 'kk' edit-command-line
 bindkey -M vicmd "k" up-line-or-beginning-search
 bindkey -M vicmd "j" down-line-or-beginning-search
+bindkey -M vicmd 'jk' vi-insert
 bindkey 'jk' autosuggest-accept
 bindkey 'ç' autosuggest-execute
 source ~/.cache/wal/colors.sh

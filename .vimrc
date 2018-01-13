@@ -234,8 +234,8 @@ nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
 inoremap <F1> <C-o>
-inoremap <F5> <esc>:w<CR>i
-inoremap <F6> <esc>:wq<CR>
+inoremap <F5> <ESC>:w<CR>i
+inoremap <F6> <ESC>:wq<CR>
 inoremap zz \|
 inoremap ç' "
 inoremap 99 ()
@@ -251,11 +251,12 @@ inoremap ,, <
 inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
-inoremap jj <ESC>A
-inoremap kk <Left>
-inoremap ll <Right>
+inoremap ll <ESC>A
+inoremap jj <Left>
+inoremap kk <Right>
 inoremap hh <ESC>I
 inoremap nn <C-n>
+inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
 inoremap ( ()<Left>
