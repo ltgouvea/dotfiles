@@ -29,6 +29,8 @@ Explicitly unsupported Python versions: 3.2 (missing unicode literals)
 # Documentation
 See [the wiki](https://github.com/tobi-wan-kenobi/bumblebee-status/wiki) for documentation.
 
+See [FAQ](https://github.com/tobi-wan-kenobi/bumblebee-status/wiki/FAQ) for, well, FAQs.
+
 Other resources:
 
 * A list of [available modules](https://github.com/tobi-wan-kenobi/bumblebee-status/wiki/Available-Modules)
@@ -58,6 +60,14 @@ $ ./bumblebee-status -l modules
 ```
 
 Any parameter you can specify with `-p <name>=<value>`, you can alternatively specify in `~/.bumblebee-status.conf` or `~/.config/bumblebee-status.conf`. This parameters act as a **fallback**, so values specified with `-p` have priority.
+
+Parameters can also be used to override theme settings, such as:
+
+```
+$ ./bumblebee-status -p <module>.theme.<theme field>=<value>
+# for example, to get a spacer with a red background:
+$ ./bumblebee-status -m spacer -p spacer.theme.bg=#ff0000
+```
 
 Configuration files have a format like this:
 ```

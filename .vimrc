@@ -24,7 +24,10 @@ call plug#end()
 filetype plugin on
 set nobackup
 set noswapfile
+set smartindent
 set cwh=20
+set cmdheight=2
+set shortmess=at
 set nu
 set relativenumber
 set ic

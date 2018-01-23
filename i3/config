@@ -127,11 +127,11 @@ set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 
 mode "wallpapers" {
-        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave -o wal-set"
-        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant -o wal-set"
-        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o wal-set"
-        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o wal-set"
-        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o wal-set"
+        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym Return mode "default"
 }
 
@@ -140,6 +140,7 @@ mode "programs" {
         bindsym c exec google-chrome
         bindsym p exec pgadmin3
         bindsym s exec steam
+        bindsym v exec $term -e vim
         bindsym m exec spotify
         bindsym q exec qbittorrent
         bindsym w exec playonlinux
