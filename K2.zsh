@@ -42,3 +42,4 @@ alias u='apt update;apt upgrade -y;apt autoremove -y'
 alias n='ncmpcpp'
 source ~/update_gits
 source ~/mailutils
+alias ai='apt install'

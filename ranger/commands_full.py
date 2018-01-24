@@ -1739,3 +1739,5 @@ class yank(Command):
             in sorted(self.modes.keys())
             if mode
         )
+
+

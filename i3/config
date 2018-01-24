@@ -102,10 +102,10 @@ bindsym $mod+Shift+a focus child
 
 set $ws1  " "
 set $ws2  " "
-set $ws3  " "
-set $ws4  " "
-set $ws5  " "
-set $ws6  " "
+set $ws3  " "
+set $ws4  " "
+set $ws5  ""
+set $ws6  " "
 set $ws7  " "
 set $ws8  " "
 set $ws9  " "
@@ -216,7 +216,7 @@ bindsym $mod+m exec $term -e mutt
 mode "system" {
         bindsym s exec systemctl poweroff
         bindsym r exec systemctl reboot
-        # back to normal: Enter or Escape
+
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
@@ -234,7 +234,7 @@ mode "music" {
         bindsym x exec mpc toggle
         bindsym c exec mpc stop
         bindsym z exec mpc random
-        # back to normal: Enter or Escape
+
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
@@ -248,10 +248,7 @@ mode "brightness" {
         bindsym Escape mode "default"
 }
 
-# resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
@@ -262,7 +259,6 @@ mode "resize" {
         bindsym Up resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
@@ -284,10 +280,11 @@ gaps inner 10
 gaps outer 10
 
 bar {
-        font pango:Hack, FontAwesome 10
+        font pango:Source Code Pro for Powerline, FontAwesome 12
         position top
+        tray_output none
         # status_command i3blocks
-        status_command ~/bumblebee-status/bumblebee-status -m xrandr mpd cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 
         colors {
             statusline         $white

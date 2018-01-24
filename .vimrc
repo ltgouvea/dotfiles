@@ -254,10 +254,10 @@ inoremap ,, <
 inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
-inoremap ll <ESC>A
+inoremap kl <ESC>A
 inoremap jj <Left>
 inoremap kk <Right>
-inoremap hh <ESC>I
+inoremap lk <ESC>I
 inoremap nn <C-n>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
