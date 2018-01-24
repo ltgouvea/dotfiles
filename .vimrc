@@ -64,6 +64,7 @@ nnoremap _a :exec InitArteris()<CR>
 nnoremap __ :help 
 nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
+nnoremap gh "+p
 nnoremap <space>n :cn<CR>
 nnoremap <space>p :cp<CR>
 nnoremap <space>f :copen<CR>

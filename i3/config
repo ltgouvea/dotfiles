@@ -106,7 +106,7 @@ set $ws3  " "
 set $ws4  " "
 set $ws5  ""
 set $ws6  " "
-set $ws7  " "
+set $ws7  " "
 set $ws8  " "
 set $ws9  " "
 set $ws10  " "
@@ -292,9 +292,9 @@ bar {
             separator          $transparent
 
             #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $transparent $darkwhite
+            focused_workspace  $transparent $transparent $darkmagenta
             inactive_workspace $transparent $transparent $white
-            active_workspace   $transparent $transparent $white
+            active_workspace   $transparent $transparent $darkmagenta
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $darkred     $transparent
             }

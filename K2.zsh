@@ -17,7 +17,7 @@ alias cnpj='xclip ~/.cnpj'
 
 alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194.ovpn'
 source ~/devops/devops
-source ~/update_dotfiles.sh
+source ~/update_dotfiles
 alias dit='docker exec -it'
 alias d='docker-compose exec workspace'
 alias dps='docker ps'
@@ -42,4 +42,5 @@ alias u='apt update;apt upgrade -y;apt autoremove -y'
 alias n='ncmpcpp'
 source ~/update_gits
 source ~/mailutils
+source ~/dist_free
 alias ai='apt install'

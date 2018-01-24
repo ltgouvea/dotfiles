@@ -1,0 +1,37 @@
+update_neofetch() {
+	cd ~/_git/neofetch_git/
+	git fetch --all
+	git pull
+	sudo make install
+}
+
+update_ranger() {
+	cd ~/_git/ranger_git/
+	git fetch --all
+	git pull
+	sudo python3 setup.py install
+}
+
+update_pywal() {
+	cd ~/_git/pywal_git/
+	git fetch --all
+	git pull
+	sudo python3 setup.py install
+	sudo pip3 install pywal --upgrade
+}
+
+update_i3() {
+	cd ~/i3-gaps/
+	git fetch --all
+	git pull
+	cd build
+	../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers	
+	sudo make install
+}
+
+k2_run() {
+	update_neofetch
+	update_ranger
+	update_pywal
+	update_i3
+}
