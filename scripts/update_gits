@@ -1,5 +1,7 @@
 update_neofetch() {
 	cd ~/_git/neofetch_git/
+	pwd
+	echo
 	git fetch --all
 	git pull
 	sudo make install
@@ -7,6 +9,8 @@ update_neofetch() {
 
 update_ranger() {
 	cd ~/_git/ranger_git/
+	pwd
+	echo
 	git fetch --all
 	git pull
 	sudo python3 setup.py install
@@ -14,6 +18,8 @@ update_ranger() {
 
 update_pywal() {
 	cd ~/_git/pywal_git/
+	pwd
+	echo
 	git fetch --all
 	git pull
 	sudo python3 setup.py install

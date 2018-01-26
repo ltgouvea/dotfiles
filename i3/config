@@ -160,6 +160,7 @@ mode "wallpapers" {
         bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/ -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym Return mode "default"
 }
 

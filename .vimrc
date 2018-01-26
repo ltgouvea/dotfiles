@@ -66,8 +66,10 @@ nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
 nnoremap <space>n :cn<CR>
+nnoremap <space>e :e 
 nnoremap <space>p :cp<CR>
 nnoremap <space>f :copen<CR>
+nnoremap <space>s :%s/
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch();

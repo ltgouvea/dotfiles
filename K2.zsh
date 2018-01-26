@@ -44,3 +44,8 @@ source ~/update_gits
 source ~/mailutils
 source ~/dist_free
 alias ai='apt install'
+venceremos() {
+	c
+	lolcat ~/art
+}
+DIST_FREE_FLAG=false

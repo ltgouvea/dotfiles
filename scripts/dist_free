@@ -1,10 +1,10 @@
-# modo distraction free
+#!/bin/sh
 dist_free_disable() {
-    sudo sed -i '/facebook/d;/twitter/d;/reddit/d;/whatsapp/d' /etc/hosts
+	sudo sed -i '/facebook/d;/twitter/d;/reddit/d;/whatsapp/d' /etc/hosts
+	DIST_FREE_FLAG=false
 }
 
 dist_free_enable() {
-	dist_free_disable
 	sudo sed -i '$a\
 0.0.0.0 www.facebook.com\
 0.0.0.0 facebook.com\
@@ -15,4 +15,14 @@ dist_free_enable() {
 0.0.0.0 www.web.whatsapp.com\
 0.0.0.0 web.whatsapp.com\
 	' /etc/hosts
+	DIST_FREE_FLAG=true
+}
+
+dist_free_toggle() {
+	if [ "$DIST_FREE_FLAG" = "true" ]; then
+		dist_free_disable
+
+	elif [ "$DIST_FREE_FLAG" = "false" ]; then
+		dist_free_enable
+	fi
 }
