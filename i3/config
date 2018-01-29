@@ -107,7 +107,7 @@ set $ws4  " "
 set $ws5  ""
 set $ws6  " "
 set $ws7  " "
-set $ws8  " "
+set $ws8  ""
 set $ws9  " "
 set $ws10  " "
 
@@ -122,6 +122,16 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
+
+assign [class="(?i)google-chrome"] $ws1
+assign [title="(?i)rxvt-unicode"]  $ws2
+assign [class="(?i)torrent"]       $ws3
+assign [title="(?i)steam"]         $ws4
+assign [title="(?i)ranger"]        $ws5
+assign [class="(?i)pgadmin"]       $ws6
+assign [title="(?i)ncmpcpp"]        $ws7
+assign [class="(?i)mpv"]           $ws8
+assign [title="(?i)mutt"]          $ws9
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -145,6 +155,7 @@ bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
 bindsym $mod+s mode "system"
 bindsym $mod+w mode "wallpapers"
+bindsym $mod+m mode "mail"
 bindsym $mod+p mode "programs"
 bindsym $mod+Shift+m mode "music"
 bindsym $mod+Shift+b mode "brightness"
@@ -212,7 +223,12 @@ mode "$mode_gaps_outer" {
         bindsym Tab mode "$mode_gaps_inner"
 }
 
-bindsym $mod+m exec $term -e mutt
+mode "mail" {
+        bindsym s exec $term -hold -e mutt -F ~/.muttrc_lucas.fim
+        bindsym p exec $term -hold -e mutt -F ~/.muttrc_lucas.thiago
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
 mode "system" {
         bindsym s exec systemctl poweroff
@@ -265,7 +281,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-
 bindsym $mod+Ctrl+Right resize shrink width  10px or  10ppt
 bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
 bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
@@ -281,11 +296,11 @@ gaps inner 10
 gaps outer 10
 
 bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 12
+        font pango:Source Code Pro for Powerline, FontAwesome 10
         position top
         tray_output none
-        # status_command i3blocks
-        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        tray_padding 0
+        status_command ~/bumblebee-status/bumblebee-status -m mpd xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' mpd.format='{title} ({artist})' memory.format='{used}' -t wal-powerline
 
         colors {
             statusline         $white

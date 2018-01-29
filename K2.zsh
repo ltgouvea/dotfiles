@@ -48,4 +48,3 @@ venceremos() {
 	c
 	lolcat ~/art
 }
-DIST_FREE_FLAG=false

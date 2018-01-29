@@ -5,6 +5,7 @@ dist_free_disable() {
 }
 
 dist_free_enable() {
+	sudo sed -i '/facebook/d;/twitter/d;/reddit/d;/whatsapp/d' /etc/hosts
 	sudo sed -i '$a\
 0.0.0.0 www.facebook.com\
 0.0.0.0 facebook.com\
@@ -26,3 +27,5 @@ dist_free_toggle() {
 		dist_free_enable
 	fi
 }
+
+

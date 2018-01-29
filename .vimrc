@@ -29,6 +29,11 @@ set cwh=20
 set cmdheight=2
 set shortmess=at
 set nu
+set complete-=i
+set laststatus=2
+set scrolloff=3
+set sidescrolloff=5
+set display+=lastline
 set relativenumber
 set ic
 set incsearch
@@ -65,6 +70,7 @@ nnoremap __ :help
 nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
+nnoremap hg "+y
 nnoremap <space>n :cn<CR>
 nnoremap <space>e :e 
 nnoremap <space>p :cp<CR>
@@ -153,7 +159,7 @@ nnoremap <leader>8 *
 onoremap z a<
 onoremap \ i<
 onoremap q ip
-onoremap c i{
+onoremap <leader>c i{
 onoremap v i[
 onoremap p i(
 onoremap <leader>f F
@@ -202,6 +208,8 @@ vnoremap <leader><leader>c a{
 vnoremap <leader>v i[
 vnoremap <leader><leader>v a[
 vnoremap zz i<
+vnoremap gh "+p
+vnoremap hg "+y
 vnoremap z a<
 vnoremap <leader>f F
 vnoremap <leader>t T
@@ -271,6 +279,7 @@ inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 nnoremap <F10> :NERDTreeFind<CR>
+nnoremap <space><F10> :NERDTree<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
@@ -352,7 +361,6 @@ function! UpdateBranch()
 	Git checkout -
 	Git merge --no-ff --no-edit -
 endfunction
-
 function! InitArteris()
 	cd ~/HD/var/www/api-arteris/htdocs/
 	NERDTreeToggle
