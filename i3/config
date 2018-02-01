@@ -33,7 +33,7 @@ set $darkblack   #1d2021
 set $transparent #00000000
 
 font pango:'Inconsolata for Powerline' 10
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -157,6 +157,7 @@ bindsym $mod+s mode "system"
 bindsym $mod+w mode "wallpapers"
 bindsym $mod+m mode "mail"
 bindsym $mod+p mode "programs"
+bindsym $mod+Shift+d mode "distraction_free"
 bindsym $mod+Shift+m mode "music"
 bindsym $mod+Shift+b mode "brightness"
 bindsym $mod+Shift+g mode "$mode_gaps"
@@ -173,6 +174,12 @@ mode "wallpapers" {
         bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/ -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym Return mode "default"
+}
+
+mode "distraction_free" {
+    bindsym d exec "~/dist_free_disable.sh"
+    bindsym e exec  "~/dist_free_enable.sh"
+    bindsym Return mode "default"
 }
 
 mode "programs" {

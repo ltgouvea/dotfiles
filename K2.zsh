@@ -46,5 +46,6 @@ source ~/dist_free
 alias ai='apt install'
 venceremos() {
 	c
-	lolcat ~/art
+	cat ~/art
 }
+DIST_FREE_FLAG='false'

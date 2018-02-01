@@ -23,6 +23,8 @@ call plug#end()
 
 filetype plugin on
 set nobackup
+set nomore
+set hi=1000
 set noswapfile
 set smartindent
 set cwh=20
@@ -158,7 +160,8 @@ nnoremap <leader>8 *
 " - operator pending maps
 onoremap z a<
 onoremap \ i<
-onoremap q ip
+onoremap q i'
+onoremap <space>q i"
 onoremap <leader>c i{
 onoremap v i[
 onoremap p i(
@@ -170,7 +173,6 @@ onoremap <leader>b B
 onoremap <leader>b B
 onoremap ç <esc>
 
-onoremap <space>q ap
 onoremap <space>c a{
 onoremap <space>v a[
 onoremap <space>p a(
