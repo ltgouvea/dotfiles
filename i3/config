@@ -172,7 +172,7 @@ mode "wallpapers" {
         bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/ -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym Return mode "default"
 }
 
@@ -303,11 +303,11 @@ gaps inner 10
 gaps outer 10
 
 bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 10
+        font pango:Source Code Pro for Powerline, FontAwesome 12
         position top
         tray_output none
         tray_padding 0
-        status_command ~/bumblebee-status/bumblebee-status -m mpd xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' mpd.format='{title} ({artist})' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 
         colors {
             statusline         $white

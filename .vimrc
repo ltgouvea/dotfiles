@@ -158,6 +158,7 @@ nnoremap <leader>ftt =at
 nnoremap <leader>8 *
 
 " - operator pending maps
+onoremap x iW
 onoremap z a<
 onoremap \ i<
 onoremap q i'
@@ -217,10 +218,13 @@ vnoremap <leader>f F
 vnoremap <leader>t T
 
 cnoremap <leader>. w !sudo tee %
+cnoremap kk <C-f>
+cnoremap çç <Esc>
 cnoremap 11 !
 cnoremap 55 %
 cnoremap 22 @
 cnoremap 33 #
+cnoremap 00 _
 cnoremap pp <C-r>"
 cnoremap qq q!<CR>
 cnoremap <leader>v tabe ~/.vimrc<CR>
@@ -267,11 +271,14 @@ inoremap ,, <
 inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
-inoremap kl <ESC>A
-inoremap jj <Left>
-inoremap kk <Right>
-inoremap lk <ESC>I
+inoremap kk <ESC>A
+inoremap kj <Left>
+inoremap jk <Right>
+inoremap jj <ESC>I
 inoremap nn <C-n>
+inoremap pp <C-p>
+inoremap yy <C-y>
+inoremap hh <C-x><C-l>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
@@ -363,6 +370,7 @@ function! UpdateBranch()
 	Git checkout -
 	Git merge --no-ff --no-edit -
 endfunction
+
 function! InitArteris()
 	cd ~/HD/var/www/api-arteris/htdocs/
 	NERDTreeToggle
@@ -370,3 +378,12 @@ function! InitArteris()
 	cd ~/HD/var/www/sig-arteris/htdocs/
 	NERDTreeToggle
 endfunction
+
+function! Snake()
+	:silent s/\ /_/g
+	:silent s/-/_/g
+	:silent s/_\+/-/g
+	:silent s/-/_/g
+	:normal guu
+endfunction
+
