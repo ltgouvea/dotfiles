@@ -287,6 +287,7 @@ inoremap { {}<Left>
 inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
+nnoremap <C-s> :mksession! ~/vim.current<CR>
 nnoremap <F10> :NERDTreeFind<CR>
 nnoremap <space><F10> :NERDTree<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>

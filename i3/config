@@ -123,15 +123,16 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-assign [class="(?i)google-chrome"] $ws1
-assign [title="(?i)rxvt-unicode"]  $ws2
-assign [class="(?i)torrent"]       $ws3
-assign [title="(?i)steam"]         $ws4
-assign [title="(?i)ranger"]        $ws5
-assign [class="(?i)pgadmin"]       $ws6
-assign [title="(?i)ncmpcpp"]        $ws7
-assign [class="(?i)mpv"]           $ws8
-assign [title="(?i)mutt"]          $ws9
+assign [class="(?i)google-chrome"]        $ws1
+assign [title="(?i)rxvt-unicode"]         $ws2
+assign [class="(?i)torrent"]              $ws3
+assign [title="(?i)steam"]                $ws4
+assign [title="(?i)ranger"]               $ws5
+assign [class="(?i)pgadmin"]              $ws6
+assign [title="(?i)ncmpcpp"]              $ws7
+assign [class="(?i)mpv"]                  $ws8
+assign [title="(?i)mutt"]                 $ws9
+assign [class="(?i)gnome-system-monitor"] $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
