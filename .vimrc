@@ -156,6 +156,7 @@ nnoremap <leader>ftt =at
 
 " - lazy maps
 nnoremap <leader>8 *
+nnoremap zx ZQ
 
 " - operator pending maps
 onoremap x iW
@@ -236,6 +237,8 @@ cnoremap grhh Git reset --hard HEAD<CR>
 cnoremap gst Gstatus<CR>
 cnoremap -- <C-R>=expand("%:p:h")<CR>
 cnoremap sg s///g<C-LEFT><Right><Right>
+cnoremap jk <Right>
+cnoremap kj <Left>
 
 nnoremap ; :
 nnoremap <backspace> :shell<CR>
@@ -243,6 +246,7 @@ nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
+nnoremap <space>t :%s///g<Left><Left>
 nnoremap <space>wq :wq<CR>
 nnoremap <space>ww <C-w>r
 nnoremap <space>r :so ~/.vimrc<CR>

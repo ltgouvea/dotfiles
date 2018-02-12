@@ -304,11 +304,11 @@ gaps inner 10
 gaps outer 10
 
 bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 12
+        font pango:Source Code Pro for Powerline, FontAwesome 11
         position top
         tray_output none
         tray_padding 0
-        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pulseaudio datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 
         colors {
             statusline         $white

@@ -1,4 +1,11 @@
-#!/bin/sh
+#!/bin/bash
+
+if [[ ! $DIST_FREE_FLAG ]]; then
+	sudo sed -i '/facebook/d;/twitter/d;/reddit/d;/whatsapp/d' /etc/hosts
+	DIST_FREE_FLAG=false
+	#statements
+fi
+DIST_FREE_FLAG='false'
 dist_free_disable() {
 	sudo sed -i '/facebook/d;/twitter/d;/reddit/d;/whatsapp/d' /etc/hosts
 	DIST_FREE_FLAG=false

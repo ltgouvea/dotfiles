@@ -2,7 +2,7 @@
 ---
 ## List of softwares covered:
 - [Ranger](https://github.com/ranger/ranger)
-- [i3wm](i3wm.org)
+- [i3wm](i3wm.org) - Using fork i3-gaps from [airblader/i3](https://github.com/Airblader/i3)
 - [Polybar](https://github.com/jaagr/polybar) !DEPRECATED! using bumblebee-status, powerline is just so badass
 - [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status)
 - [VIM](https://github.com/vim/vim) hic sunt dracones

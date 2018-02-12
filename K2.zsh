@@ -48,4 +48,3 @@ venceremos() {
 	c
 	cat ~/art
 }
-DIST_FREE_FLAG='false'
