@@ -15,12 +15,36 @@
 	},
 	"cycle": [
 		{
-			"fg": "foreground",
-			"bg": "background"
+			"fg": "background",
+			"bg": "color1"
 		},
 		{
 			"fg": "background",
-			"bg": "foreground"
+			"bg": "color2"
+		},
+		{
+			"fg": "background",
+			"bg": "color3"
+		},
+		{
+			"fg": "background",
+			"bg": "color4"
+		},
+		{
+			"fg": "background",
+			"bg": "color5"
+		},
+		{
+			"fg": "background",
+			"bg": "color6"
+		},
+		{
+			"fg": "background",
+			"bg": "color7"
+		},
+		{
+			"fg": "background",
+			"bg": "color8"
 		}
 	],
 	"dnf": {

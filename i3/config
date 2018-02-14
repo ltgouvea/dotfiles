@@ -45,7 +45,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec rofi -show run -opacity "75"
+bindsym $mod+d exec rofi -show run
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -257,6 +257,7 @@ mode "music" {
         bindsym l exec mpc next
         bindsym h exec mpc prev
         bindsym x exec mpc toggle
+        bindsym p exec mpc toggle
         bindsym c exec mpc stop
         bindsym z exec mpc random
 
@@ -303,26 +304,27 @@ bindsym --release Shift+Print exec scrot ~/prints/print_%d_%m_%Y_%T.png
 gaps inner 10
 gaps outer 10
 
-bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 11
-        position top
-        tray_output none
-        tray_padding 0
-        status_command ~/bumblebee-status/bumblebee-status -m xrandr cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+# bar {
+#         font pango:Source Code Pro for Powerline, FontAwesome 13
+#         position top
+#         tray_output none
+#         status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+#         i3bar_command i3bar -t
 
-        colors {
-            statusline         $white
-            background         $transparent
-            separator          $transparent
+#         colors {
+#             statusline         $white
+#             background         $transparent
+#             separator          $transparent
 
-            #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $transparent $darkmagenta
-            inactive_workspace $transparent $transparent $white
-            active_workspace   $transparent $transparent $darkmagenta
-            urgent_workspace   $darkred     $darkred     $transparent
-            binding_mode       $darkred     $darkred     $transparent
-            }
-        }
+#             #                          BORDER       BACKGROUND   TEXT
+#             focused_workspace  $transparent $transparent $yellow
+#             inactive_workspace $transparent $transparent $white
+#             active_workspace   $transparent $transparent $darkmagenta
+#             urgent_workspace   $darkred     $darkred     $transparent
+#             binding_mode       $darkred     $darkred     $transparent
+#             }
+#         }
 
-exec --no-startup-id compton -cfb
+exec_always ~/.config/polybar/launch.sh
+exec --no-startup-id compton -fb
 exec --no-startup-id nm-applet

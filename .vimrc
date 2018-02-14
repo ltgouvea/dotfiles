@@ -28,7 +28,7 @@ set hi=1000
 set noswapfile
 set smartindent
 set cwh=20
-set cmdheight=2
+set cmdheight=3
 set shortmess=at
 set nu
 set complete-=i
@@ -55,6 +55,7 @@ colorscheme wal
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
 let g:airline_powerline_fonts = 1
+let g:airline_section_error=0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
@@ -80,7 +81,9 @@ nnoremap <space>f :copen<CR>
 nnoremap <space>s :%s/
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
-nnoremap <leader><F2> :exec UpdateBranch();
+nnoremap <leader><F2> :exec UpdateBranch()<CR>
+nnoremap <leader>0 :exec EnableSpeedMode()<CR>
+nnoremap <leader>= :exec DisableSpeedMode()<CR>
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
@@ -194,16 +197,15 @@ nnoremap <leader>o O
 nnoremap <leader>r R
 nnoremap <leader>h ^
 nnoremap <leader>x :e!<CR>
-
-nnoremap ç ~
-vnoremap ç ~
-
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
+nnoremap ç ~
+
+vnoremap ç ~
+vnoremap ; :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>4 $
-
 vnoremap <leader>q ap
 vnoremap <leader>p i(
 vnoremap <leader><leader>p a(
@@ -392,3 +394,18 @@ function! Snake()
 	:normal guu
 endfunction
 
+function! EnableSpeedMode()
+	:set nonu
+	:set norelativenumber
+	:AirlineToggle
+	:set noruler
+	:set syntax=disable
+endfunction
+
+function! DisableSpeedMode()
+	:set nu
+	:set relativenumber
+	:AirlineToggle
+	:set ruler
+	:set syntax=enable
+endfunction
