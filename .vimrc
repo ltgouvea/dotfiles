@@ -25,7 +25,7 @@ filetype plugin on
 set nobackup
 set nomore
 set hi=1000
-set fcs=vert:\|,fold:\ 
+set fcs=vert:\│,fold:\ 
 set noswapfile
 set smartindent
 set cwh=20
@@ -55,6 +55,7 @@ set timeoutlen=1000 ttimeoutlen=0
 colorscheme wal
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none 
+highlight VertSplit cterm=NONE guibg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline_section_error=0
 let g:airline#extensions#tabline#enabled = 1
@@ -261,6 +262,7 @@ nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
 inoremap <F1> <C-o>
+inoremap d <ESC>dwi
 inoremap <F5> <ESC>:w<CR>i
 inoremap <F6> <ESC>:wq<CR>
 inoremap zz \|
@@ -412,4 +414,5 @@ function! DisableSpeedMode()
 	:AirlineToggle
 	:set ruler
 	:set syntax=enable
+	:e
 endfunction
