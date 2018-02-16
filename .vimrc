@@ -25,6 +25,7 @@ filetype plugin on
 set nobackup
 set nomore
 set hi=1000
+set fcs=vert:\|,fold:\ 
 set noswapfile
 set smartindent
 set cwh=20
@@ -271,6 +272,7 @@ inoremap 55 %
 inoremap 44 $
 inoremap 22 @
 inoremap 33 #
+iabbrev 22 @
 inoremap =. =>
 inoremap -. ->
 inoremap ,, <
@@ -396,6 +398,7 @@ endfunction
 
 function! EnableSpeedMode()
 	:set nonu
+	:set lz	
 	:set norelativenumber
 	:AirlineToggle
 	:set noruler
@@ -404,6 +407,7 @@ endfunction
 
 function! DisableSpeedMode()
 	:set nu
+	:set nolz	
 	:set relativenumber
 	:AirlineToggle
 	:set ruler
