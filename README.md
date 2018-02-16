@@ -4,7 +4,7 @@
 - [Ranger](https://github.com/ranger/ranger)
 - [i3wm](i3wm.org) - Using fork i3-gaps from [airblader/i3](https://github.com/Airblader/i3)
 - [Polybar](https://github.com/jaagr/polybar) - configs uploaded
-- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) Deprecated because I finally managed to config polybar as I like and it. This one is much much lighter and requires no thousand dependencies to compile, though. Still would recomend it for ease-of-use
+- [bumblebee-status](https://github.com/tobi-wan-kenobi/bumblebee-status) Deprecated because I finally managed to config polybar as I like it. This one is much much lighter and requires no thousand dependencies to compile, though. Still would recomend it for ease-of-use
 - [VIM](https://github.com/vim/vim) hic sunt dracones
 - [Zsh/Oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) .zshrc file uses antigen stuff btw. Won't explain how the fuck do you use antigen cuz it's easy AF
 - [Tmux](https://github.com/tmux/tmux/wiki) !DEPRECATED! who needs this with i3 I dunno
