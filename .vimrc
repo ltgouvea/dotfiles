@@ -77,7 +77,7 @@ nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
 nnoremap hg "+y
 nnoremap <space>n :cn<CR>
-nnoremap <space>e :e 
+nnoremap <space>e :e #<CR> 
 nnoremap <space>p :cp<CR>
 nnoremap <space>f :copen<CR>
 nnoremap <space>s :%s/
@@ -201,10 +201,9 @@ nnoremap <leader>h ^
 nnoremap <leader>x :e!<CR>
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
-nnoremap ç ~
+nnoremap ç :
 
-vnoremap ç ~
-vnoremap ; :
+vnoremap ç :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>4 $
@@ -244,7 +243,6 @@ cnoremap sg s///g<C-LEFT><Right><Right>
 cnoremap jk <Right>
 cnoremap kj <Left>
 
-nnoremap ; :
 nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
@@ -399,20 +397,12 @@ function! Snake()
 endfunction
 
 function! EnableSpeedMode()
-	:set nonu
-	:set lz	
-	:set norelativenumber
+	:set nonu lz norelativenumber noruler syntax=disable
 	:AirlineToggle
-	:set noruler
-	:set syntax=disable
 endfunction
 
 function! DisableSpeedMode()
-	:set nu
-	:set nolz	
-	:set relativenumber
+	:set nu nolz relativenumber ruler syntax=enable
 	:AirlineToggle
-	:set ruler
-	:set syntax=enable
 	:e
 endfunction
