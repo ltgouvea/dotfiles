@@ -25,12 +25,14 @@ filetype plugin on
 set nobackup
 set nomore
 set hi=1000
+set updatetime=100
 set fcs=vert:\│,fold:\ 
 set noswapfile
 set smartindent
 set cwh=20
 set cmdheight=3
-set shortmess=at
+set syntax=enable
+set shortmess=atT
 set nu
 set complete-=i
 set laststatus=2
@@ -62,7 +64,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#syntastic#enabled = 0
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_theme='wal'
 let g:syntastic_enable_highlighting = 1
@@ -70,7 +72,7 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nnoremap _a :exec InitArteris()<CR>
+nnoremap _a :exec ToggleAim()<CR>
 nnoremap __ :help 
 nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
@@ -84,8 +86,9 @@ nnoremap <space>s :%s/
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch()<CR>
-nnoremap <leader>0 :exec EnableSpeedMode()<CR>
-nnoremap <leader>= :exec DisableSpeedMode()<CR>
+nnoremap <leader>0 :exec ToggleSpeedMode()<CR>
+nnoremap _a :exec ToggleAim()<CR>
+nnoremap <leader>1 :read ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
 nnoremap <F4> :q<CR>
@@ -102,7 +105,7 @@ nnoremap - <C-x>
 nnoremap <space>d <C-d>
 nnoremap <space>u <C-u>
 nnoremap <leader>/ :noh<CR>
-nnoremap <leader>t :tabe<CR>
+nnoremap <leader>t :%s///g<Left><Left>
 nnoremap <leader>k K
 
 " Selection shortcuts
@@ -169,7 +172,8 @@ onoremap z a<
 onoremap \ i<
 onoremap q i'
 onoremap <space>q i"
-onoremap <leader>c i{
+onoremap c i{
+onoremap <leader>c a{
 onoremap v i[
 onoremap p i(
 onoremap <leader>f F
@@ -202,6 +206,7 @@ nnoremap <leader>x :e!<CR>
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
 nnoremap ç :
+nnoremap ; :
 
 vnoremap ç :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
@@ -248,10 +253,10 @@ nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
-nnoremap <space>t :%s///g<Left><Left>
+nnoremap <space>t :tabe<CR>
 nnoremap <space>wq :wq<CR>
 nnoremap <space>ww <C-w>r
-nnoremap <space>r :so ~/.vimrc<CR>
+nnoremap <space>r :so ~/.vimrc<CR>:e<CR>
 nnoremap <space>o :options<CR>
 
 nnoremap <Left> <C-W><Left>
@@ -380,14 +385,6 @@ function! UpdateBranch()
 	Git merge --no-ff --no-edit -
 endfunction
 
-function! InitArteris()
-	cd ~/HD/var/www/api-arteris/htdocs/
-	NERDTreeToggle
-	tabe
-	cd ~/HD/var/www/sig-arteris/htdocs/
-	NERDTreeToggle
-endfunction
-
 function! Snake()
 	:silent s/\ /_/g
 	:silent s/-/_/g
@@ -396,13 +393,13 @@ function! Snake()
 	:normal guu
 endfunction
 
-function! EnableSpeedMode()
-	:set nonu lz norelativenumber noruler syntax=disable
+function! ToggleSpeedMode()
+	:set nu! lz! relativenumber! ruler! syntax=disable
 	:AirlineToggle
+	:if exists("g:syntax_on") | syntax off | else | syntax enable | endif
+	:e
 endfunction
 
-function! DisableSpeedMode()
-	:set nu nolz relativenumber ruler syntax=enable
-	:AirlineToggle
-	:e
+function! ToggleAim()
+	:set cursorcolumn! cursorline!
 endfunction

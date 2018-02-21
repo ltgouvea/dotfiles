@@ -1,5 +1,5 @@
-URxvt*transparent: true
-URxvt*shading: 20
+/* URxvt*transparent: true */
+/* URxvt*shading: 20 */
 URxvt*scrollBar_right: false
 URxvt*font: xft: Hack:size=11
 URxvt*scrollBar: false
