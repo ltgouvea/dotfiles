@@ -18,6 +18,9 @@ Plug 'tpope/vim-surround'
 Plug 'xsbeats/vim-blade'
 Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
@@ -31,8 +34,9 @@ set noswapfile
 set smartindent
 set cwh=20
 set cmdheight=3
-set syntax=enable
-set shortmess=atT
+syntax enable
+set background=dark
+set shortmess=atTo
 set nu
 set complete-=i
 set laststatus=2
@@ -42,21 +46,18 @@ set display+=lastline
 set relativenumber
 set ic
 set incsearch
-set hlsearch
 set autoread
 set linebreak
 set ruler
 set autochdir
+set ai
 set showcmd
 set wildmenu
 set wildignorecase
-set foldmethod=indent
 set mouse=a
 set timeoutlen=1000 ttimeoutlen=0
 
 colorscheme wal
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none 
 highlight VertSplit cterm=NONE guibg=NONE
 let g:airline_powerline_fonts = 1
 let g:airline_section_error=0
@@ -72,8 +73,12 @@ let mapleader=","
 set signcolumn=yes
 nmap <TAB> gt
 nmap <S-TAB> gT
-nnoremap _a :exec ToggleAim()<CR>
+nnoremap Oa ddkP
+nnoremap Ob ddp
+vnoremap Oa V$d<ESC>kPv
+vnoremap Ob V$dd<ESC>pv
 nnoremap __ :help 
+nnoremap _n :exec ToggleNumbers()<CR>
 nnoremap _w :help <C-r><C-w><CR>
 nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
@@ -226,6 +231,7 @@ vnoremap z a<
 vnoremap <leader>f F
 vnoremap <leader>t T
 
+cnoremap mks mksession! ~/vim.current<CR>
 cnoremap <leader>. w !sudo tee %
 cnoremap kk <C-f>
 cnoremap çç <Esc>
@@ -378,11 +384,8 @@ let @c='OR/branchwyW^zj-ccpa zz '
 let @z='OR/branchwyW^zj--ccpa zz '
 
 function! UpdateBranch() 
-	Git checkout develop
 	Git fetch --all
 	Git pull origin develop
-	Git checkout -
-	Git merge --no-ff --no-edit -
 endfunction
 
 function! Snake()
@@ -402,4 +405,8 @@ endfunction
 
 function! ToggleAim()
 	:set cursorcolumn! cursorline!
+endfunction
+
+function! ToggleNumbers()
+	:set nu! relativenumber!
 endfunction

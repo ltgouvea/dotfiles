@@ -3,6 +3,10 @@
 
 set $mod Mod4
 set $term rxvt-unicode
+
+set $black       #282828
+set $darkblack   #1d2021
+set $transparent #34444444
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
@@ -14,24 +18,6 @@ client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10 #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
-set $black       #282828
-set $darkblack   #1d2021
-set $transparent #00000000
-
 font pango:'Inconsolata for Powerline' 10
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
@@ -304,27 +290,26 @@ bindsym --release Shift+Print exec scrot ~/prints/print_%d_%m_%Y_%T.png
 gaps inner 10
 gaps outer 10
 
-# bar {
-#         font pango:Source Code Pro for Powerline, FontAwesome 13
-#         position top
-#         tray_output none
-#         status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
-#         i3bar_command i3bar -t
+bar {
+        font pango:Source Code Pro for Powerline, FontAwesome 11
+        i3bar_command i3bar -t
+        tray_output none
+        status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 
-#         colors {
-#             statusline         $white
-#             background         $transparent
-#             separator          $transparent
+        colors {
+            statusline         $white
+            background         $transparent
+            separator          $transparent
 
-#             #                          BORDER       BACKGROUND   TEXT
-#             focused_workspace  $transparent $transparent $yellow
-#             inactive_workspace $transparent $transparent $white
-#             active_workspace   $transparent $transparent $darkmagenta
-#             urgent_workspace   $darkred     $darkred     $transparent
-#             binding_mode       $darkred     $darkred     $transparent
-#             }
-#         }
+            #                  BORDER       BACKGROUND   TEXT
+            focused_workspace  $transparent $transparent $bg
+            inactive_workspace $transparent $transparent $fg
+            active_workspace   $transparent $transparent #39FF14
+            urgent_workspace   $darkred     $darkred     $transparent
+            binding_mode       $darkred     $darkred     $transparent
+            }
+        }
 
-exec_always ~/.config/polybar/launch.sh
-exec --no-startup-id compton -fb
+exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
+

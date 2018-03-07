@@ -1,14 +1,13 @@
-/* URxvt*transparent: true */
-/* URxvt*shading: 20 */
-URxvt*scrollBar_right: false
-URxvt*font: xft: Hack:size=11
-URxvt*scrollBar: false
-URxvt*perl-ext-common: default, matcher,keyboard-select, resize-font
-URxvt*url-launcher: /usr/bin/google-chrome
-URxvt*matcher*button: 1
-URxvt*keysym*M-m: perl:keyboard-select:activate
-URxvt*keysym*M-s: perl:keyboard-select:search
-URxvt*keysym*C-j:     resize-font:smaller
-URxvt*keysym*C-k:      resize-font:bigger
-URxvt*keysym*C-equal:     resize-font:reset
-URxvt*keysym*C-minus:  resize-font:show
+URxvt.shading: 5
+URxvt.transparent: false
+URxvt.intensityStyles: true
+URxvt.scrollBar_right: false
+URxvt.font: xft: Source Code Pro for Powerline:size=11
+URxvt.scrollBar: false
+URxvt.perl-ext-common: default, resize-font
+URxvt.url-launcher: /usr/bin/google-chrome
+URxvt.matcher.button: 1
+URxvt.keysym.C-j:     resize-font:smaller
+URxvt.keysym.C-k:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-minus:  resize-font:show

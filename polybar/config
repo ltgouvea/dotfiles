@@ -44,12 +44,12 @@ font-1 = Hack:size=10:antialias=false;2
 font-2 = FontAwesome:size=12;2
 
 modules-left = i3
-modules-center = mpd 
+;modules-center = mpd 
 modules-right = xbacklight memory cpu battery temperature volume date powermenu 
 
 tray-position = right
 tray-padding = 2
-tray-transparent = false
+tray-transparent = true
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
