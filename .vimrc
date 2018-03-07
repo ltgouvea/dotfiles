@@ -1,3 +1,4 @@
+" Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
@@ -24,6 +25,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
+" Basics
 filetype plugin on
 set nobackup
 set nomore
@@ -57,6 +59,7 @@ set wildignorecase
 set mouse=a
 set timeoutlen=1000 ttimeoutlen=0
 
+" Frescurite
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
 let g:airline_powerline_fonts = 1
@@ -71,6 +74,8 @@ let g:airline_theme='wal'
 let g:syntastic_enable_highlighting = 1
 let mapleader=","
 set signcolumn=yes
+
+" Hic sunt dracones
 nmap <TAB> gt
 nmap <S-TAB> gT
 nnoremap Oa ddkP
@@ -374,7 +379,7 @@ if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set encoding=utf-8
 
 " abbreviations
-iab shrug ¯\_\|ツ\|_/¯ 
+iab shrug ¯\_(ツ)_/¯<delete>
 
 " MARCOS kkk
 let @y='OR/branchwyWq'
@@ -397,7 +402,7 @@ function! Snake()
 endfunction
 
 function! ToggleSpeedMode()
-	:set nu! lz! relativenumber! ruler! syntax=disable
+	:set nu! lz! relativenumber! ruler! 
 	:AirlineToggle
 	:if exists("g:syntax_on") | syntax off | else | syntax enable | endif
 	:e
