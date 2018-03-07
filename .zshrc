@@ -14,7 +14,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen theme  agnoster
+antigen theme  robbyrussell
 antigen apply
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
 bindkey -v
