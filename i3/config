@@ -310,6 +310,6 @@ bar {
             }
         }
 
-exec --no-startup-id compton -b
+# exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 

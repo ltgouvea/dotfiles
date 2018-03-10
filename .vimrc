@@ -35,7 +35,7 @@ set fcs=vert:\│,fold:\
 set noswapfile
 set smartindent
 set cwh=20
-set cmdheight=3
+set cmdheight=2
 syntax enable
 set background=dark
 set shortmess=atTo
@@ -258,6 +258,9 @@ cnoremap -- <C-R>=expand("%:p:h")<CR>
 cnoremap sg s///g<C-LEFT><Right><Right>
 cnoremap jk <Right>
 cnoremap kj <Left>
+cnoremap kk <C-f>
+cnoremap kl <End>
+cnoremap jj <Home>
 
 nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
@@ -391,6 +394,11 @@ let @z='OR/branchwyW^zj--ccpa zz '
 function! UpdateBranch() 
 	Git fetch --all
 	Git pull origin develop
+endfunction
+
+function! RemoveSqlQuotes() 
+	:silent %s/^"//
+	:silent %s/"$//
 endfunction
 
 function! Snake()
