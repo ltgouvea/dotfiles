@@ -26,8 +26,9 @@ alias e='exit'
 alias u='apt update;apt upgrade -y;apt autoremove -y'
 alias n='ncmpcpp'
 alias ai='apt install'
-alias mana=sudo service network-manager restart
+alias mana='sudo service network-manager restart'
 source ~/update_gits
 source ~/mailutils
 source ~/dist_free
 source ~/update_dotfiles
+alias lock='i3lock -i ~/login.png'

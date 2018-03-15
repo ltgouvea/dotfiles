@@ -226,6 +226,7 @@ mode "mail" {
 
 mode "system" {
         bindsym s exec systemctl poweroff
+        bindsym l exec i3lock -i ~/login.png
         bindsym r exec systemctl reboot
 
         bindsym Return mode "default"
@@ -285,16 +286,18 @@ bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
-bindsym --release Print exec scrot -s ~/prints/print_%d_%m_%Y_%T.png
-bindsym --release Shift+Print exec scrot ~/prints/print_%d_%m_%Y_%T.png
+bindsym --release Print exec notify-send 'screenshot' 'please select area' && scrot -s ~/prints/print_%d_%m_%Y_%T.png
+bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/prints/' && scrot ~/prints/print_%d_%m_%Y_%T.png
 gaps inner 10
 gaps outer 10
 
 bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 11
+        font pango:Source Code Pro for Powerline, FontAwesome 10
         i3bar_command i3bar -t
+        position top
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m title caffeine cpu sensors memory battery redshift brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
 
         colors {
             statusline         $white

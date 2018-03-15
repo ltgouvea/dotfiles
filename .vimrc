@@ -39,13 +39,13 @@ set cmdheight=2
 syntax enable
 set background=dark
 set shortmess=atTo
-set nu
 set complete-=i
 set laststatus=2
 set scrolloff=3
 set sidescrolloff=5
 set display+=lastline
 set relativenumber
+set nu
 set ic
 set incsearch
 set autoread
@@ -83,9 +83,9 @@ nnoremap Ob ddp
 vnoremap Oa V$d<ESC>kPv
 vnoremap Ob V$dd<ESC>pv
 nnoremap __ :help 
-nnoremap _n :exec ToggleNumbers()<CR>
-nnoremap _w :help <C-r><C-w><CR>
-nnoremap _s :vimgrep /<C-r><C-w>/g **/*<CR>
+nnoremap -n :exec ToggleNumbers()<CR>
+nnoremap -w :help <C-r><C-w><CR>
+nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
 nnoremap hg "+y
 nnoremap <space>n :cn<CR>
