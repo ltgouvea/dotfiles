@@ -31,7 +31,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -location 1 -bw 2 -yoffset -2 -sidebar-mode -show run
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -235,7 +235,6 @@ mode "system" {
 }
 
 mode "music" {
-        # todo: bind media keys
         bindsym k exec amixer -D pulse sset Master 5%+
         bindsym Shift+k exec amixer -D pulse sset Master 15%+
         bindsym Shift+j exec amixer -D pulse sset Master 15%-
@@ -282,22 +281,23 @@ bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
 bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
 bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
 bindsym $mod+r exec $term -e ranger
+bindsym $mod+x exec --no-startup-id ~/dist_free_toggle.sh
 bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym --release Print exec notify-send 'screenshot' 'please select area' && scrot -s ~/prints/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/prints/' && scrot ~/prints/print_%d_%m_%Y_%T.png
-gaps inner 10
-gaps outer 10
+# gaps inner 10
+# gaps outer 10
 
 bar {
-        font pango:Source Code Pro for Powerline, FontAwesome 10
-        i3bar_command i3bar -t
+        font pango:Hack, FontAwesome 14
+        i3bar_command i3bar
         position top
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m title caffeine cpu sensors memory battery redshift brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
-        # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
             statusline         $white
@@ -315,4 +315,5 @@ bar {
 
 # exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
+exec --no-startup-id redshift
 

@@ -23,10 +23,13 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " Basics
 filetype plugin on
+set lcs=eol:~,tab:>-,trail:-
+set backspace=indent,eol,start
 set nobackup
 set nomore
 set hi=1000
@@ -62,6 +65,7 @@ set timeoutlen=1000 ttimeoutlen=0
 " Frescurite
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
+highlight NonText ctermfg=12
 let g:airline_powerline_fonts = 1
 let g:airline_section_error=0
 let g:airline#extensions#tabline#enabled = 1
@@ -84,6 +88,7 @@ vnoremap Oa V$d<ESC>kPv
 vnoremap Ob V$dd<ESC>pv
 nnoremap __ :help 
 nnoremap -n :exec ToggleNumbers()<CR>
+nnoremap -f :exec ToggleFolding()<CR>
 nnoremap -w :help <C-r><C-w><CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
@@ -97,7 +102,7 @@ nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch()<CR>
 nnoremap <leader>0 :exec ToggleSpeedMode()<CR>
-nnoremap _a :exec ToggleAim()<CR>
+nnoremap -a :exec ToggleAim()<CR>
 nnoremap <leader>1 :read ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gst<CR>
@@ -237,6 +242,7 @@ vnoremap <leader>f F
 vnoremap <leader>t T
 
 cnoremap mks mksession! ~/vim.current<CR>
+cnoremap ntr NERDTree<CR>
 cnoremap <leader>. w !sudo tee %
 cnoremap kk <C-f>
 cnoremap çç <Esc>
@@ -291,7 +297,8 @@ inoremap 55 %
 inoremap 44 $
 inoremap 22 @
 inoremap 33 #
-iabbrev 22 @
+iab 22 @
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 inoremap =. =>
 inoremap -. ->
 inoremap ,, <
@@ -306,6 +313,7 @@ inoremap nn <C-n>
 inoremap pp <C-p>
 inoremap yy <C-y>
 inoremap hh <C-x><C-l>
+inoremap vv <C-x><C-v>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
@@ -315,8 +323,8 @@ inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
 nnoremap <C-s> :mksession! ~/vim.current<CR>
-nnoremap <F10> :NERDTreeFind<CR>
-nnoremap <space><F10> :NERDTree<CR>
+nnoremap <F10> :NERDTreeToggle<CR>
+nnoremap <space><F10> :NERDTreeFind<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
 nnoremap <leader>v <C-V>
@@ -422,4 +430,8 @@ endfunction
 
 function! ToggleNumbers()
 	:set nu! relativenumber!
+endfunction
+
+function! ToggleFolding()
+	:if &foldcolumn ==# 0 | set foldcolumn=1 foldmethod=indent | else | set foldcolumn=0 foldmethod=manual | endif
 endfunction
