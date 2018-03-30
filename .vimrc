@@ -60,7 +60,7 @@ set showcmd
 set wildmenu
 set wildignorecase
 set mouse=a
-set timeoutlen=1000 ttimeoutlen=0
+set timeoutlen=700 ttimeoutlen=0
 
 " Frescurite
 colorscheme wal
@@ -93,8 +93,8 @@ nnoremap -w :help <C-r><C-w><CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
 nnoremap hg "+y
-nnoremap <space>n :cn<CR>
 nnoremap <space>e :e #<CR> 
+nnoremap <space>n :cn<CR>
 nnoremap <space>p :cp<CR>
 nnoremap <space>f :copen<CR>
 nnoremap <space>s :%s/
@@ -349,6 +349,7 @@ vnoremap <leader>l <S-v>
 vnoremap vv <C-v>
 vnoremap <space> <esc>
 vnoremap ç <esc>
+vnoremap ; :
 
 let g:user_emmet_leader_key='<C-Z>'
 let NERDTreeMapActivateNode='l'

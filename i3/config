@@ -19,7 +19,7 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 font pango:'Inconsolata for Powerline' 10
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -31,7 +31,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec rofi -location 1 -bw 2 -yoffset -2 -sidebar-mode -show run
+bindsym $mod+d exec rofi -location 7 -bw 2 -yoffset -2 -sidebar-mode -show run
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -161,12 +161,15 @@ mode "wallpapers" {
         bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym Return mode "default"
+        bindsym Space mode "default"
 }
 
 mode "distraction_free" {
-    bindsym d exec "~/dist_free_disable.sh"
-    bindsym e exec  "~/dist_free_enable.sh"
-    bindsym Return mode "default"
+        bindsym d exec "~/dist_free_disable.sh"
+        bindsym e exec  "~/dist_free_enable.sh"
+        bindsym Return mode "default"
+        bindsym Space mode "default"
+        bindsym Escape mode "default"
 }
 
 mode "programs" {
@@ -180,6 +183,8 @@ mode "programs" {
         bindsym w exec playonlinux
         bindsym Shift+p exec postman
         bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape  mode "default"
 }
 
 mode "$mode_gaps" {
@@ -187,6 +192,7 @@ mode "$mode_gaps" {
         bindsym i      mode "$mode_gaps_inner"
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym Space  mode "default"
 }
 
 mode "$mode_gaps_inner" {
@@ -200,6 +206,7 @@ mode "$mode_gaps_inner" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym Space  mode "default"
         bindsym Tab mode "$mode_gaps_outer"
 }
 
@@ -214,6 +221,7 @@ mode "$mode_gaps_outer" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym Space  mode "default"
         bindsym Tab mode "$mode_gaps_inner"
 }
 
@@ -222,6 +230,7 @@ mode "mail" {
         bindsym p exec $term -hold -e mutt -F ~/.muttrc_lucas.thiago
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        bindsym Space  mode "default"
 }
 
 mode "system" {
@@ -245,6 +254,7 @@ mode "music" {
         bindsym x exec mpc toggle
         bindsym p exec mpc toggle
         bindsym c exec mpc stop
+        bindsym s exec mpc stop
         bindsym z exec mpc random
 
         bindsym Return mode "default"
@@ -288,15 +298,14 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym --release Print exec notify-send 'screenshot' 'please select area' && scrot -s ~/prints/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/prints/' && scrot ~/prints/print_%d_%m_%Y_%T.png
-# gaps inner 10
-# gaps outer 10
+gaps inner 4
+gaps outer 2
 
 bar {
-        font pango:Hack, FontAwesome 14
-        i3bar_command i3bar
-        position top
+        font pango:SauceCodePro Nerd Font Mono 14
+        i3bar_command i3bar 
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t greyish-powerline
         # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
@@ -309,11 +318,11 @@ bar {
             inactive_workspace $transparent $transparent $fg
             active_workspace   $transparent $transparent #39FF14
             urgent_workspace   $darkred     $darkred     $transparent
-            binding_mode       $darkred     $darkred     $transparent
+            binding_mode       $darkred     $transparent $fg
             }
         }
 
-# exec --no-startup-id compton -b
+exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 

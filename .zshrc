@@ -6,7 +6,7 @@ export ZSH=/home/k2/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 source ~/scripts/K2.zsh
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="hackersaurus/hackersaurus"
 
 plugins=(
   git
@@ -16,7 +16,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-autoload -U compinit && compinit
 export EDITOR='vim'
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'

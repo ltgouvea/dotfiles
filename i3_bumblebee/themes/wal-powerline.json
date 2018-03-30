@@ -3,6 +3,7 @@
 	"colors": [ "wal" ],
 	"defaults": {
 		"separator-block-width": 0,
+		"separator": "",
 		"critical": {
 			"fg": "cursor",
 			"bg": "color5"

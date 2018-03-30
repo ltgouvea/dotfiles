@@ -149,7 +149,7 @@ Modules and commandline utilities are only required for modules, the core itself
 
 * psutil (for the modules 'cpu', 'memory', 'traffic')
 * netifaces (for the modules 'nic', 'traffic')
-* requests (for the modules 'weather', 'github', 'getcrypto', 'stock')
+* requests (for the modules 'weather', 'github', 'getcrypto', 'stock', 'hipchat', 'currency')
 * power (for the module 'battery')
 * dbus (for the module 'spotify')
 * i3ipc (for the module 'title')
@@ -199,6 +199,10 @@ Solarized (`-t solarized`):
 Powerline (`-t powerline`):
 
 ![Powerline](https://github.com/tobi-wan-kenobi/bumblebee-status/blob/master/screenshots/themes/powerline.png)
+
+Greyish Powerline (`-t powerline-greyish`)
+
+![Greyish Powerline](https://github.com/tobi-wan-kenobi/bumblebee-status/blob/master/screenshots/themes/powerline-greyish.png)
 
 Default (nothing or `-t default`):
 

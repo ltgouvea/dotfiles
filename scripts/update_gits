@@ -5,6 +5,7 @@ update_neofetch() {
 	git fetch --all
 	git pull
 	sudo make install
+	echo
 }
 
 update_ranger() {
@@ -14,6 +15,7 @@ update_ranger() {
 	git fetch --all
 	git pull
 	sudo python3 setup.py install
+	echo
 }
 
 update_pywal() {
@@ -24,6 +26,7 @@ update_pywal() {
 	git pull
 	sudo python3 setup.py install
 	sudo pip3 install pywal --upgrade
+	echo
 }
 
 update_i3() {
@@ -33,6 +36,7 @@ update_i3() {
 	cd build
 	../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers	
 	sudo make install
+	echo
 }
 
 k2_run() {

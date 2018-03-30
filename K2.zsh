@@ -32,3 +32,4 @@ source ~/scripts/mailutils
 source ~/scripts/dist_free
 source ~/scripts/update_dotfiles
 alias lock='i3lock -i ~/login.png'
+alias vcon='v -S ~/config.vimsession'

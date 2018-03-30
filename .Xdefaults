@@ -1,8 +1,5 @@
-URxvt.shading: 5
-URxvt.transparent: false
-URxvt.intensityStyles: true
 URxvt.scrollBar_right: false
-URxvt.font: xft: SauceCodePro Nerd Font Mono:size=13
+URxvt.font: xft: SauceCodePro Nerd Font Mono:size=11
 URxvt.scrollBar: false
 URxvt.perl-ext-common: default, resize-font, matcher, keyboard-select
 URxvt.matcher.button: 1
@@ -11,4 +8,9 @@ URxvt.keysym.C-j:     resize-font:smaller
 URxvt.keysym.C-k:      resize-font:bigger
 URxvt.keysym.C-equal:     resize-font:reset
 URxvt.keysym.C-minus:  resize-font:show
-URxvt.keysym.C-x:  matcher:activate
+URxvt.keysym.C-x:  matcher:select
+URxvt.keysym.M-x:  keyboard-select:activate
+#include "/home/k2/.cache/wal/colors.Xresources"
+URxvt.transparent: true
+URxvt.shading: 15
+URxvt.intensityStyles: true
