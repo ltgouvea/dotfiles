@@ -12,5 +12,6 @@ URxvt.keysym.C-x:  matcher:select
 URxvt.keysym.M-x:  keyboard-select:activate
 #include "/home/k2/.cache/wal/colors.Xresources"
 URxvt.transparent: true
-URxvt.shading: 15
+URxvt.shading: 20
+URxvt.depth: 24
 URxvt.intensityStyles: true

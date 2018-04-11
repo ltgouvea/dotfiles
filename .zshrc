@@ -6,7 +6,7 @@ export ZSH=/home/k2/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 source ~/scripts/K2.zsh
 
-ZSH_THEME="hackersaurus/hackersaurus"
+ZSH_THEME="agnoster"
 
 plugins=(
   git
@@ -19,7 +19,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export EDITOR='vim'
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
-
 
 bindkey -v
 bindkey -M vicmd '?' history-incremental-search-backward

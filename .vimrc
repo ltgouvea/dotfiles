@@ -220,7 +220,6 @@ nnoremap <leader>h ^
 nnoremap <leader>x :e!<CR>
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
-nnoremap ç :
 nnoremap ; :
 
 vnoremap ç :
@@ -241,7 +240,9 @@ vnoremap z a<
 vnoremap <leader>f F
 vnoremap <leader>t T
 
+cnoremap ... cd ../../<CR>
 cnoremap mks mksession! ~/vim.current<CR>
+cnoremap vex Vexplore<CR>
 cnoremap ntr NERDTree<CR>
 cnoremap <leader>. w !sudo tee %
 cnoremap kk <C-f>
@@ -271,11 +272,12 @@ cnoremap jj <Home>
 nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
+nnoremap <c-h> :Hexplore<CR>
+nnoremap <c-t> :Texplore<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
 nnoremap <space>t :tabe<CR>
-nnoremap <space>wq :wq<CR>
-nnoremap <space>ww <C-w>r
+nnoremap <space>w <C-w>
 nnoremap <space>r :so ~/.vimrc<CR>:e<CR>
 nnoremap <space>o :options<CR>
 
@@ -284,6 +286,7 @@ nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
+inoremap xx <C-x>
 inoremap <F1> <C-o>
 inoremap d <ESC>dwi
 inoremap <F5> <ESC>:w<CR>i

@@ -51,7 +51,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
-bindsym $mod+Shift+f exec google-chrome
+bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+p exec pgadmin3
 bindsym $mod+Shift+t exec qbittorrent
 
@@ -86,13 +86,13 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
-set $ws1  " "
+set $ws1  " "
 set $ws2  " "
 set $ws3  " "
 set $ws4  " "
 set $ws5  ""
 set $ws6  " "
-set $ws7  " "
+set $ws7  " "
 set $ws8  ""
 set $ws9  " "
 set $ws10  " "
@@ -110,6 +110,7 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 assign [class="(?i)google-chrome"]        $ws1
+assign [class="(?i)firefox"]              $ws1
 assign [title="(?i)rxvt-unicode"]         $ws2
 assign [class="(?i)torrent"]              $ws3
 assign [title="(?i)steam"]                $ws4
@@ -154,12 +155,13 @@ set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
 
 mode "wallpapers" {
-        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
+        bindsym r exec "wpp=$(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1);feh --bg-scale $wpp;cp $wpp ~/wallpaper.png;"
         bindsym Return mode "default"
         bindsym Space mode "default"
 }
@@ -256,6 +258,7 @@ mode "music" {
         bindsym c exec mpc stop
         bindsym s exec mpc stop
         bindsym z exec mpc random
+        bindsym n exec --no-startup-id ~/.mpcstatus
 
         bindsym Return mode "default"
         bindsym Space  mode "default"
@@ -302,14 +305,14 @@ gaps inner 4
 gaps outer 2
 
 bar {
-        font pango:SauceCodePro Nerd Font Mono 14
-        i3bar_command i3bar 
+        font pango:SauceCodePro Nerd Font Mono 11
+        i3bar_command i3bar -t
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t greyish-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p title.max='25' title.scroll='true' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
         # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
-            statusline         $white
+            statusline         $transparent
             background         $transparent
             separator          $transparent
 
@@ -325,4 +328,5 @@ bar {
 exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
 exec --no-startup-id redshift
+exec --no-startup-id feh --bg-scale ~/wallpaper.png
 
