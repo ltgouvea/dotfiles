@@ -19,9 +19,6 @@ Plug 'tpope/vim-surround'
 Plug 'xsbeats/vim-blade'
 Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'flazz/vim-colorschemes'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -32,6 +29,7 @@ set lcs=eol:~,tab:>-,trail:-
 set backspace=indent,eol,start
 set nobackup
 set nomore
+set nowrap
 set hi=1000
 set updatetime=100
 set fcs=vert:\│,fold:\ 
@@ -79,6 +77,10 @@ let g:syntastic_enable_highlighting = 1
 let mapleader=","
 set signcolumn=yes
 
+"
+let g:multi_cursor_select_all_word_key = '<C-a>'
+let g:multi_cursor_skip_key            = '<C-d>'
+
 " Hic sunt dracones
 nmap <TAB> gt
 nmap <S-TAB> gT
@@ -119,7 +121,7 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 nnoremap <space>d <C-d>
 nnoremap <space>u <C-u>
-nnoremap <leader>/ :noh<CR>
+nnoremap <leader>/ :set hlsearch!<CR>
 nnoremap <leader>t :%s///g<Left><Left>
 nnoremap <leader>k K
 
@@ -325,7 +327,7 @@ inoremap { {}<Left>
 inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
-nnoremap <C-s> :mksession! ~/vim.current<CR>
+nnoremap <C-e> :mksession! ~/vim.current<CR>
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <space><F10> :NERDTreeFind<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>

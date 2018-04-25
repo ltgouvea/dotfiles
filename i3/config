@@ -86,8 +86,8 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
-set $ws1  " "
-set $ws2  " "
+set $ws1  " "
+set $ws2  " "
 set $ws3  " "
 set $ws4  " "
 set $ws5  ""
@@ -109,9 +109,9 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
-assign [class="(?i)google-chrome"]        $ws1
-assign [class="(?i)firefox"]              $ws1
-assign [title="(?i)rxvt-unicode"]         $ws2
+assign [class="(?i)google-chrome"]        $ws2
+assign [class="(?i)firefox"]              $ws2
+assign [title="(?i)rxvt-unicode"]         $ws1
 assign [class="(?i)torrent"]              $ws3
 assign [title="(?i)steam"]                $ws4
 assign [title="(?i)ranger"]               $ws5
@@ -274,15 +274,15 @@ mode "brightness" {
 }
 
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym h resize grow left 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym l resize grow right 10 px or 10 ppt
 
-        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Left resize grow left 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Right resize grow right 10 px or 10 ppt
 
         bindsym Return mode "default"
         bindsym Space  mode "default"
@@ -305,28 +305,28 @@ gaps inner 4
 gaps outer 2
 
 bar {
-        font pango:SauceCodePro Nerd Font Mono 11
         i3bar_command i3bar -t
+        font pango:SauceCodePro Nerd Font Mono 13
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m title caffeine sensors memory battery brightness pasink datetime -p title.max='25' title.scroll='true' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command ~/bumblebee-status/bumblebee-status -m title sensors memory battery brightness pasink datetime -p title.max='25' title.scroll='true' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
         # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
-            statusline         $transparent
-            background         $transparent
+            statusline         #000000cc
+            background         #263238cc
             separator          $transparent
 
             #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  $transparent $transparent $bg
-            inactive_workspace $transparent $transparent $fg
-            active_workspace   $transparent $transparent #39FF14
+            focused_workspace  #263238cc #263238cc $bg
+            inactive_workspace #263238cc #263238cc $fg
+            active_workspace   #263238cc #263238cc #39FF14
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $transparent $fg
             }
         }
 
-exec --no-startup-id compton -b
 exec --no-startup-id nm-applet
+exec --no-startup-id compton -bf
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/wallpaper.png
 

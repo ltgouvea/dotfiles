@@ -1,12 +1,12 @@
 export TERM="xterm-256color"
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/scripts:$PATH
 
 set -s escape-time 1
 export ZSH=/home/k2/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 source ~/scripts/K2.zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="hyperzsh"
 
 plugins=(
   git

@@ -23,13 +23,15 @@ alias r='ranger'
 alias wr='wal -R'
 alias m='mutt'
 alias e='exit'
-alias u='apt update;apt upgrade -y;apt autoremove -y'
+alias u='update_gits;apt update;apt upgrade -y;apt autoremove -y'
 alias n='ncmpcpp'
 alias ai='apt install'
 alias mana='sudo service network-manager restart'
-source ~/scripts/update_gits
-source ~/scripts/mailutils
-source ~/scripts/dist_free
-source ~/scripts/update_dotfiles
+# source ~/scripts/update_gits
+# source ~/scripts/mailutils
+# source ~/scripts/dist_free
+# source ~/scripts/update_dotfiles
+alias social='mailutils soc'
+alias profess='mailutils pro'
 alias lock='i3lock -i ~/login.png'
 alias vcon='v -S ~/config.vimsession'

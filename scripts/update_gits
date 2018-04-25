@@ -45,3 +45,5 @@ k2_run() {
 	update_pywal
 	update_i3
 }
+
+k2_run

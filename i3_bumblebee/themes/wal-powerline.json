@@ -15,27 +15,27 @@
 	},
 	"cycle": [
 		{
-			"fg": "foreground",
-			"bg": "background"
+			"fg": "#dcdcccdd",
+			"bg": "#3f3f3fdd"
 		},
 		{
-			"fg": "background",
-			"bg": "foreground"
+			"fg": "#3f3f3fdd",
+			"bg": "#dcdcccdd"
 		}
 	],
 	"dnf": {
 		"good": {
-			"fg": "background",
+			"fg": "#3f3f3fdd",
 			"bg": "color3"
 		}
 	},
 	"battery": {
 		"charged": {
-			"fg": "background",
+			"fg": "#3f3f3fdd",
 			"bg": "color3"
 		},
 		"AC": {
-			"fg": "background",
+			"fg": "#3f3f3fdd",
 			"bg": "color3"
 		}
 	}
