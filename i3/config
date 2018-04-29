@@ -26,7 +26,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $term 
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+q kill
@@ -250,7 +250,7 @@ mode "music" {
         bindsym Shift+k exec amixer -D pulse sset Master 15%+
         bindsym Shift+j exec amixer -D pulse sset Master 15%-
         bindsym j exec amixer -D pulse sset Master 5%-
-        
+
         bindsym l exec mpc next
         bindsym h exec mpc prev
         bindsym x exec mpc toggle

@@ -1,5 +1,6 @@
 export TERM="xterm-256color"
 export PATH=~/bin:~/scripts:$PATH
+export PATH=~/.npm-global/bin:$PATH
 
 set -s escape-time 1
 export ZSH=/home/k2/.oh-my-zsh

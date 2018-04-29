@@ -21,6 +21,8 @@ Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
+Plug 'eslint/eslint'
+Plug 'palantir/tslint'
 call plug#end()
 
 " Basics
@@ -63,14 +65,15 @@ set timeoutlen=700 ttimeoutlen=0
 " Frescurite
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
-highlight NonText ctermfg=12
+highlight NonText ctermfg=magenta
 let g:airline_powerline_fonts = 1
+let g:syntastic_typescript_checkers = ['tslint']
 let g:airline_section_error=0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline_theme='wal'
 let g:syntastic_enable_highlighting = 1
@@ -95,7 +98,7 @@ nnoremap -w :help <C-r><C-w><CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap gh "+p
 nnoremap hg "+y
-nnoremap <space>e :e #<CR> 
+nnoremap <space>e :e #<CR>
 nnoremap <space>n :cn<CR>
 nnoremap <space>p :cp<CR>
 nnoremap <space>f :copen<CR>
@@ -185,7 +188,7 @@ nnoremap zx ZQ
 
 " - operator pending maps
 onoremap x iW
-onoremap z a<
+onoremap z aW
 onoremap \ i<
 onoremap q i'
 onoremap <space>q i"
@@ -228,6 +231,7 @@ vnoremap ç :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
 vnoremap <leader>4 $
+vnoremap s :s//<Left>
 vnoremap <leader>q ap
 vnoremap <leader>p i(
 vnoremap <leader><leader>p a(
@@ -405,12 +409,12 @@ let @g='@y;Git push origin pp'
 let @c='OR/branchwyW^zj-ccpa zz '
 let @z='OR/branchwyW^zj--ccpa zz '
 
-function! UpdateBranch() 
+function! UpdateBranch()
 	Git fetch --all
 	Git pull origin develop
 endfunction
 
-function! RemoveSqlQuotes() 
+function! RemoveSqlQuotes()
 	:silent %s/^"//
 	:silent %s/"$//
 endfunction
@@ -424,7 +428,7 @@ function! Snake()
 endfunction
 
 function! ToggleSpeedMode()
-	:set nu! lz! relativenumber! ruler! 
+	:set nu! lz! relativenumber! ruler!
 	:AirlineToggle
 	:if exists("g:syntax_on") | syntax off | else | syntax enable | endif
 	:e
