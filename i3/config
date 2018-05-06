@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 set $mod Mod4
-set $term rxvt-unicode
+set $term termite
 
 set $black       #282828
 set $darkblack   #1d2021
@@ -301,25 +301,25 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 bindsym --release Print exec notify-send 'screenshot' 'please select area' && scrot -s ~/prints/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/prints/' && scrot ~/prints/print_%d_%m_%Y_%T.png
-gaps inner 4
-gaps outer 2
+gaps inner 5
+gaps outer 5
 
 bar {
         i3bar_command i3bar -t
-        font pango:SauceCodePro Nerd Font Mono 13
+        font pango:SauceCodePro Nerd Font Mono 11
         tray_output none
         status_command ~/bumblebee-status/bumblebee-status -m title sensors memory battery brightness pasink datetime -p title.max='25' title.scroll='true' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
         # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
             statusline         #000000cc
-            background         #263238cc
+            background         #151515cc
             separator          $transparent
 
             #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  #263238cc #263238cc $bg
-            inactive_workspace #263238cc #263238cc $fg
-            active_workspace   #263238cc #263238cc #39FF14
+            focused_workspace  #151515cc #151515cc $bg
+            inactive_workspace #151515cc #151515cc $fg
+            active_workspace   #151515cc #151515cc #39FF14
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $transparent $fg
             }

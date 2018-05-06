@@ -44,10 +44,15 @@ function zle-keymap-select() {
 zle -N zle-keymap-select
 
 function vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/[% JEDI]%}/(main|viins)/[% INSERT]%}"
+  echo "${${KEYMAP/vicmd/[% --VIM--]%}/(main|viins|normal)/[% --INSERT--]%}"
 }
 
-RPS1='$(vi_mode_prompt_info)'
+function jobscount() {
+  running=$(jobs -p | wc -l)
+  ((running)) && echo -n ""
+}
+
+RPS1='$(jobscount) $(vi_mode_prompt_info)'
 RPS2=$RPS1
 source "$HOME/devops/devops"
 

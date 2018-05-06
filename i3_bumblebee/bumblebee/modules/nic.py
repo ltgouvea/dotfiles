@@ -5,10 +5,12 @@
 Parameters:
     * nic.exclude: Comma-separated list of interface prefixes to exclude (defaults to "lo,virbr,docker,vboxnet,veth")
     * nic.states: Comma-separated list of states to show (prefix with "^" to invert - i.e. ^down -> show all devices that are not in state down)
+    * nic.format: Format string (defaults to "{intf} {state} {ip} {ssid}")
 """
 
 try:
     import netifaces
+    import subprocess
 except ImportError:
     pass
 
@@ -31,7 +33,7 @@ class Module(bumblebee.engine.Module):
                 self._states["exclude"].append(state[1:])
             else:
                 self._states["include"].append(state)
-
+        self._format = self.parameter("format","{intf} {state} {ip} {ssid}");
         self._update_widgets(widgets)
 
     def update(self, widgets):
@@ -70,7 +72,7 @@ class Module(bumblebee.engine.Module):
         except Exception:
             return []
         return retval
-
+    
     def _update_widgets(self, widgets):
         interfaces = [i for i in netifaces.interfaces() if not i.startswith(self._exclude)]
 
@@ -86,12 +88,13 @@ class Module(bumblebee.engine.Module):
 
             if len(self._states["exclude"]) > 0 and state in self._states["exclude"]: continue
             if len(self._states["include"]) > 0 and state not in self._states["include"]: continue
-
+            
             widget = self.widget(intf)
             if not widget:
                 widget = bumblebee.output.Widget(name=intf)
                 widgets.append(widget)
-            widget.full_text("{} {} {}".format(intf, state, ", ".join(addr)))
+            # join/split is used to get rid of multiple whitespaces (in case SSID is not available, for instance
+            widget.full_text(" ".join(self._format.format(ip=", ".join(addr),intf=intf,state=state,ssid=self.get_ssid(intf)).split()))
             widget.set("intf", intf)
             widget.set("state", state)
             widget.set("visited", True)
@@ -99,5 +102,13 @@ class Module(bumblebee.engine.Module):
         for widget in widgets:
             if widget.get("visited") == False:
                 widgets.remove(widget)
+    
+    def get_ssid(self, intf):
+        if self._iswlan(intf):
+            try:
+                return subprocess.check_output(["iwgetid","-r",intf]).strip().decode('utf-8')
+            except:
+                return ""
+        return ""
 
 # vim: tabstop=8 expandtab shiftwidth=4 softtabstop=4

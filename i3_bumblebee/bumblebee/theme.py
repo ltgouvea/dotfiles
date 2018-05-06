@@ -6,7 +6,6 @@ import os
 import glob
 import copy
 import json
-import yaml
 import io
 import re
 import logging
@@ -39,12 +38,13 @@ def themes():
 
 class Theme(object):
     """Represents a collection of icons and colors"""
-    def __init__(self, name):
+    def __init__(self, name, iconset="auto"):
         self._widget = None
         self._cycle_idx = 0
         self._cycle = {}
         self._prevbg = None
         self._colorset = {}
+        self._iconset = iconset
 
         self.load_symbols()
 
@@ -78,8 +78,11 @@ class Theme(object):
     def _init(self, data):
         """Initialize theme from data structure"""
         self._theme = data
-        for iconset in data.get("icons", []):
-            self._merge(data, self._load_icons(iconset))
+        if self._iconset != "auto":
+            self._merge(data, self._load_icons(self._iconset))
+        else:
+            for iconset in data.get("icons", []):
+                self._merge(data, self._load_icons(iconset))
         for colorset in data.get("colors", []):
             self._merge(self._colorset, self._load_colors(colorset))
         self._defaults = data.get("defaults", {})

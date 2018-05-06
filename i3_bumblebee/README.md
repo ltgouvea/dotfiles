@@ -7,6 +7,8 @@
 
 **Many, many thanks to all contributors! As of now, 26 of the modules are from various contributors (!), and only 16 from myself.**
 
+![Solarized Powerline](https://github.com/tobi-wan-kenobi/bumblebee-status/blob/master/screenshots/themes/powerline-solarized.png)
+
 bumblebee-status is a modular, theme-able status line generator for the [i3 window manager](https://i3wm.org/).
 
 Focus is on:
@@ -23,6 +25,8 @@ Thanks a lot!
 Required i3wm version: 4.12+ (in earlier versions, blocks won't have background colors)
 
 Supported Python versions: 2.7, 3.3, 3.4, 3.5, 3.6
+
+Supported FontAwesome version: 4 (free version of 5 doesn't include some of the icons)
 
 Explicitly unsupported Python versions: 3.2 (missing unicode literals)
 
@@ -41,6 +45,10 @@ Other resources:
 ```
 $ git clone git://github.com/tobi-wan-kenobi/bumblebee-status
 ```
+
+# Dependencies
+[Available modules](https://github.com/tobi-wan-kenobi/bumblebee-status/wiki/Available-Modules) lists the dependencies (Python modules and external executables)
+for each module. If you are not using a module, you don't need the dependencies.
 
 # Usage
 ## Normal usage
@@ -180,7 +188,7 @@ Here are some screenshots for all themes that currently exist:
 
 :exclamation: Some themes (all 'Powerline' themes) require [Font Awesome](http://fontawesome.io/) and a powerline-compatible font ([powerline-fonts](https://github.com/powerline/fonts), for example) to display all icons correctly.
 
-Gruvbox Powerline (`-t gruvbox-powerline`) (contributed by [@paxy97](https://github.com/paxy97)):
+Gruvbox Powerline (`-t gruvbox-powerline`) (contributed by [@TheEdgeOfRage](https://github.com/TheEdgeOfRage)):
 
 ![Gruvbox Powerline](https://github.com/tobi-wan-kenobi/bumblebee-status/blob/master/screenshots/themes/powerline-gruvbox.png)
 

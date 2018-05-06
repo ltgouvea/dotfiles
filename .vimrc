@@ -87,10 +87,6 @@ let g:multi_cursor_skip_key            = '<C-d>'
 " Hic sunt dracones
 nmap <TAB> gt
 nmap <S-TAB> gT
-nnoremap Oa ddkP
-nnoremap Ob ddp
-vnoremap Oa V$d<ESC>kPv
-vnoremap Ob V$dd<ESC>pv
 nnoremap __ :help 
 nnoremap -n :exec ToggleNumbers()<CR>
 nnoremap -f :exec ToggleFolding()<CR>
@@ -128,62 +124,10 @@ nnoremap <leader>/ :set hlsearch!<CR>
 nnoremap <leader>t :%s///g<Left><Left>
 nnoremap <leader>k K
 
-" Selection shortcuts
-" - inside motions
-nnoremap <leader>ic vi{
-nnoremap <leader>ip vi(
-nnoremap <leader>iv vi[
-nnoremap <leader>it vit
-
-" - around motions
-nnoremap <space>aa ggvG
-nnoremap <space>ac va{
-nnoremap <space>ap va(
-nnoremap <space>av va[
-nnoremap <space>at vat
-
-" Deletion shortcuts
-" - inside motions
-nnoremap <leader>dc di{
-nnoremap <leader>dp di(
-nnoremap <leader>dv di[
-nnoremap <leader>dt dit
-"
-" - around motions
-nnoremap <leader>dcc da{
-nnoremap <leader>dpp da(
-nnoremap <leader>dvv da[
-nnoremap <leader>dtt dat
-
-" Paste shortcuts
-" - inside motions
 nnoremap yp Yp
-nnoremap <leader>yc yi{
-nnoremap <leader>yp yi(
-nnoremap <leader>yv yi[
-nnoremap <leader>yt yit
-
-" - around motions
-nnoremap <leader>ycc ya{
-nnoremap <leader>ypp ya(
-nnoremap <leader>yvv ya[
-nnoremap <leader>ytt yat
-
-" Indentation shortcuts
-" - inside motions
-nnoremap <leader>fc =i{
-nnoremap <leader>fp =i(
-nnoremap <leader>fv =i[
-nnoremap <leader>ft =it
-
-" - around motions
-nnoremap <leader>fcc =a{
-nnoremap <leader>fpp =a(
-nnoremap <leader>fvv =a[
-nnoremap <leader>ftt =at
+nnoremap dp ddkP
 
 " - lazy maps
-nnoremap <leader>8 *
 nnoremap zx ZQ
 
 " - operator pending maps
@@ -226,6 +170,7 @@ nnoremap <leader>x :e!<CR>
 nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
 nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
 nnoremap ; :
+nnoremap : ;
 
 vnoremap ç :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
@@ -249,7 +194,6 @@ vnoremap <leader>t T
 cnoremap ... cd ../../<CR>
 cnoremap mks mksession! ~/vim.current<CR>
 cnoremap vex Vexplore<CR>
-cnoremap ntr NERDTree<CR>
 cnoremap <leader>. w !sudo tee %
 cnoremap kk <C-f>
 cnoremap çç <Esc>
