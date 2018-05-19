@@ -4,12 +4,25 @@
 set $mod Mod4
 set $term termite
 
-set $black       #282828
-set $darkblack   #1d2021
-set $transparent #34444444
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color2 #f0f0f0
 
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $darkwhite   color7  #000000
+set_from_resource $white       color15 #000000
+# Use custom colors for black
+set $black       #282828
+set $darkblack   #1d2021DD
+set $transparent #00000000
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
@@ -112,6 +125,7 @@ bindsym $mod+0 workspace $ws10
 assign [class="(?i)google-chrome"]        $ws2
 assign [class="(?i)firefox"]              $ws2
 assign [title="(?i)rxvt-unicode"]         $ws1
+assign [title="(?i)termite"]              $ws1
 assign [class="(?i)torrent"]              $ws3
 assign [title="(?i)steam"]                $ws4
 assign [title="(?i)ranger"]               $ws5
@@ -274,7 +288,7 @@ mode "brightness" {
 }
 
 mode "resize" {
-        bindsym h resize grow left 10 px or 10 ppt
+        bindsym h resize shrink right 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow right 10 px or 10 ppt
@@ -306,26 +320,28 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar -t
-        font pango:SauceCodePro Nerd Font Mono 11
+        font pango:SauceCodePro Nerd Font Mono 13
+        tray_padding 0
         tray_output none
-        status_command ~/bumblebee-status/bumblebee-status -m title sensors memory battery brightness pasink datetime -p title.max='25' title.scroll='true' brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t wal-powerline
+        status_command i3blocks
         # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
-            statusline         #000000cc
-            background         #151515cc
+            statusline         $white
+            background         $darkblack
             separator          $transparent
 
-            #                  BORDER       BACKGROUND   TEXT
-            focused_workspace  #151515cc #151515cc $bg
-            inactive_workspace #151515cc #151515cc $fg
-            active_workspace   #151515cc #151515cc #39FF14
+            #                          BORDER       BACKGROUND   TEXT
+            focused_workspace  $darkblack $darkblack $darkwhite
+            inactive_workspace $darkblack $darkblack $white
+            active_workspace   $transparent $transparent $white
             urgent_workspace   $darkred     $darkred     $transparent
-            binding_mode       $darkred     $transparent $fg
+            binding_mode       $darkred     $darkred     $transparent
             }
         }
 
 exec --no-startup-id nm-applet
+exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bf
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/wallpaper.png

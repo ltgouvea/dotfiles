@@ -270,7 +270,7 @@ inoremap vv <C-x><C-v>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
-inoremap ( ()<Left>
+inoremap 99 ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>
 inoremap ' ''<left>

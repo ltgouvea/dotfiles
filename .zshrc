@@ -7,7 +7,7 @@ export ZSH=/home/k2/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 source ~/scripts/K2.zsh
 
-ZSH_THEME="hyperzsh"
+ZSH_THEME="half-life"
 
 plugins=(
   git
@@ -47,13 +47,8 @@ function vi_mode_prompt_info() {
   echo "${${KEYMAP/vicmd/[% --VIM--]%}/(main|viins|normal)/[% --INSERT--]%}"
 }
 
-function jobscount() {
-  running=$(jobs -p | wc -l)
-  ((running)) && echo -n ""
-}
-
-RPS1='$(jobscount) $(vi_mode_prompt_info)'
+RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
-source "$HOME/devops/devops"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+(cat ~/.cache/wal/sequences &)
