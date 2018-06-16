@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 set $mod Mod4
-set $term termite
+set $term rxvt-unicode
 
-
+set $bg          #1e161f77
+# set_from_resource $bg          color0  #000000
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
 set_from_resource $darkgreen   color2  #000000
@@ -21,8 +22,9 @@ set_from_resource $darkwhite   color7  #000000
 set_from_resource $white       color15 #000000
 # Use custom colors for black
 set $black       #282828
-set $darkblack   #1d2021DD
-set $transparent #00000000
+set $darkblack   #1d2021EE
+# set $transparent #00000000
+set $transparent #1d2021EE
 # class                 border  backgr. text indicator child_border
 client.focused          $bg     $bg     $fg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
@@ -102,12 +104,12 @@ bindsym $mod+Shift+a focus child
 set $ws1  " "
 set $ws2  " "
 set $ws3  " "
-set $ws4  " "
+set $ws4  " "
 set $ws5  ""
 set $ws6  " "
 set $ws7  " "
 set $ws8  ""
-set $ws9  " "
+set $ws9  " "
 set $ws10  " "
 
 # switch to workspace
@@ -128,6 +130,8 @@ assign [title="(?i)rxvt-unicode"]         $ws1
 assign [title="(?i)termite"]              $ws1
 assign [class="(?i)torrent"]              $ws3
 assign [title="(?i)steam"]                $ws4
+assign [title="(?i)otclient"]             $ws4
+assign [title="(?i)tibia"]                $ws10
 assign [title="(?i)ranger"]               $ws5
 assign [class="(?i)pgadmin"]              $ws6
 assign [title="(?i)ncmpcpp"]              $ws7
@@ -157,11 +161,10 @@ bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
 bindsym $mod+s mode "system"
 bindsym $mod+w mode "wallpapers"
-bindsym $mod+m mode "mail"
+bindsym $mod+m mode "music"
 bindsym $mod+p mode "programs"
 bindsym $mod+Shift+d mode "distraction_free"
-bindsym $mod+Shift+m mode "music"
-bindsym $mod+Shift+b mode "brightness"
+bindsym $mod+b mode "brightness"
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -175,7 +178,7 @@ mode "wallpapers" {
         bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
         bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym r exec "wpp=$(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1);feh --bg-scale $wpp;cp $wpp ~/wallpaper.png;"
+        bindsym r exec "wpp=$(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1);feh --bg-scale $wpp;cp $wpp ~/wallpaper.png;cp $wpp /usr/share/slim/themes/default/background.jpg"
         bindsym Return mode "default"
         bindsym Space mode "default"
 }
@@ -241,14 +244,6 @@ mode "$mode_gaps_outer" {
         bindsym Tab mode "$mode_gaps_inner"
 }
 
-mode "mail" {
-        bindsym s exec $term -hold -e mutt -F ~/.muttrc_lucas.fim
-        bindsym p exec $term -hold -e mutt -F ~/.muttrc_lucas.thiago
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym Space  mode "default"
-}
-
 mode "system" {
         bindsym s exec systemctl poweroff
         bindsym l exec i3lock -i ~/login.png
@@ -308,6 +303,7 @@ bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
 bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
 bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
 bindsym $mod+r exec $term -e ranger
+bindsym $mod+c exec $term -e vim ~/config/i3/config
 bindsym $mod+x exec --no-startup-id ~/dist_free_toggle.sh
 bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
@@ -320,20 +316,20 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar -t
-        font pango:SauceCodePro Nerd Font Mono 13
+        font pango:FuraCode Nerd Font Mono 13
+        # position top
         tray_padding 0
         tray_output none
         status_command i3blocks
-        # status_command ~/bumblebee-status/bumblebee-status -m xrandr caffeine cpu sensors memory battery brightness pasink datetime -p brightness.wheel-up='light -A 5' brightness.wheel-down='light -U 5' datetime.format='%d/%m | %H:%M' memory.format='{used}' -t gruvbox-powerline
 
         colors {
             statusline         $white
-            background         $darkblack
-            separator          $transparent
+            background         $bg
+            separator          $bg
 
             #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $darkblack $darkblack $darkwhite
-            inactive_workspace $darkblack $darkblack $white
+            focused_workspace  $bg $bg $red
+            inactive_workspace $bg $bg $white
             active_workspace   $transparent $transparent $white
             urgent_workspace   $darkred     $darkred     $transparent
             binding_mode       $darkred     $darkred     $transparent
@@ -345,4 +341,3 @@ exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bf
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/wallpaper.png
-
