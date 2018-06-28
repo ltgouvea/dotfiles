@@ -31,6 +31,7 @@ set lcs=eol:~,tab:>-,trail:-
 set backspace=indent,eol,start
 set nobackup
 set nomore
+set nocompatible
 set nowrap
 set hi=1000
 set updatetime=100
@@ -38,7 +39,7 @@ set fcs=vert:\│,fold:\
 set noswapfile
 set smartindent
 set cwh=20
-set cmdheight=2
+set cmdheight=1
 syntax enable
 set background=dark
 set shortmess=atTo
@@ -194,7 +195,7 @@ vnoremap <leader>t T
 cnoremap ... cd ../../<CR>
 cnoremap mks mksession! ~/vim.current<CR>
 cnoremap vex Vexplore<CR>
-cnoremap <leader>. w !sudo tee %
+cnoremap <leader>. w !sudo tee %<CR>
 cnoremap kk <C-f>
 cnoremap çç <Esc>
 cnoremap 11 !
@@ -350,9 +351,8 @@ iab shrug ¯\_(ツ)_/¯<delete>
 let @y='OR/branchwyWq'
 let @p='@y;Git pull origin pp'
 let @g='@y;Git push origin pp'
-let @c='OR/branchwyW^zj-ccpa zz '
-let @z='OR/branchwyW^zj--ccpa zz '
-
+let @c='@y�k3zj-ccpa | '
+let @z='@y�k3zj-zj-ccpa | '
 function! UpdateBranch()
 	Git fetch --all
 	Git pull origin develop

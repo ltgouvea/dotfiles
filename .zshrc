@@ -7,7 +7,7 @@ export ZSH=/home/k2/.oh-my-zsh
 export UPDATE_ZSH_DAYS=7
 source ~/scripts/K2.zsh
 
-ZSH_THEME="half-life"
+ZSH_THEME="robbyrussell"
 
 plugins=(
   git
@@ -35,6 +35,7 @@ bindkey -M vicmd "j" down-line-or-beginning-search
 bindkey -M vicmd 'jk' vi-insert
 bindkey 'jk' autosuggest-accept
 bindkey 'ç' autosuggest-execute
+bindkey '^ ' autosuggest-clear
 
 function zle-keymap-select() {
   zle reset-prompt
@@ -51,4 +52,8 @@ RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
+alias bia='cd /var/www/projeto_bia'
+alias torrents='~/HD/Torr'
+alias tv='xrandr --output HDMI-1 --auto --same-as eDP-1'
+alias restore_resolution='xrandr -s 1366x768'

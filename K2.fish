@@ -3,10 +3,6 @@ alias c="clear"
 alias top='glances'
 alias pega="sudo aptitude install -y"
 alias larga="sudo apt-get remove"
-alias arstart='sig-arteris;gfa;ggpull;dcu -d;api-arteris;gfa;ggpull;dcu -d;v'
-alias arstop='sig-arteris;dcd;api-arteris;dcd;'
-alias zshconf='subl ~/.zshrc'
-alias soma_on='cd /etc/openvpn/client && sudo openvpn --config Firewall-udp-1194.ovpn'
 alias dit='docker exec -it'
 alias d='docker-compose exec workspace'
 alias dps='docker ps'
@@ -15,10 +11,10 @@ alias dcd='docker-compose down'
 alias vimrc='vim ~/.vimrc'
 alias ssn='sudo shutdown now'
 alias ticsol='cd /var/www/tic-sms/'
-alias ticup='cd /var/www/tic-sms/ && docker-compose up -d workspace postgres pgadmin php-fpm nginx'
+alias ticup='cd /var/www/tic-sms/ ; and  docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 alias cmatrix='cmatrix -bs'
-alias -g gp='| grep -i'
 alias v='vim'
+alias l='ls -lah'
 alias r='ranger'
 alias wr='wal -R'
 alias m='mutt'
@@ -27,12 +23,15 @@ alias u='update_gits;apt update;apt upgrade -y;apt autoremove -y'
 alias n='ncmpcpp'
 alias ai='apt install'
 alias mana='sudo service network-manager restart'
-# source ~/scripts/update_gits
-# source ~/scripts/mailutils
-# source ~/scripts/dist_free
-# source ~/scripts/update_dotfiles
 alias social='mailutils soc'
-alias profess='mailutils pro'
 alias lock='i3lock -i ~/login.png'
-alias vcon='v -S ~/config.vimsession'
-alias swclean='sudo ls && htop & ; sudo swapoff -a && sudo swapon -a'
+alias swclean='sudo ls ; and  htop ; and ; sudo swapoff -a ; and  sudo swapon -a'
+function current_branch
+  set branch (git status | grep branch | sed 's/^.*branch.//')
+  echo $branch 
+end
+alias ggpull='git pull origin (current_branch)'
+alias ggpur='git pull --rebase origin (current_branch)'
+alias ggpush='git push origin (current_branch)'
+alias ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
+alias d='docker-compose exec -u laradock workspace'

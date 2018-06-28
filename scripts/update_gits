@@ -1,49 +1,36 @@
-update_neofetch() {
-	cd ~/_git/neofetch_git/
-	pwd
-	echo
-	git fetch --all
-	git pull
-	sudo make install
-	echo
-}
+#!/bin/bash
 
-update_ranger() {
-	cd ~/_git/ranger_git/
-	pwd
-	echo
-	git fetch --all
-	git pull
-	sudo python3 setup.py install
-	echo
-}
+cd ~/_git/neofetch_git/
+pwd
+echo
+git fetch --all
+git pull
+sudo make install
+echo
 
-update_pywal() {
-	cd ~/_git/pywal_git/
-	pwd
-	echo
-	git fetch --all
-	git pull
-	sudo python3 setup.py install
-	sudo pip3 install pywal --upgrade
-	echo
-}
 
-update_i3() {
-	cd ~/i3-gaps/
-	git fetch --all
-	git pull
-	cd build
-	../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers	
-	sudo make install
-	echo
-}
+cd ~/_git/ranger_git/
+pwd
+echo
+git fetch --all
+git pull
+sudo python3 setup.py install
+echo
 
-k2_run() {
-	update_neofetch
-	update_ranger
-	update_pywal
-	update_i3
-}
+cd ~/_git/pywal_git/
+pwd
+echo
+git fetch --all
+git pull
+sudo python3 setup.py install
+sudo pip3 install pywal --upgrade
+echo
 
-k2_run
+cd ~/i3-gaps/
+git fetch --all
+git pull
+cd build
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers	
+sudo make install
+echo
+
