@@ -1,7 +1,6 @@
 #!/bin/bash
 dotfiles_push() {
 	cd ~/dotfiles
-	sudo rm ./.zshrc
 	sudo rm ./.vimrc
 	sudo rm ./.Xdefaults
 	sudo rm ./K2.fish
@@ -13,7 +12,6 @@ dotfiles_push() {
 	sudo rm -rf ./scripts
 
 	mkdir scripts
-	sudo cp ~/.zshrc .
 	sudo cp ~/scripts/dist_free ./scripts
 	sudo cp ~/scripts/update_gits ./scripts
 	sudo cp ~/scripts/update_dotfiles ./scripts
