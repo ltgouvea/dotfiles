@@ -338,6 +338,6 @@ bar {
 
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -bf
+exec --no-startup-id compton -b
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/wallpaper.png

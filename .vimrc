@@ -2,7 +2,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' 
+Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-commentary'
@@ -11,18 +12,13 @@ Plug 'junegunn/fzf'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'powerline/fonts'
 Plug 'leafgarland/typescript-vim'
-Plug 'scrooloose/syntastic'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
-Plug 'xsbeats/vim-blade'
 Plug 'dylanaraps/wal.vim'
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
-Plug 'eslint/eslint'
-Plug 'palantir/tslint'
 call plug#end()
 
 " Basics
@@ -42,7 +38,7 @@ set cwh=20
 set cmdheight=1
 syntax enable
 set background=dark
-set shortmess=atTo
+set shortmess=atToI
 set complete-=i
 set laststatus=2
 set scrolloff=3
@@ -58,6 +54,7 @@ set ruler
 set autochdir
 set ai
 set showcmd
+set wildmode=longest,list,full
 set wildmenu
 set wildignorecase
 set mouse=a
@@ -93,7 +90,7 @@ nnoremap -n :exec ToggleNumbers()<CR>
 nnoremap -f :exec ToggleFolding()<CR>
 nnoremap -w :help <C-r><C-w><CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
-nnoremap gh "+p
+nnoremap gh "+P
 nnoremap hg "+y
 nnoremap <space>e :e #<CR>
 nnoremap <space>n :cn<CR>
@@ -173,6 +170,7 @@ nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
 nnoremap ; :
 nnoremap : ;
 
+vnoremap <C-c> "*y :let @+=@*<CR>
 vnoremap ç :
 vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
 vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
@@ -311,6 +309,7 @@ let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap <C-c> "+yy
 
 "EasyAlign
 xmap ga <Plug>(EasyAlign)
