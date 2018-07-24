@@ -2,22 +2,18 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
-Plug 'SirVer/ultisnips' 
-Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-commentary'
 Plug 'bling/vim-airline'
 Plug 'junegunn/fzf'
 Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'powerline/fonts'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'terryma/vim-multiple-cursors'
-" Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
 Plug 'dylanaraps/wal.vim'
-" Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
@@ -30,7 +26,7 @@ set nomore
 set nocompatible
 set nowrap
 set hi=1000
-set updatetime=100
+set updatetime=200
 set fcs=vert:\│,fold:\ 
 set noswapfile
 set smartindent
@@ -54,33 +50,21 @@ set ruler
 set autochdir
 set ai
 set showcmd
-set wildmode=longest,list,full
 set wildmenu
 set wildignorecase
 set mouse=a
 set timeoutlen=700 ttimeoutlen=0
 
-" Frescurite
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
 highlight NonText ctermfg=magenta
-let g:airline_powerline_fonts = 1
-let g:syntastic_typescript_checkers = ['tslint']
-let g:airline_section_error=0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline_theme='wal'
-let g:syntastic_enable_highlighting = 1
+highlight StatusLine ctermbg=0
+highlight StatusLine ctermfg=4
 let mapleader=","
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
 set signcolumn=yes
-
-"
-let g:multi_cursor_select_all_word_key = '<C-a>'
-let g:multi_cursor_skip_key            = '<C-d>'
 
 " Hic sunt dracones
 nmap <TAB> gt
@@ -104,7 +88,7 @@ nnoremap <leader>0 :exec ToggleSpeedMode()<CR>
 nnoremap -a :exec ToggleAim()<CR>
 nnoremap <leader>1 :read ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
-nnoremap <F3> :Gst<CR>
+nnoremap <F3> :Gstatus<CR>
 nnoremap <F4> :q<CR>
 nnoremap <leader><F4> :qa<CR>
 nnoremap <F5> :w<CR>
@@ -172,23 +156,8 @@ nnoremap : ;
 
 vnoremap <C-c> "*y :let @+=@*<CR>
 vnoremap ç :
-vnoremap <leader>qq iw<esc>a'<esc>bi'<esc>lel
-vnoremap <leader>qd iw<esc>a"<esc>bi"<esc>lel
-vnoremap <leader>4 $
-vnoremap s :s//<Left>
-vnoremap <leader>q ap
-vnoremap <leader>p i(
-vnoremap <leader><leader>p a(
-vnoremap <leader>c i{
-vnoremap <leader><leader>c a{
-vnoremap <leader>v i[
-vnoremap <leader><leader>v a[
-vnoremap zz i<
 vnoremap gh "+p
 vnoremap hg "+y
-vnoremap z a<
-vnoremap <leader>f F
-vnoremap <leader>t T
 
 cnoremap ... cd ../../<CR>
 cnoremap mks mksession! ~/vim.current<CR>
@@ -209,7 +178,6 @@ cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
 cnoremap glo Git log --stat<CR><CR>
 cnoremap grhh Git reset --hard HEAD<CR>
-cnoremap gst Gstatus<CR>
 cnoremap -- <C-R>=expand("%:p:h")<CR>
 cnoremap sg s///g<C-LEFT><Right><Right>
 cnoremap jk <Right>
@@ -286,23 +254,6 @@ nnoremap <leader>. :w<CR>
 nnoremap <leader>l <S-v>
 nnoremap <space><space> :w<CR>
 
-" VISUAL MODE RATPACK
-vnoremap <leader>aa A
-vnoremap <leader>b B
-vnoremap <leader>d D
-vnoremap <leader>g G
-vnoremap <leader>s S
-vnoremap <leader>w W
-vnoremap <leader>e E
-vnoremap <leader>p P
-vnoremap <leader>o O
-vnoremap <leader>r R
-vnoremap <leader>l <S-v>
-vnoremap vv <C-v>
-vnoremap <space> <esc>
-vnoremap ç <esc>
-vnoremap ; :
-
 let g:user_emmet_leader_key='<C-Z>'
 let NERDTreeMapActivateNode='l'
 let NERDTreeShowLineNumbers=1
@@ -315,23 +266,14 @@ nnoremap <C-c> "+yy
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-"EasyAlign
 command! Sw :w !sudo tee %
-command! Gst :Gstatus
 command! E :e!
-
-" pra não quebrar o youcompletemE
-let g:ycm_server_python_interpreter='/usr/bin/python'
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion   = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType    = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 " The Silver Searcher
 if executable('ag')
   set grepprg=ag\ --nogroup
@@ -352,23 +294,24 @@ let @p='@y;Git pull origin pp'
 let @g='@y;Git push origin pp'
 let @c='@y�k3zj-ccpa | '
 let @z='@y�k3zj-zj-ccpa | '
+
 function! UpdateBranch()
 	Git fetch --all
 	Git pull origin develop
 endfunction
 
-function! RemoveSqlQuotes()
-	:silent %s/^"//
-	:silent %s/"$//
-endfunction
+" function! RemoveSqlQuotes()
+" 	:silent %s/^"//
+" 	:silent %s/"$//
+" endfunction
 
-function! Snake()
-	:silent s/\ /_/g
-	:silent s/-/_/g
-	:silent s/_\+/-/g
-	:silent s/-/_/g
-	:normal guu
-endfunction
+" function! Snake()
+" 	:silent s/\ /_/g
+" 	:silent s/-/_/g
+" 	:silent s/_\+/-/g
+" 	:silent s/-/_/g
+" 	:normal guu
+" endfunction
 
 function! ToggleSpeedMode()
 	:set nu! lz! relativenumber! ruler!

@@ -102,7 +102,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 set $ws1  " "
-set $ws2  " "
+set $ws2  " "
 set $ws3  " "
 set $ws4  " "
 set $ws5  ""
@@ -213,31 +213,31 @@ mode "$mode_gaps" {
         bindsym Escape mode "default"
         bindsym Space  mode "default"
 }
-
-mode "$mode_gaps_inner" {
-        bindsym plus  gaps inner current plus 5
-        bindsym minus gaps inner current minus 5
-        bindsym 0     gaps inner current set 0
-
-        bindsym Shift+plus  gaps inner all plus 5
-        bindsym Shift+minus gaps inner all minus 5
-        bindsym Shift+0     gaps inner all set 0
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym Space  mode "default"
-        bindsym Tab mode "$mode_gaps_outer"
-}
-
+ 
+ mode "$mode_gaps_inner" {
+         bindsym plus  gaps inner current plus 5
+         bindsym minus gaps inner current minus 5
+         bindsym 0     gaps inner current set 0
+ 
+         bindsym Shift+plus  gaps inner all plus 5
+         bindsym Shift+minus gaps inner all minus 5
+         bindsym Shift+0     gaps inner all set 0
+ 
+         bindsym Return mode "default"
+         bindsym Escape mode "default"
+         bindsym Space  mode "default"
+         bindsym Tab mode "$mode_gaps_outer"
+ }
+ 
 mode "$mode_gaps_outer" {
         bindsym plus  gaps outer current plus 5
         bindsym minus gaps outer current minus 5
         bindsym 0     gaps outer current set 0
-
+ 
         bindsym Shift+plus  gaps outer all plus 5
         bindsym Shift+minus gaps outer all minus 5
         bindsym Shift+0     gaps outer all set 0
-
+ 
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym Space  mode "default"
@@ -316,7 +316,7 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar -t
-        font pango:FuraCode Nerd Font Mono 13
+        font pango:FuraCode Nerd Font Mono 14
         # position top
         tray_padding 0
         tray_output none

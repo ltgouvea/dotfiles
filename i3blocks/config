@@ -7,10 +7,10 @@ markup=none
 #interval=1
 #color=#7F00FF 
 
-[mpd]
-label=
-command=/usr/local/libexec/i3blocks/i3mpd
-interval=1
+# [mpd]
+# label=
+# command=/usr/local/libexec/i3blocks/i3mpd
+# interval=1
 
 [memory]
 label=
