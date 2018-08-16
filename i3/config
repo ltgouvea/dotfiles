@@ -26,15 +26,15 @@ set $darkblack   #1d2021EE
 # set $transparent #00000000
 set $transparent #1d2021EE
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $bg       $bg
-client.placeholder      $bg     $bg     $fg  $bg       $bg
+client.focused          $darkgreen  $bg  $fg  $darkgreen  $darkgreen
+client.focused_inactive $darkgreen  $bg  $fg  $darkgreen  $darkgreen
+client.unfocused        $darkgreen  $bg  $fg  $darkgreen  $darkgreen
+client.urgent           $darkgreen  $bg  $fg  $darkgreen  $darkgreen
+client.placeholder      $darkgreen  $bg  $fg  $darkgreen  $darkgreen
 
 client.background       $bg
 font pango:'Inconsolata for Powerline' 10
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -46,7 +46,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec rofi -location 7 -bw 2 -yoffset -2 -sidebar-mode -show run
+bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -66,7 +66,7 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
-bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+p exec pgadmin3
 bindsym $mod+Shift+t exec qbittorrent
 
@@ -181,7 +181,7 @@ mode "wallpapers" {
         bindsym r exec "wpp=$(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1);feh --bg-scale $wpp;cp $wpp ~/wallpaper.png;cp $wpp /usr/share/slim/themes/default/background.jpg"
         bindsym Return mode "default"
         bindsym Space mode "default"
-}
+        }
 
 mode "distraction_free" {
         bindsym d exec "~/dist_free_disable.sh"
@@ -189,7 +189,7 @@ mode "distraction_free" {
         bindsym Return mode "default"
         bindsym Space mode "default"
         bindsym Escape mode "default"
-}
+        }
 
 mode "programs" {
         bindsym f exec firefox
@@ -204,7 +204,7 @@ mode "programs" {
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape  mode "default"
-}
+        }
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -212,37 +212,37 @@ mode "$mode_gaps" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym Space  mode "default"
-}
- 
- mode "$mode_gaps_inner" {
-         bindsym plus  gaps inner current plus 5
-         bindsym minus gaps inner current minus 5
-         bindsym 0     gaps inner current set 0
- 
-         bindsym Shift+plus  gaps inner all plus 5
-         bindsym Shift+minus gaps inner all minus 5
-         bindsym Shift+0     gaps inner all set 0
- 
-         bindsym Return mode "default"
-         bindsym Escape mode "default"
-         bindsym Space  mode "default"
-         bindsym Tab mode "$mode_gaps_outer"
- }
- 
+        }
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Space  mode "default"
+        bindsym Tab mode "$mode_gaps_outer"
+        }
+
 mode "$mode_gaps_outer" {
         bindsym plus  gaps outer current plus 5
         bindsym minus gaps outer current minus 5
         bindsym 0     gaps outer current set 0
- 
+
         bindsym Shift+plus  gaps outer all plus 5
         bindsym Shift+minus gaps outer all minus 5
         bindsym Shift+0     gaps outer all set 0
- 
+
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym Space  mode "default"
         bindsym Tab mode "$mode_gaps_inner"
-}
+        }
 
 mode "system" {
         bindsym s exec systemctl poweroff
@@ -252,7 +252,7 @@ mode "system" {
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
-}
+        }
 
 mode "music" {
         bindsym k exec amixer -D pulse sset Master 5%+
@@ -272,7 +272,7 @@ mode "music" {
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
-}
+        }
 
 mode "brightness" {
         bindsym k exec light -A 5
@@ -280,7 +280,7 @@ mode "brightness" {
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
-}
+        }
 
 mode "resize" {
         bindsym h resize shrink right 10 px or 10 ppt
@@ -296,7 +296,7 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape mode "default"
-}
+        }
 
 bindsym $mod+Ctrl+Right resize shrink width  10px or  10ppt
 bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
@@ -315,7 +315,7 @@ gaps inner 5
 gaps outer 5
 
 bar {
-        i3bar_command i3bar -t
+        i3bar_command i3bar
         font pango:FuraCode Nerd Font Mono 14
         # position top
         tray_padding 0
@@ -338,6 +338,6 @@ bar {
 
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -b
+exec --no-startup-id compton -bfCG
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/wallpaper.png

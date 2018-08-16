@@ -14,5 +14,3 @@
 # ![desktop_result](screenshot.png "true beauty lies in detail")
 
 No GUI, no mouse, no nothing, no problem.
-
-

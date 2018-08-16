@@ -1,0 +1,4 @@
+#!/bin/bash
+cp -f "$(<~/.cache/wal/wal)" ~/wallpaper.png
+cp -f "$(<~/.cache/wal/wal)" /usr/share/slim/themes/default/background.jpg
+i3 restart

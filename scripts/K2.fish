@@ -19,7 +19,7 @@ abbr -a e='exit'
 abbr -a u="update_gits; and sudo apt update; and sudo apt upgrade -y; and sudo apt autoclean; and sudo apt autoremove -y"
 abbr -a n='ncmpcpp'
 abbr -a apt='sudo apt'
-abbr -a ai='sudo apt install'
+abbr -a ai='apt install'
 abbr -a mana='sudo service network-manager restart'
 abbr -a social='mailutils soc'
 abbr -a lock='i3lock -i ~/login.png'
@@ -28,11 +28,12 @@ function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')
   echo $branch 
 end
-abbr -a gst='git status'
 abbr -a ggpull='git pull origin (current_branch)'
 abbr -a ggpur='git pull --rebase origin (current_branch)'
 abbr -a ggpush='git push origin (current_branch)'
 abbr -a ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
 abbr -a gcam='git add .; and git commit -m ""'
 abbr -a d='docker-compose exec -u laradock workspace'
-bind ç forward-char execute
+alias -='cd -'
+abbr -a k2rc='vim ~/scripts/K2.fish'
+abbr -a ...='cd ../../'

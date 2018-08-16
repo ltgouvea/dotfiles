@@ -1,6 +1,6 @@
-" Plugins
+" " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
@@ -34,7 +34,8 @@ set cwh=20
 set cmdheight=1
 syntax enable
 set background=dark
-set shortmess=atToI
+set shortmess=atTo
+" set shortmess=atToI
 set complete-=i
 set laststatus=2
 set scrolloff=3
@@ -58,10 +59,12 @@ set timeoutlen=700 ttimeoutlen=0
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
 highlight NonText ctermfg=magenta
-highlight StatusLine ctermbg=0
-highlight StatusLine ctermfg=4
+highlight lineNr ctermfg=darkgray
+highlight CursorLineNr ctermfg=red
 let mapleader=","
+let g:airline_theme='wal'
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_close_button = 0
 set signcolumn=yes
@@ -144,7 +147,8 @@ nnoremap <leader>g G
 nnoremap <leader>s S
 nnoremap <leader>w W
 nnoremap <leader>e E
-nnoremap <leader>p P
+nnoremap <leader>p :prev<CR>
+nnoremap <leader>n :next<CR>
 nnoremap <leader>o O
 nnoremap <leader>r R
 nnoremap <leader>h ^

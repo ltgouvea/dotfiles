@@ -12,7 +12,7 @@ dotfiles_push() {
 	sudo rm -rf ./scripts
 
 	mkdir scripts
-	sudo cp ~/scripts/dist_free ./scripts
+	sudo cp ~/scripts/dist_free_toggle.sh ./scripts
 	sudo cp ~/scripts/update_gits ./scripts
 	sudo cp ~/scripts/update_dotfiles ./scripts
 	sudo cp ~/.vimrc .
