@@ -1,74 +1,159 @@
-command=/usr/local/libexec/i3blocks/$BLOCK_NAME
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/share/i3blocks/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-#[mail]
-#command=echo -e " $(sh ~/.config/i3/gmail.sh)"
-#interval=1
-#color=#7F00FF 
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+color=#2fdcb6
+label=
+interval=10
+separator=false
 
-# [mpd]
-# label=
-# command=/usr/local/libexec/i3blocks/i3mpd
-# interval=1
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=
+separator=false
+interval=30
+color=#97d01a
 
 [memory]
-label=
+label=
+instance=swap
 separator=false
-interval=1
-color=#dfe3ee
-
-[disk]
-label=
-instance=/media/k2/K
 interval=30
-separator=false
-color=#d9534f
+color=#97d01a
 
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
 [disk]
-label=
-instance=/mnt
-interval=30
-separator=true
-color=#ffff00
+label=
+#instance=/mnt/data
+interval=180
+color=#16b1fb
 
-[cpu_usage]
-label=
-command=/usr/local/libexec/i3blocks/cpu_usage
-interval=1
-separator=true
-color=#00ff7f
-
+# Network interface monitoring
+#
+# If the instance is not specified, use the interface used for default route.
+# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 # [iface]
-# label=
-# instance=wlp3s0
-# color=#00FFFF
+#instance=wlan0
+# color=#00FF00
 # interval=10
-# separator=true
-# color=#adff00
+# separator=false
+
+# [wifi]
+#instance=wlp3s0
+# interval=10
+# separator=false
 
 [bandwidth]
-label=
-instance=wlp3s0
-interval=1
-color=#83d0c9
+#instance=eth0
+label=
+interval=5
+color=#0fdcb6
 
-[light]
-interval=once
-command=/usr/local/libexec/i3blocks/brightness
+#[load_average]
+#interval=10
 
+# Battery indicator
+#
+# The battery instance defaults to 0.
 [battery]
 label=
 instance=0
+color=#FFFF00
 interval=30
 
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
 [volume]
-interval=once
-command=/usr/local/libexec/i3blocks/volume
-markup=pango
-signal=10
+label=♪
+command=/usr/share/i3blocks/volume default pulse
+color=#00FFAA
+interval=2
+signal=1
 
+# Date Time
+#
 [time]
-command= /usr/local/libexec/i3blocks/date
-label=
-interval=1
+label=
+command=date '+%Y-%m-%d %H:%M'
+interval=5
+color=#d81765
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=spotify
+#interval=5
+#signal=10
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+#[openvpn]
+#interval=20
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+#[temperature]
+#label=TEMP
+#interval=10
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#instance=CAPS
+#interval=once
+#signal=11
+
+#[keyindicator]
+#instance=NUM
+#interval=once
+#signal=11

@@ -316,7 +316,7 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar
-        font pango:FuraCode Nerd Font Mono 14
+        font pango:MesloLGMDZ Nerd Font Mono 13
         # position top
         tray_padding 0
         tray_output none
