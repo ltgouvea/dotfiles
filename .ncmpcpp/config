@@ -22,15 +22,15 @@
 #
 ##### connection settings #####
 #
-#mpd_host = localhost
+mpd_host = localhost
 #
-#mpd_port = 6600
+mpd_port = 6600
 #
 #mpd_connection_timeout = 5
 #
 ## Needed for tag editor and file operations to work.
 ##
-#mpd_music_dir = ~/music
+mpd_music_dir = ~/Music
 #
 #mpd_crossfade_time = 5
 #
@@ -41,12 +41,12 @@
 ## visualization or 44100:16:2 for stereo visualization. Example configuration
 ## (it has to be put into mpd.conf):
 ##
-# audio_output {
-#        type            "fifo"
-#        name            "Visualizer feed"
-#        path            "/tmp/mpd.fifo"
-#        format          "44100:16:2"
-# }
+ audio_output {
+        type            "fifo"
+        name            "Visualizer feed"
+        path            "/tmp/mpd.fifo"
+        format          "44100:16:2"
+ }
 ##
 #
 # visualizer_fifo_path = /tmp/mpd.fifo
@@ -542,3 +542,17 @@ user_interface = alternative
 #
 #active_window_border = red
 #
+
+audio_output {
+    type                    "fifo"
+    name                    "my_fifo"
+    path                    "/tmp/mpd.fifo"
+    format                  "44100:16:2"
+}
+
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "30" 
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"

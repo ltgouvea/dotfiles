@@ -1,4 +1,4 @@
-" " Plugins
+" Plugins
 call plug#begin('~/.vim/plugged')
 " Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
@@ -243,7 +243,6 @@ inoremap hh <C-x><C-l>
 inoremap vv <C-x><C-v>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
-inoremap çq <ESC>:wq<CR>
 inoremap 99 ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>
