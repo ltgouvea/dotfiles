@@ -95,7 +95,7 @@ nnoremap -a :exec ToggleAim()<CR>
 nnoremap <leader>1 :read ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gstatus<CR>
-nnoremap <F4> :q<CR>
+nnoremap <F4> :vert term<CR>
 nnoremap <leader><F4> :qa<CR>
 nnoremap <F5> :w<CR>
 nnoremap <F6> :wq<CR>

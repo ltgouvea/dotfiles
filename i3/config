@@ -315,7 +315,7 @@ gaps inner 5
 gaps outer 5
 
 bar {
-        i3bar_command i3bar
+        i3bar_command i3bar -t
         font pango:MesloLGMDZ Nerd Font Mono 13
         # position top
         tray_padding 0
@@ -336,6 +336,7 @@ bar {
             }
         }
 
+exec --no-startup-id wal -R -a 85
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bfCG

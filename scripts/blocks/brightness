@@ -1,0 +1,14 @@
+#!/bin/bash
+
+print_light() {
+  light | sed 's/\..*$/%/'
+}
+
+case $BLOCK_BUTTON in
+  4) light -A 5 ;; # scroll up, increase
+  5) light -U 5 ;; # scroll down, decrease
+esac
+
+print_light
+
+
