@@ -67,8 +67,6 @@ bindsym $mod+Shift+l move right
 
 # Custom Launchers k2
 bindsym $mod+Shift+f exec google-chrome
-bindsym $mod+Shift+p exec pgadmin3
-bindsym $mod+Shift+t exec qbittorrent
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -192,15 +190,10 @@ mode "distraction_free" {
         }
 
 mode "programs" {
-        bindsym f exec firefox
         bindsym c exec google-chrome
-        bindsym p exec pgadmin3
         bindsym s exec steam
         bindsym v exec $term -e vim
         bindsym m exec spotify
-        bindsym q exec qbittorrent
-        bindsym w exec playonlinux
-        bindsym Shift+p exec postman
         bindsym Return mode "default"
         bindsym Space  mode "default"
         bindsym Escape  mode "default"

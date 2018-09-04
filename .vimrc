@@ -196,7 +196,7 @@ cnoremap jj <Home>
 nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
-nnoremap <c-h> :Hexplore<CR>
+nnoremap <c-h> :NERDTreeToggle<CR>
 nnoremap <c-t> :Texplore<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>

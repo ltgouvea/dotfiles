@@ -3,6 +3,8 @@
 dotfiles_push()
 {
 	cd ~/dotfiles/
+	cp ~/.K2.fish K2.fish
+	cp ~/.git.fish git.fish
 	cp -r ~/config/i3* .
 	cp -r ~/.ncmpcpp/ .
 	cp -r ~/.config/rofi .
@@ -20,4 +22,6 @@ dotfiles_pull()
 	cp -r ~/dotfiles/.config/fish/ ./.config/
 	cp ~/dotfiles/.vimrc .
 	cp ~/dotfiles/.Xdefaults .
+	cp ~/dotfiles/K2.fish ~/.K2.fish
+	cp ~/dotfiles/git.fish ~/.git.fish
 }

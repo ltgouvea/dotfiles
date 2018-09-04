@@ -24,23 +24,18 @@ abbr -a mana='sudo service network-manager restart'
 abbr -a social='mailutils soc'
 abbr -a lock='i3lock -i ~/login.png'
 abbr -a swclean='sudo ls ; and  htop ; and ; sudo swapoff -a ; and  sudo swapon -a'
+abbr -a d='docker-compose exec -u laradock workspace'
 
 function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')
   echo $branch 
 end
 
-abbr -a gst='git status'
-abbr -a gd='git diff'
-abbr -a ggpull='git pull origin (current_branch)'
-abbr -a ggpur='git pull --rebase origin (current_branch)'
-abbr -a ggpush='git push origin (current_branch)'
-abbr -a ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
-abbr -a gcam='git add .; and git commit -m ""'
-abbr -a d='docker-compose exec -u laradock workspace'
-
 function fish_user_key_bindings
 bind ç forward-char execute
+bind \cs down-or-search
+bind \cr up-or-search
 end
 
+export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g ""'
