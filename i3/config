@@ -105,7 +105,7 @@ set $ws3  " "
 set $ws4  " "
 set $ws5  ""
 set $ws6  " "
-set $ws7  " "
+set $ws7  " "
 set $ws8  ""
 set $ws9  " "
 set $ws10  " "
@@ -306,10 +306,11 @@ bindsym --release Print exec notify-send 'screenshot' 'please select area' && sc
 bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/Pictures/printscreen/' && scrot ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
 gaps inner 5
 gaps outer 5
+smart_gaps on
 
 bar {
         i3bar_command i3bar -t
-        font pango:MesloLGMDZ Nerd Font Mono 13
+        font pango:MesloLGMDZ Nerd Font Mono 15
         # position top
         tray_padding 0
         tray_output none

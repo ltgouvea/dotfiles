@@ -10,7 +10,7 @@ abbr -a grhh "git reset --hard"
 abbr -a gb "git branch"
 abbr -a gcb "git checkout -b"
 abbr -a gco "git checkout"
-abbr -a gfa "git fetch -a"
+abbr -a gfa "git fetch --all"
 abbr -a gcfd "git clean -fd"
 abbr -a gcod "git checkout -- ."
 abbr -a gst='git status'
