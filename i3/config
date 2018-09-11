@@ -4,35 +4,25 @@
 set $mod Mod4
 set $term rxvt-unicode
 
-set $bg          #1e161f77
-# set_from_resource $bg          color0  #000000
-set_from_resource $darkred     color1  #000000
-set_from_resource $red         color9  #000000
-set_from_resource $darkgreen   color2  #000000
-set_from_resource $green       color10 #000000
-set_from_resource $darkyellow  color3  #000000
-set_from_resource $yellow      color11 #000000
-set_from_resource $darkblue    color4  #000000
-set_from_resource $blue        color12 #000000
-set_from_resource $darkmagenta color5  #000000
-set_from_resource $magenta     color13 #000000
-set_from_resource $darkcyan    color6  #000000
-set_from_resource $cyan        color14 #000000
-set_from_resource $darkwhite   color7  #000000
-set_from_resource $white       color15 #000000
-# Use custom colors for black
-set $black       #282828
-set $darkblack   #1d2021EE
-# set $transparent #00000000
-set $transparent #1d2021EE
+# Set colors from Xresources
+# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# from the generated scheme.
+# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+# it fails to get colors from Xresources.
+set_from_resource $fg i3wm.color7 #f0f0f0
+set_from_resource $bg i3wm.color0 #f0f0f0
+
+set_from_resource $color1 i3wm.color2 #f0f0f0
+
 # class                 border  backgr. text indicator child_border
-client.focused          $darkgreen  $bg  $fg  $darkgreen  $darkgreen
-client.focused_inactive $darkgreen  $bg  $fg  $darkgreen  $darkgreen
-client.unfocused        $darkgreen  $bg  $fg  $darkgreen  $darkgreen
-client.urgent           $darkgreen  $bg  $fg  $darkgreen  $darkgreen
-client.placeholder      $darkgreen  $bg  $fg  $darkgreen  $darkgreen
+client.focused          $color1     $bg     $fg  $color1       $color1
+client.focused_inactive $color1     $bg     $fg  $color1       $color1
+client.unfocused        $color1     $bg     $fg  $color1       $color1
+client.urgent           $color1     $bg     $fg  $color1       $color1
+client.placeholder      $color1     $bg     $fg  $color1       $color1
 
 client.background       $bg
+
 font pango:'Inconsolata for Powerline' 10
 for_window [class="^.*"] border pixel 1
 new_window 1pixel
@@ -46,7 +36,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run
+bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run -terminal rxvt-unicode
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -306,33 +296,33 @@ bindsym --release Print exec notify-send 'screenshot' 'please select area' && sc
 bindsym --release Shift+Print exec notify-send 'screenshot taken in ~/Pictures/printscreen/' && scrot ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
 gaps inner 5
 gaps outer 5
-smart_gaps on
 
 bar {
         i3bar_command i3bar -t
-        font pango:MesloLGMDZ Nerd Font Mono 15
+        font pango:MesloLGMDZ Nerd Font Mono 12
         # position top
         tray_padding 0
         tray_output none
         status_command i3blocks
 
         colors {
-            statusline         $white
+            statusline         $fg
             background         $bg
             separator          $bg
 
             #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $bg $bg $red
+            focused_workspace  $bg $bg $color1
             inactive_workspace $bg $bg $white
-            active_workspace   $transparent $transparent $white
-            urgent_workspace   $darkred     $darkred     $transparent
-            binding_mode       $darkred     $darkred     $transparent
+            active_workspace   $transparent $transparent $color1
+            urgent_workspace   $fg     $color1     $bg
+            binding_mode       $bg     $color1     $bg
             }
         }
 
-exec --no-startup-id wal -R -a 85
+exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id wal -R -a 85 -o ~/dotfiles/scripts/reload_dunst.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -bfCG
+exec --no-startup-id compton -bfcCG -o=0.2
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg

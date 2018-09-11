@@ -1,6 +1,6 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
-" Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
@@ -31,7 +31,7 @@ set fcs=vert:\│,fold:\
 set noswapfile
 set smartindent
 set cwh=20
-set cmdheight=1
+set cmdheight=2
 syntax enable
 set background=dark
 set shortmess=atTo
@@ -95,7 +95,7 @@ nnoremap -a :exec ToggleAim()<CR>
 nnoremap <leader>1 :read ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gstatus<CR>
-nnoremap <F4> :vert term<CR>
+nnoremap <F4> :bot term<CR>
 nnoremap <leader><F4> :qa<CR>
 nnoremap <F5> :w<CR>
 nnoremap <F6> :wq<CR>
@@ -224,7 +224,6 @@ inoremap 55 %
 inoremap 44 $
 inoremap 22 @
 inoremap 33 #
-iab 22 @
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 inoremap =. =>
 inoremap -. ->
