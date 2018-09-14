@@ -1,60 +1,30 @@
 command=/usr/share/i3blocks/$BLOCK_NAME
+color=#666666
 separator_block_width=7
 markup=none
-
-[cpu_usage]
-color=#c27142
-label=
-interval=10
-separator=false
-
-[memory]
-label=
-separator=false
-interval=30
-color=#c2aa81
-
-[memory]
-label=
-instance=swap
-separator=false
-interval=30
-color=#7b4faa
-
-[disk]
-label=
-interval=180
-color=#a143a6
-
-[bandwidth]
-interval=5
-color=#aa318b
 
 [battery]
 label=
 instance=0
-color=#aa2863
 interval=30
+markup=pango
 
 [brightness]
-label=
 command=/usr/share/i3blocks/brightness
-color=#c7c7c5
 interval=2
 signal=1
+markup=pango
 
 [volume]
-label=♪
 command=/usr/share/i3blocks/volume default pulse
-color=#595753
 interval=2
 signal=1
+markup=pango
 
 [time]
-label=
-command=date '+%Y-%m-%d %H:%M'
 interval=5
-color=#c27142
+markup=pango
+command=/usr/share/i3blocks/time
 
 
 

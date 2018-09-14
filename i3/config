@@ -24,7 +24,7 @@ client.placeholder      $color1     $bg     $fg  $color1       $color1
 client.background       $bg
 
 font pango:'Inconsolata for Powerline' 10
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -298,11 +298,10 @@ gaps inner 5
 gaps outer 5
 
 bar {
-        i3bar_command i3bar -t
-        font pango:MesloLGMDZ Nerd Font Mono 12
-        # position top
+        i3bar_command i3bar
+        font pango:MesloLGMDZ Nerd Font Mono 14
         tray_padding 0
-        tray_output none
+        # tray_output none
         status_command i3blocks
 
         colors {
@@ -323,6 +322,6 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id wal -R -a 85 -o ~/dotfiles/scripts/reload_dunst.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -bfcCG -o=0.2
+exec --no-startup-id compton -bfcz 
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
