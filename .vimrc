@@ -8,6 +8,7 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-commentary'
 Plug 'bling/vim-airline'
 Plug 'junegunn/fzf'
+Plug 'mattn/emmet-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
@@ -92,7 +93,7 @@ nnoremap <F2> @p<CR>
 nnoremap <leader><F2> :exec UpdateBranch()<CR>
 nnoremap <leader>0 :exec ToggleSpeedMode()<CR>
 nnoremap -a :exec ToggleAim()<CR>
-nnoremap <leader>1 :read ! 
+nnoremap <leader>1 :r ! 
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gstatus<CR>
 nnoremap <F4> :bot term<CR>
@@ -227,8 +228,6 @@ inoremap 33 #
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 inoremap =. =>
 inoremap -. ->
-inoremap ,, <
-inoremap .. >
 inoremap ;; ::
 inoremap çç <ESC>
 inoremap kk <ESC>A
@@ -259,7 +258,7 @@ nnoremap <leader>. :w<CR>
 nnoremap <leader>l <S-v>
 nnoremap <space><space> :w<CR>
 
-let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key=','
 let NERDTreeMapActivateNode='l'
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber

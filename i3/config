@@ -36,6 +36,7 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+q kill
 
+bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run -terminal rxvt-unicode
 # change focus
 bindsym $mod+h focus left
@@ -54,9 +55,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# Custom Launchers k2
-bindsym $mod+Shift+f exec google-chrome
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
