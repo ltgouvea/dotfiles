@@ -25,6 +25,7 @@ abbr -a social='mailutils soc'
 abbr -a lock='i3lock -i ~/login.png'
 abbr -a swclean='sudo ls ; and  htop ; and ; sudo swapoff -a ; and  sudo swapon -a'
 abbr -a d='docker-compose exec -u laradock workspace'
+abbr -a chx='chmod +x '
 
 function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')

@@ -4,6 +4,10 @@ function fish_prompt
     test "$USER" = 'root'
     and echo (set_color red)"#"
 
+    function check_branch
+	echo (git branch ^/dev/null | grep \* | sed 's/* / /')
+    end
+
     # Main
-    echo -n (set_color cyan) (prompt_pwd) (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+    echo -n (check_branch)(set_color cyan) (prompt_pwd) (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
 end

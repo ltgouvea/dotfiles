@@ -3,6 +3,11 @@ color=#666666
 separator_block_width=7
 markup=none
 
+[spotinfo]
+command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
+interval=10
+markup=pango
+
 [battery]
 instance=0
 interval=30
