@@ -14,12 +14,13 @@ Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
+Plug 'dag/vim-fish'
 Plug 'dylanaraps/wal.vim'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Basics
-filetype plugin on
+filetype plugin indent on
 set lcs=eol:~,tab:>-,trail:-
 set backspace=indent,eol,start
 set nobackup
@@ -31,12 +32,16 @@ set updatetime=200
 set fcs=vert:\│,fold:\ 
 set noswapfile
 set smartindent
+set smarttab
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set cwh=20
 set cmdheight=2
 syntax enable
 set background=dark
 set shortmess=atTo
-" set shortmess=atToI
+set shortmess=atToI
 set complete-=i
 set laststatus=2
 set scrolloff=3
@@ -63,7 +68,7 @@ highlight NonText ctermfg=magenta
 highlight lineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=red
 let NERDTreeAutoDeleteBuffer = 1
-let NERDTreeQuitOnOpen = 1 
+let NERDTreeQuitOnOpen = 1
 let mapleader=","
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:airline_theme='wal'
@@ -163,7 +168,7 @@ nnoremap ; :
 nnoremap : ;
 
 vnoremap <C-c> "*y :let @+=@*<CR>
-vnoremap ç :
+vnoremap ; :
 vnoremap gh "+p
 vnoremap hg "+y
 
@@ -180,7 +185,6 @@ cnoremap 33 #
 cnoremap 00 _
 cnoremap pp <C-r>"
 cnoremap qq q!<CR>
-cnoremap <leader>v tabe ~/.vimrc<CR>
 cnoremap gp Git push origin
 cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
@@ -241,6 +245,7 @@ inoremap hh <C-x><C-l>
 inoremap vv <C-x><C-v>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
+inoremap çq <ESC>:wq<CR>
 inoremap 99 ()<Left>
 inoremap { {}<Left>
 inoremap [ []<left>
@@ -251,7 +256,7 @@ nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <space><F10> :NERDTreeFind<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>
 nnoremap <leader>fj :%!python -m json.tool<CR>
-nnoremap <leader>v <C-V>
+nnoremap <leader>v :vsplit ~/.vimrc<CR>
 nnoremap <leader>; @:
 nnoremap <leader><space> @@
 nnoremap <leader>. :w<CR>
@@ -273,7 +278,7 @@ nmap ga <Plug>(EasyAlign)
 command! Sw :w !sudo tee %
 command! E :e!
 
-" better key bindings for UltiSnipsExpandTrigger
+" Better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
@@ -289,10 +294,10 @@ set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set encoding=utf-8
 
-" abbreviations
+" Abbreviations
 iab shrug ¯\_(ツ)_/¯<delete>
 
-" MARCOS kkk
+" Macros
 let @y='OR/branchwyWq'
 let @p='@y;Git pull origin pp'
 let @g='@y;Git push origin pp'
@@ -300,38 +305,25 @@ let @c='@y�k3zj-ccpa | '
 let @z='@y�k3zj-zj-ccpa | '
 
 function! UpdateBranch()
-	Git fetch --all
-	Git pull origin develop
+    Git fetch --all
+    Git pull origin develop
 endfunction
 
-" function! RemoveSqlQuotes()
-" 	:silent %s/^"//
-" 	:silent %s/"$//
-" endfunction
-
-" function! Snake()
-" 	:silent s/\ /_/g
-" 	:silent s/-/_/g
-" 	:silent s/_\+/-/g
-" 	:silent s/-/_/g
-" 	:normal guu
-" endfunction
-
 function! ToggleSpeedMode()
-	:set nu! lz! relativenumber! ruler!
-	:AirlineToggle
-	:if exists("g:syntax_on") | syntax off | else | syntax enable | endif
-	:e
+    :set nu! lz! relativenumber! ruler!
+    :AirlineToggle
+    :if exists("g:syntax_on") | syntax off | else | syntax enable | endif
+    :e
 endfunction
 
 function! ToggleAim()
-	:set cursorcolumn! cursorline!
+    :set cursorcolumn! cursorline!
 endfunction
 
 function! ToggleNumbers()
-	:set nu! relativenumber!
+    :set nu! relativenumber!
 endfunction
 
 function! ToggleFolding()
-	:if &foldcolumn ==# 0 | set foldcolumn=1 foldmethod=indent | else | set foldcolumn=0 foldmethod=manual | endif
+    :if &foldcolumn ==# 0 | set foldcolumn=1 foldmethod=indent | else | set foldcolumn=0 foldmethod=manual | endif
 endfunction
