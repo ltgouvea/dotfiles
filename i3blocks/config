@@ -3,6 +3,10 @@ color=#666666
 separator_block_width=7
 markup=none
 
+[todolist]
+interval=10
+markup=pango
+
 [spotinfo]
 command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
 interval=10

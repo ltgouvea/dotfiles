@@ -40,8 +40,7 @@ set cwh=20
 set cmdheight=2
 syntax enable
 set background=dark
-set shortmess=atTo
-set shortmess=atToI
+" set shortmess=atToI
 set complete-=i
 set laststatus=2
 set scrolloff=3
@@ -221,7 +220,6 @@ inoremap d <ESC>dwi
 inoremap <F5> <ESC>:w<CR>i
 inoremap <F6> <ESC>:wq<CR>
 inoremap zz \|
-inoremap ç' "
 inoremap 99 ()
 inoremap 88 {}
 inoremap 00 _
