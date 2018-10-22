@@ -2,6 +2,6 @@
 
 . "/home/k2/.cache/wal/colors.sh"
 
-OUTPUT=$(date '+%Y-%m-%d %H:%M')
+OUTPUT=$(date '+%d/%m/%Y %H:%M')
 
 echo "<span foreground=\"$color2\"> $OUTPUT</span>"

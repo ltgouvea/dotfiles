@@ -5,7 +5,7 @@ set $mod Mod4
 set $term rxvt-unicode
 
 # Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use 
+# Change 'color7' and 'color2' to whatever colors you want i3 to use
 # from the generated scheme.
 # NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
 # it fails to get colors from Xresources.
@@ -119,9 +119,9 @@ assign [title="(?i)steam"]                $ws4
 assign [title="(?i)otclient"]             $ws4
 assign [title="(?i)tibia"]                $ws10
 assign [title="(?i)ranger"]               $ws5
+assign [class="(?i)nemo"]                 $ws5
 assign [class="(?i)pgadmin"]              $ws6
 assign [title="(?i)ncmpcpp"]              $ws7
-assign [class="(?i)mpv"]                  $ws8
 assign [title="(?i)mutt"]                 $ws9
 assign [class="(?i)gnome-system-monitor"] $ws10
 
@@ -320,6 +320,6 @@ exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agen
 exec --no-startup-id wal -R -a 85 -o ~/dotfiles/scripts/reload_dunst.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -bfcz 
+exec --no-startup-id compton -bfcz
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg

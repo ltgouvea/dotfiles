@@ -26,6 +26,7 @@ abbr -a lock='i3lock -i ~/login.png'
 abbr -a swclean='sudo ls ; and  htop ; and ; sudo swapoff -a ; and  sudo swapon -a'
 abbr -a d='docker-compose exec -u laradock workspace'
 abbr -a chx='chmod +x '
+abbr -a cwp='rm -rf ~/.cache/wal/; and wal -i ~/Pictures/wallpaper.jpg -a 85 --backend colorthief --saturate 0.5 -g'
 abbr -a gentags="ctags -R --exclude='.git' --exclude='node_modules' --exclude='vendor' --exclude='public' --exclude='laradock' --exclude='*.js'"
 
 function current_branch

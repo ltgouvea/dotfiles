@@ -21,6 +21,7 @@ call plug#end()
 
 " Basics
 filetype plugin indent on
+set gdefault
 set lcs=eol:~,tab:>-,trail:-
 set backspace=indent,eol,start
 set nobackup
@@ -40,7 +41,7 @@ set cwh=20
 set cmdheight=2
 syntax enable
 set background=dark
-" set shortmess=atToI
+set shortmess=atToI
 set complete-=i
 set laststatus=2
 set scrolloff=3
@@ -58,7 +59,6 @@ set ai
 set showcmd
 set wildmenu
 set wildignorecase
-set mouse=a
 set timeoutlen=700 ttimeoutlen=0
 
 colorscheme wal
@@ -266,15 +266,11 @@ let NERDTreeMapActivateNode='l'
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
 
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap <C-c> "+yy
 
 "EasyAlign
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
-
-command! Sw :w !sudo tee %
-command! E :e!
 
 " Better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger       = "<tab>"
