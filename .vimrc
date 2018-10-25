@@ -22,7 +22,7 @@ call plug#end()
 " Basics
 filetype plugin indent on
 set gdefault
-set lcs=eol:~,tab:>-,trail:-
+set lcs=eol:~,nbsp:>,tab:<<,trail:-
 set backspace=indent,eol,start
 set nobackup
 set nomore
@@ -53,6 +53,7 @@ set ic
 set incsearch
 set autoread
 set linebreak
+set list
 set ruler
 set autochdir
 set ai
@@ -168,6 +169,7 @@ nnoremap : ;
 
 vnoremap <C-c> "*y :let @+=@*<CR>
 vnoremap ; :
+vnoremap : ;
 vnoremap gh "+p
 vnoremap hg "+y
 
