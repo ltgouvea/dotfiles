@@ -285,7 +285,7 @@ bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
 bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
 bindsym $mod+r exec $term -e ranger
 bindsym $mod+c exec $term -e vim ~/config/i3/config
-bindsym $mod+x exec --no-startup-id ~/dist_free_toggle.sh
+bindsym $mod+x exec --no-startup-id ~/.scripts/dist_free_toggle.sh
 bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace next
@@ -297,8 +297,9 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar
-        font pango:MesloLGMDZ Nerd Font Mono 13
+        font pango:MesloLGMDZ Nerd Font Mono 12
         tray_padding 0
+        position top
         # tray_output none
         status_command i3blocks
 

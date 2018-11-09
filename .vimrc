@@ -2,11 +2,11 @@
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
+Plug 'itchyny/lightline.vim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/matchit.zip'
 Plug 'tpope/vim-commentary'
-Plug 'bling/vim-airline'
 Plug 'junegunn/fzf'
 Plug 'mattn/emmet-vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -70,12 +70,8 @@ highlight CursorLineNr ctermfg=red
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let mapleader=","
+let g:syntastic_check_on_open = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:airline_theme='wal'
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_close_button = 0
 set signcolumn=yes
 
 " Hic sunt dracones
@@ -174,7 +170,7 @@ vnoremap gh "+p
 vnoremap hg "+y
 
 cnoremap ... cd ../../<CR>
-cnoremap mks mksession! ~/vim.current<CR>
+cnoremap mks mksession! ~/.vim.current<CR>
 cnoremap vex Vexplore<CR>
 cnoremap <leader>. w !sudo tee %<CR>
 cnoremap kk <C-f>
@@ -251,7 +247,7 @@ inoremap { {}<Left>
 inoremap [ []<left>
 inoremap ' ''<left>
 inoremap " ""<left>
-nnoremap <C-e> :mksession! ~/vim.current<CR>
+nnoremap <C-e> :mksession! ~/.vim.current<CR>
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <space><F10> :NERDTreeFind<CR>
 nnoremap <leader><F10> :NERDTreeClose<CR>
@@ -307,7 +303,6 @@ endfunction
 
 function! ToggleSpeedMode()
     :set nu! lz! relativenumber! ruler!
-    :AirlineToggle
     :if exists("g:syntax_on") | syntax off | else | syntax enable | endif
     :e
 endfunction
@@ -323,3 +318,4 @@ endfunction
 function! ToggleFolding()
     :if &foldcolumn ==# 0 | set foldcolumn=1 foldmethod=indent | else | set foldcolumn=0 foldmethod=manual | endif
 endfunction
+source ~/.lightline.vimrc
