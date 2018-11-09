@@ -146,46 +146,13 @@ bindsym $mod+Shift+backspace reboot
 bindsym $mod+Shift+o exit
 bindsym $mod+z mode "resize"
 bindsym $mod+s mode "system"
-bindsym $mod+w mode "wallpapers"
 bindsym $mod+m mode "music"
-bindsym $mod+p mode "programs"
-bindsym $mod+Shift+d mode "distraction_free"
 bindsym $mod+b mode "brightness"
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
-
-mode "wallpapers" {
-        bindsym z exec "wal -i $HOME/HD/Pictures/Wallpapers/Retrowave --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym x exec "wal -i $HOME/HD/Pictures/Wallpapers/Vibrant --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym c exec "wal -i $HOME/HD/Pictures/Wallpapers/Future --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym v exec "wal -i $HOME/HD/Pictures/Wallpapers/Landscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym b exec "wal -i $HOME/HD/Pictures/Wallpapers/Cityscapes --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym a exec "wal -i $(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1) --backend colorthief -o $HOME/HD/Pictures/Wallpapers/restart.sh"
-        bindsym r exec "wpp=$(find $HOME/HD/Pictures/Wallpapers/** -name '*.**g' | shuf -n 1);feh --bg-scale $wpp;cp $wpp ~/wallpaper.png;cp $wpp /usr/share/slim/themes/default/background.jpg"
-        bindsym Return mode "default"
-        bindsym Space mode "default"
-        }
-
-mode "distraction_free" {
-        bindsym d exec "~/dist_free_disable.sh"
-        bindsym e exec  "~/dist_free_enable.sh"
-        bindsym Return mode "default"
-        bindsym Space mode "default"
-        bindsym Escape mode "default"
-        }
-
-mode "programs" {
-        bindsym c exec google-chrome
-        bindsym s exec steam
-        bindsym v exec $term -e vim
-        bindsym m exec spotify
-        bindsym Return mode "default"
-        bindsym Space  mode "default"
-        bindsym Escape  mode "default"
-        }
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -227,7 +194,7 @@ mode "$mode_gaps_outer" {
 
 mode "system" {
         bindsym s exec systemctl poweroff
-        bindsym l exec i3lock -i ~/login.png
+        bindsym l exec i3lock -i ~/Pictures/wallpaper.jpg
         bindsym r exec systemctl reboot
 
         bindsym Return mode "default"
@@ -297,10 +264,9 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar
-        font pango:MesloLGMDZ Nerd Font Mono 12
+        font pango:MesloLGMDZ Nerd Font Mono 13
         tray_padding 0
         position top
-        # tray_output none
         status_command i3blocks
 
         colors {
