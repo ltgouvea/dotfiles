@@ -264,7 +264,7 @@ gaps outer 5
 
 bar {
         i3bar_command i3bar
-        font pango:MesloLGMDZ Nerd Font Mono 13
+        font pango:Fira Code 12
         tray_padding 0
         position top
         status_command i3blocks

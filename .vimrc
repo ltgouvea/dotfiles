@@ -1,11 +1,15 @@
 " Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
 Plug 'junegunn/vim-easy-align'
 Plug 'itchyny/lightline.vim'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/matchit.zip'
+Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf'
 Plug 'mattn/emmet-vim'
@@ -70,8 +74,11 @@ highlight CursorLineNr ctermfg=red
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let mapleader=","
+let g:syntastic_typescript_checkers = [ 'tsc', 'tslint' ]
 let g:syntastic_check_on_open = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:syntastic_mode_map = {
+            \ "mode": "passive" }
 set signcolumn=yes
 
 " Hic sunt dracones
@@ -79,6 +86,7 @@ nmap <TAB> gt
 nmap <S-TAB> gT
 nnoremap __ :help 
 nnoremap -n :exec ToggleNumbers()<CR>
+nnoremap -t :retab<CR>
 nnoremap -f :exec ToggleFolding()<CR>
 nnoremap -w :help <C-r><C-w><CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
@@ -214,12 +222,14 @@ nnoremap <Down> <C-W><Down>
 
 inoremap xx <C-x>
 inoremap <F1> <C-o>
-inoremap d <ESC>dwi
 inoremap <F5> <ESC>:w<CR>i
 inoremap <F6> <ESC>:wq<CR>
 inoremap zz \|
-inoremap 99 ()
-inoremap 88 {}
+inoremap 99 ()<Left>
+inoremap 88 {}<Left>
+inoremap {<CR> {<CR><CR>}<Esc>kI<tab>
+inoremap (<CR> (<CR><CR>)<Esc>kI<tab>
+inoremap [<CR> [<CR><CR>]<Esc>kI<tab>
 inoremap 00 _
 inoremap 55 %
 inoremap 44 $
@@ -242,11 +252,6 @@ inoremap vv <C-x><C-v>
 inoremap ff <C-x><C-f>
 inoremap çs <ESC>:w<CR>
 inoremap çq <ESC>:wq<CR>
-inoremap 99 ()<Left>
-inoremap { {}<Left>
-inoremap [ []<left>
-inoremap ' ''<left>
-inoremap " ""<left>
 nnoremap <C-e> :mksession! ~/.vim.current<CR>
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <space><F10> :NERDTreeFind<CR>
@@ -288,6 +293,10 @@ set encoding=utf-8
 
 " Abbreviations
 iab shrug ¯\_(ツ)_/¯<delete>
+cabbrev tdcore ~/Projects/Revelare/troca-digital-core/
+cabbrev tdpainel ~/Projects/Revelare/troca-digital-painel/
+cabbrev tdportal ~/Projects/Revelare/troca-digital-portal/
+cabbrev tdapp ~/Projects/Revelare/troca-digital-aplicativo/
 
 " Macros
 let @y='OR/branchwyWq'

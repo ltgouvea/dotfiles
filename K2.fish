@@ -29,6 +29,10 @@ abbr -a chx='chmod +x '
 abbr -a cwp='rm -rf ~/.cache/wal/; and wal -i ~/Pictures/wallpaper.jpg -a 85 --backend colorthief --saturate 0.5 -g'
 abbr -a cwpt='rm -rf ~/.cache/wal/; and wal --theme random_dark -a 85 --backend colorthief --saturate 0.5 -g'
 abbr -a gentags="ctags -R --exclude='.git' --exclude='node_modules' --exclude='vendor' --exclude='public' --exclude='laradock' --exclude='*.js'"
+abbr -a tdcore='~/Projects/Revelare/troca-digital-core/'
+abbr -a tdpainel='~/Projects/Revelare/troca-digital-painel/'
+abbr -a tdportal='~/Projects/Revelare/troca-digital-portal/'
+abbr -a tdaplicativo='~/Projects/Revelare/troca-digital-aplicativo/'
 
 function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')
@@ -43,3 +47,10 @@ end
 
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g ""'
+source ~/.trocadigital.fish
+set ANDROID_HOME /usr/lib/android-sdk/
+set JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/bin/
+set PATH /home/k2/.npm-packages/bin $PATH 
+set PATH $ANDROID_HOME/tools $PATH
+set PATH $ANDROID_HOME/platform-tools $PATH
+set PATH $JAVA_HOME $PATH
