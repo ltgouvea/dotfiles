@@ -7,7 +7,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/matchit.zip'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-commentary'
@@ -20,12 +19,14 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-surround'
 Plug 'dag/vim-fish'
 Plug 'dylanaraps/wal.vim'
+Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Basics
 filetype plugin indent on
 set gdefault
+set suffixesadd=.js,.ts
 set lcs=eol:~,nbsp:>,tab:<<,trail:-
 set backspace=indent,eol,start
 set nobackup
@@ -77,8 +78,7 @@ let mapleader=","
 let g:syntastic_typescript_checkers = [ 'tsc', 'tslint' ]
 let g:syntastic_check_on_open = 0
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:syntastic_mode_map = {
-            \ "mode": "passive" }
+let g:syntastic_mode_map = { 'mode': 'passive' }
 set signcolumn=yes
 
 " Hic sunt dracones
@@ -134,40 +134,18 @@ onoremap z aW
 onoremap \ i<
 onoremap q i'
 onoremap <space>q i"
-onoremap c i{
 onoremap <leader>c a{
+onoremap c i{
 onoremap v i[
 onoremap p i(
-onoremap <leader>f F
-onoremap <leader>t T
-onoremap <leader>w W
-onoremap <leader>e E
-onoremap <leader>b B
-onoremap <leader>b B
 onoremap ç <esc>
 
 onoremap <space>c a{
 onoremap <space>v a[
 onoremap <space>p a(
 
-nnoremap <leader>a A
-nnoremap <leader>b B
-nnoremap <leader>c C
-nnoremap <leader>i I
-nnoremap <leader>y Y
-nnoremap <leader>d D
-nnoremap <leader>g G
-nnoremap <leader>s S
-nnoremap <leader>w W
-nnoremap <leader>e E
 nnoremap <leader>p :prev<CR>
 nnoremap <leader>n :next<CR>
-nnoremap <leader>o O
-nnoremap <leader>r R
-nnoremap <leader>h ^
-nnoremap <leader>x :e!<CR>
-nnoremap <leader>qq viw<esc>a'<esc>bi'<esc>lel
-nnoremap <leader>qd viw<esc>a"<esc>bi"<esc>lel
 nnoremap ; :
 nnoremap : ;
 
@@ -206,14 +184,12 @@ cnoremap jj <Home>
 nnoremap <backspace> :shell<CR>
 nnoremap <space>v :vsplit<CR>
 nnoremap <space>h :split<CR>
-nnoremap <c-h> :NERDTreeToggle<CR>
 nnoremap <c-t> :Texplore<CR>
 nnoremap <space>g :Gst<CR>
 nnoremap <space>q :q<CR>
 nnoremap <space>t :tabe<CR>
 nnoremap <space>w <C-w>
 nnoremap <space>r :so ~/.vimrc<CR>:e<CR>
-nnoremap <space>o :options<CR>
 
 nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
@@ -279,6 +255,8 @@ nmap ga <Plug>(EasyAlign)
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
 
 " The Silver Searcher
 if executable('ag')

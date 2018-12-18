@@ -24,6 +24,9 @@ client.placeholder      $color1     $bg     $fg  $color1       $color1
 client.background       $bg
 
 font pango:'Inconsolata for Powerline' 10
+for_window [window_role="pop-up"] floating enable
+for_window [title="(?i)steam"] floating enable
+for_window [title="(?i)spotify"] floating enable, move to workspace $ws7
 for_window [class="^.*"] border pixel 0
 new_window 1pixel
 
@@ -122,7 +125,6 @@ assign [title="(?i)ranger"]               $ws5
 assign [class="(?i)nemo"]                 $ws5
 assign [class="(?i)pgadmin"]              $ws6
 assign [title="(?i)ncmpcpp"]              $ws7
-assign [title="(?i)mutt"]                 $ws9
 assign [class="(?i)gnome-system-monitor"] $ws10
 
 # move focused container to workspace
@@ -284,7 +286,7 @@ bar {
         }
 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id wal -R -a 85 -o ~/dotfiles/scripts/reload_dunst.sh
+exec --no-startup-id wal -R -o ~/dotfiles/scripts/reload_dunst.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bfcz
