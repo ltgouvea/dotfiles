@@ -10,13 +10,18 @@ abbr -a gp "git push"
 abbr -a grhh "git reset --hard"
 abbr -a gb "git branch"
 abbr -a gcb "git checkout -b"
+abbr -a gcd "git checkout develop"
+abbr -a gcm "git checkout master"
 abbr -a gco "git checkout"
 abbr -a gfa "git fetch --all"
 abbr -a gcfd "git clean -fd"
 abbr -a gcod "git checkout -- ."
 abbr -a gst='git status'
-abbr -a glo='git log'
-abbr -a glola='git log -la'
+abbr -a gsta='git stash apply'
+abbr -a gstd='git stash drop'
+abbr -a glo='git log --oneline --decorate'
+abbr -a glola='git log --graph --pretty --abbrev-commit --all'
+abbr -a glog='git log --oneline --decorate --graph'
 abbr -a gl='git pull'
 abbr -a gp='git push'
 abbr -a gco='git checkout'

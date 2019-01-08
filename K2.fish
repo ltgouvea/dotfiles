@@ -11,6 +11,7 @@ abbr -a ticsol='cd /var/www/tic-sms/'
 abbr -a ticup='cd /var/www/tic-sms/ ; and  docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 abbr -a cmatrix='cmatrix -bs'
 abbr -a v='vim'
+abbr -a fuck="sudo (cat .local/share/fish/fish_history | grep cmd | sed 's/^.*:.//' | tail -1)" 
 abbr -a l='ls -lah'
 abbr -a r='ranger'
 abbr -a wr='wal -R'

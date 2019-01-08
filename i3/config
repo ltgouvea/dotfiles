@@ -1,18 +1,19 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
 set $term rxvt-unicode
-
-# Set colors from Xresources
-# Change 'color7' and 'color2' to whatever colors you want i3 to use
-# from the generated scheme.
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
+set $coloract "#cb6d32"
+set $colorin "#8b4b22"
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color0 #f0f0f0
-
+set_from_resource $color15 i3wm.color15 "#fff5da"
+set_from_resource $split i3wm.color10 "#986a60"
+set_from_resource $coloru i3wm.color2 "#6C5854"
 set_from_resource $color1 i3wm.color2 #f0f0f0
+set_from_resource $color0 i3wm.color0 "#0a121c"
+set_from_resource $color8 i3wm.color8 "#14243a"
 
 # class                 border  backgr. text indicator child_border
 client.focused          $color1     $bg     $fg  $color1       $color1
@@ -292,3 +293,4 @@ exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bfcz
 exec --no-startup-id redshift
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg
+exec --no-startup-id ~/.config/wpg/wp_init.sh

@@ -106,6 +106,7 @@ nnoremap <leader>1 :r !
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gstatus<CR>
 nnoremap <F4> :bot term<CR>
+tnoremap <F4> <C-w>NZQ
 nnoremap <leader><F4> :qa<CR>
 nnoremap <F5> :w<CR>
 nnoremap <F6> :wq<CR>
@@ -113,7 +114,6 @@ nnoremap <F7> :e!<CR>
 nnoremap <F8> :CtrlP<CR>
 nnoremap <F9> :FZF<CR>
 nnoremap <F11> @c
-nnoremap <F12> @z
 nnoremap + <C-a>
 nnoremap - <C-x>
 nnoremap <space>d <C-d>
@@ -277,11 +277,10 @@ cabbrev tdportal ~/Projects/Revelare/troca-digital-portal/
 cabbrev tdapp ~/Projects/Revelare/troca-digital-aplicativo/
 
 " Macros
-let @y='OR/branchwyWq'
+let @y='ORWyEq'
 let @p='@y;Git pull origin pp'
 let @g='@y;Git push origin pp'
-let @c='@y€k3zj-ccpa | '
-let @z='@y€k3zj-zj-ccpa | '
+let @c='@yOR/unst-ccpa | '
 
 function! UpdateBranch()
     Git fetch --all
