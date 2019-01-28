@@ -7,10 +7,10 @@ markup=none
 interval=10
 markup=pango
 
-[spotinfo]
-command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
-interval=10
-markup=pango
+# [spotinfo]
+# command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
+# interval=10
+# markup=pango
 
 [battery]
 instance=0

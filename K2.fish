@@ -1,4 +1,4 @@
-abbr -a c="clear"
+abbr -a vs="vim -S ~/.vim.current"
 abbr -a top='glances'
 abbr -a dit='docker exec -it'
 abbr -a d='docker-compose exec workspace'
