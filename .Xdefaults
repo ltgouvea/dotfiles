@@ -13,3 +13,4 @@ URxvt.tabbed.tabbar-fg: 3
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 1
 URxvt.tabbed.tab-bg: 0
+URxvt.cursorColor:  magenta

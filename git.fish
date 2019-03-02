@@ -1,32 +1,32 @@
-abbr -a gd "git diff -M"
-abbr -a ga "git add"
-abbr -a gaa "git add --all ."
-abbr -a gbd "git branch -d"
-abbr -a gbdd "git branch -D"
-abbr -a gcam "git commit -a -m"
-abbr -a gc "git commit -m '"
-abbr -a gmff "git merge --no-ff --no-edit"
-abbr -a gp "git push"
-abbr -a grhh "git reset --hard"
-abbr -a gb "git branch"
-abbr -a gcb "git checkout -b"
-abbr -a gcd "git checkout develop"
-abbr -a gcm "git checkout master"
-abbr -a gco "git checkout"
-abbr -a gfa "git fetch --all"
-abbr -a gcfd "git clean -fd"
-abbr -a gcod "git checkout -- ."
-abbr -a gst='git status'
-abbr -a gsta='git stash apply'
-abbr -a gstd='git stash drop'
-abbr -a glo='git log --oneline --decorate'
-abbr -a glola='git log --graph --pretty --abbrev-commit --all'
-abbr -a glog='git log --oneline --decorate --graph'
-abbr -a gl='git pull'
-abbr -a gp='git push'
-abbr -a gco='git checkout'
-abbr -a gd='git diff'
-abbr -a ggpull='git pull origin (current_branch)'
-abbr -a ggpur='git pull --rebase origin (current_branch)'
-abbr -a ggpush='git push origin (current_branch)'
-abbr -a ggpnp='git pull origin (current_branch); and git push origin (current_branch)'
+abbr gd "git diff -M"
+abbr ga "git add"
+abbr gaa "git add --all ."
+abbr gbd "git branch -d"
+abbr gbdd "git branch -D"
+abbr gcam "git commit -a -g -m"
+abbr gc "git commit -m '"
+abbr gmff "git merge --no-ff --no-edit"
+abbr gp "git push"
+abbr grhh "git reset --hard"
+abbr gb "git branch"
+abbr gcb "git checkout -b"
+abbr gcd "git checkout develop"
+abbr gcm "git checkout master"
+abbr gco "git checkout"
+abbr gfa "git fetch --all"
+abbr gcfd "git clean -fd"
+abbr gcod "git checkout -- ."
+abbr gst 'git status'
+abbr gsta 'git stash apply'
+abbr gstd 'git stash drop'
+abbr glo 'git log --oneline --decorate'
+abbr glola 'git log --graph --pretty --abbrev-commit --all'
+abbr glog 'git log --oneline --decorate --graph'
+abbr gl 'git pull'
+abbr gp 'git push'
+abbr gco 'git checkout'
+abbr gd 'git diff'
+abbr ggpull 'git pull origin (current_branch)'
+abbr ggpur 'git pull --rebase origin (current_branch)'
+abbr ggpush 'git push origin (current_branch)'
+abbr ggpnp 'git pull origin (current_branch); and git push origin (current_branch)'

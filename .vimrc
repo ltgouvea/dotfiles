@@ -49,7 +49,7 @@ set background=dark
 set shortmess=atToI
 set complete-=i
 set laststatus=2
-set scrolloff=3
+set scrolloff=0
 set sidescrolloff=5
 set display+=lastline
 set relativenumber
@@ -116,8 +116,6 @@ nnoremap <F9> :FZF<CR>
 nnoremap <F11> @c
 nnoremap + <C-a>
 nnoremap - <C-x>
-nnoremap <space>d <C-d>
-nnoremap <space>u <C-u>
 nnoremap <leader>/ :set hlsearch!<CR>
 nnoremap <leader>t :%s///g<Left><Left>
 nnoremap <leader>k K
@@ -125,24 +123,8 @@ nnoremap <leader>k K
 nnoremap yp Yp
 nnoremap dp ddkP
 
-" - lazy maps
 nnoremap zx ZQ
-
-" - operator pending maps
-onoremap x iW
-onoremap z aW
-onoremap \ i<
-onoremap q i'
-onoremap <space>q i"
-onoremap <leader>c a{
-onoremap c i{
-onoremap v i[
-onoremap p i(
 onoremap ç <esc>
-
-onoremap <space>c a{
-onoremap <space>v a[
-onoremap <space>p a(
 
 nnoremap <leader>p :prev<CR>
 nnoremap <leader>n :next<CR>
@@ -173,7 +155,7 @@ cnoremap gpm Git push origin master<CR>
 cnoremap gco Git checkout 
 cnoremap glo Git log --stat<CR><CR>
 cnoremap grhh Git reset --hard HEAD<CR>
-cnoremap -- <C-R>=expand("%:p:h")<CR>
+cnoremap --- <C-R>=expand("%:p:h")<CR>
 cnoremap sg s///g<C-LEFT><Right><Right>
 cnoremap jk <Right>
 cnoremap kj <Left>
@@ -196,7 +178,6 @@ nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>
 nnoremap <Down> <C-W><Down>
 
-inoremap xx <C-x>
 inoremap <F1> <C-o>
 inoremap <F5> <ESC>:w<CR>i
 inoremap <F6> <ESC>:wq<CR>
@@ -206,7 +187,6 @@ inoremap 88 {}<Left>
 inoremap {<CR> {<CR><CR>}<Esc>kI<tab>
 inoremap (<CR> (<CR><CR>)<Esc>kI<tab>
 inoremap [<CR> [<CR><CR>]<Esc>kI<tab>
-inoremap 00 _
 inoremap 55 %
 inoremap 44 $
 inoremap 22 @
@@ -237,7 +217,6 @@ nnoremap <leader>v :vsplit ~/.vimrc<CR>
 nnoremap <leader>; @:
 nnoremap <leader><space> @@
 nnoremap <leader>. :w<CR>
-nnoremap <leader>l <S-v>
 nnoremap <space><space> :w<CR>
 
 let g:user_emmet_leader_key=','
