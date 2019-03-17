@@ -1,0 +1,323 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+set $term rxvt-unicode
+set $coloract "#59739d"
+set $colorin "#3d4f6c"
+set $color15 i3wm.color15 "#fdecec"
+set $split i3wm.color10 "#7090c5"
+set $coloru i3wm.color2 "#63738e"
+set $color1 i3wm.color2 #f0f0f0
+set $color3 i3wm.color3 "#d49e89"
+set $color4 i3wm.color4 "#42678f"
+set $color5 i3wm.color5 "#978897"
+set $color0 i3wm.color0 "#080c24"
+set $color8 i3wm.color8 "#131a40"
+set $black    #080808
+set $red      #F51024
+set $green    #4E9A06
+set $yellow   #C4A000
+set $blue     #254775
+set $magenta  #75507B
+set $cyan     #06989A
+set $gray     #A5A5A5
+set $darkgray #555753
+set $lred     #FF4444
+set $lgreen    #74FF00
+set $lyellow  #FCE94F
+set $lblue    #4A84D8
+set $lmagenta #AD7FA8
+set $lcyan    #34E2E2
+set $white    #EEEEEC
+set $black    #080808
+set $red      #F51024
+set $green    #4E9A06
+set $yellow   #C4A000
+set $blue     #254775
+set $magenta  #75507B
+set $cyan     #06989A
+set $gray     #A5A5A5
+set $darkgray #555753
+set $lred     #FF4444
+set $lgreen    #74FF00
+set $lyellow  #FCE94F
+set $lblue    #4A84D8
+set $lmagenta #AD7FA8
+set $lcyan    #34E2E2
+set $white    #EEEEEC
+
+# Color                   border    background text    indicator  child_border
+client.focused          $lmagenta $black     $gray   $lmagenta  $lmagenta
+client.focused_inactive $gray     $black     $gray   $gray      $gray
+client.unfocused        $black    $black     $gray   $black     $magenta
+client.urgent           $lgreen   $black     $gray   $lgreen    $lmagenta
+
+font pango:'Inconsolata for Powerline' 10
+for_window [window_role="pop-up"] floating enable
+for_window [title="(?i)steam"] floating enable
+for_window [title="(?i)spotify"] floating enable, move to workspace $ws7
+for_window [class="^.*"] border pixel 2
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec $term
+
+# kill focused window
+bindsym $mod+q kill
+
+bindsym $mod+Shift+f exec google-chrome
+bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run -terminal rxvt-unicode
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+g split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+Shift+w layout stacked
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+Shift+a focus child
+
+set $ws1  "  "
+set $ws2  "  "
+set $ws3  "  "
+set $ws4  "  "
+set $ws5  " "
+set $ws6  "  "
+set $ws7  "  "
+set $ws8  " "
+set $ws9  "  "
+set $ws10  "  "
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+assign [class="(?i)google-chrome"]        $ws2
+assign [class="(?i)firefox"]              $ws2
+assign [title="(?i)rxvt-unicode"]         $ws1
+assign [title="(?i)termite"]              $ws1
+assign [class="(?i)torrent"]              $ws3
+assign [title="(?i)steam"]                $ws4
+assign [title="(?i)otclient"]             $ws4
+assign [title="(?i)tibia"]                $ws10
+assign [title="(?i)ranger"]               $ws5
+assign [class="(?i)nemo"]                 $ws5
+assign [class="(?i)pgadmin"]              $ws6
+assign [title="(?i)ncmpcpp"]              $ws7
+assign [class="(?i)gnome-system-monitor"] $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i4 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+backspace reboot
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+o exit
+bindsym $mod+z mode "resize"
+bindsym $mod+s mode "system"
+bindsym $mod+m mode "music"
+bindsym $mod+b mode "brightness"
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Space  mode "default"
+        }
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Space  mode "default"
+        bindsym Tab mode "$mode_gaps_outer"
+        }
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym Space  mode "default"
+        bindsym Tab mode "$mode_gaps_inner"
+        }
+
+mode "system" {
+        bindsym s exec systemctl poweroff
+        bindsym l exec i3lock -i ~/Pictures/wallpaper.jpg
+        bindsym r exec systemctl reboot
+
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+        }
+
+mode "music" {
+        bindsym k exec amixer -D pulse sset Master 5%+
+        bindsym Shift+k exec amixer -D pulse sset Master 15%+
+        bindsym Shift+j exec amixer -D pulse sset Master 15%-
+        bindsym j exec amixer -D pulse sset Master 5%-
+
+        bindsym l exec mpc next
+        bindsym h exec mpc prev
+        bindsym x exec mpc toggle
+        bindsym p exec mpc toggle
+        bindsym c exec mpc stop
+        bindsym s exec mpc stop
+        bindsym z exec mpc random
+        bindsym n exec --no-startup-id ~/.mpcstatus
+
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+        }
+
+mode "brightness" {
+        bindsym k exec light -A 5
+        bindsym j exec light -U 5
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+        }
+
+mode "resize" {
+        bindsym h resize shrink right 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow right 10 px or 10 ppt
+
+        bindsym Left resize grow left 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow right 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Space  mode "default"
+        bindsym Escape mode "default"
+        }
+
+bindsym $mod+Ctrl+Right resize shrink width  10px or  10ppt
+bindsym $mod+Ctrl+Up resize grow height  10px or  10ppt
+bindsym $mod+Ctrl+Down resize shrink height  10px or  10ppt
+bindsym $mod+Ctrl+Left resize grow width  10px or  10ppt
+bindsym $mod+r exec $term -e ranger
+bindsym $mod+c exec $term -e vim ~/config/i3/config
+bindsym $mod+x exec --no-startup-id ~/.scripts/dist_free_toggle.sh
+bindsym $mod+n exec $term -e ncmpcpp
+bindsym $mod+Shift+Return exec $term -e tmux
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace prev
+bindsym --release Print exec notify-send -t 1000 'screenshot' 'please select area' && grim -g $(slurp) ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
+bindsym --release Shift+Print exec notify-send -t 1000 'screenshot taken in ~/Pictures/printscreen/' && grim Pictures/printscreen/print_%d_%m_%Y_%T.png
+gaps inner 5
+gaps outer 5
+
+bar {
+        font pango:SauceCodePro Nerd Font Mono 15
+        position top
+        status_command i3blocks
+
+        colors {
+            statusline #f9f9f9
+                background #080808
+                focused_workspace  #080808 #080808 #AD7FA8
+                inactive_workspace #080808 #080808 #75507B
+        }
+}
+
+input "1:1:AT_Translated_Set_2_keyboard" {
+    xkb_layout br
+    xkb_variant ,nodeadkeys
+    xkb_options grp:alt_shift_toggle
+}
+
+input "1267:12299:ELAN0501:00_04F3:300B_Touchpad" {
+    tap enabled
+}
+
+exec --no-startup-id mako
+exec --no-startup-id pulseaudio --start
+exec --no-startup-id wal -R
+exec --no-startup-id glpaper eDP-1 ~/Pictures/Jaypaper/cloudninja.frag
