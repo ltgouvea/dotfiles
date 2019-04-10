@@ -4,19 +4,19 @@
 
 set $mod Mod4
 set $term rxvt-unicode
-set $coloract "#59739d"
-set $colorin "#3d4f6c"
+set $coloract "#afaa58"
+set $colorin "#78753c"
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color0 #f0f0f0
-set_from_resource $color15 i3wm.color15 "#fdecec"
-set_from_resource $split i3wm.color10 "#7090c5"
-set_from_resource $coloru i3wm.color2 "#63738e"
+set_from_resource $color15 i3wm.color15 "#f5f5f5"
+set_from_resource $split i3wm.color10 "#bb4c40"
+set_from_resource $coloru i3wm.color2 "#87433e"
 set_from_resource $color1 i3wm.color2 #f0f0f0
-set_from_resource $color3 i3wm.color3 "#d49e89"
-set_from_resource $color4 i3wm.color4 "#42678f"
-set_from_resource $color5 i3wm.color5 "#978897"
-set_from_resource $color0 i3wm.color0 "#080c24"
-set_from_resource $color8 i3wm.color8 "#131a40"
+set_from_resource $color3 i3wm.color3 "#d9b270"
+set_from_resource $color4 i3wm.color4 "#7a7a7a"
+set_from_resource $color5 i3wm.color5 "#a66c9a"
+set_from_resource $color0 i3wm.color0 "#0b0b0b"
+set_from_resource $color8 i3wm.color8 "#1e1e1e"
 
 # class                 border  backgr. text indicator child_border
 client.focused          $color1     $bg     $fg  $color1       $color1
@@ -94,16 +94,16 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+Shift+a focus child
 
-set $ws1  "  "
-set $ws2  "  "
-set $ws3  "  "
-set $ws4  "  "
-set $ws5  " "
-set $ws6  "  "
-set $ws7  "  "
-set $ws8  " "
-set $ws9  "  "
-set $ws10  "  "
+set $ws1   "  "
+set $ws2   "  "
+set $ws3   "  "
+set $ws4   "  "
+set $ws5   "  "
+set $ws6   "  "
+set $ws7   "  "
+set $ws8   "  "
+set $ws9   "  "
+set $ws10  "  "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -262,30 +262,32 @@ bindsym $mod+x exec --no-startup-id ~/.scripts/dist_free_toggle.sh
 bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace back_and_forth
-bindsym $mod+Shift+Tab workspace prev
-bindsym --release Print exec notify-send -t 1000 'screenshot' 'please select area' && scrot -s ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
-bindsym --release Shift+Print exec notify-send -t 1000 'screenshot taken in ~/Pictures/printscreen/' && scrot ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
-gaps inner 5
-gaps outer 5
+bindsym $mod+Shift+Tab workspace next
+bindsym --release Print exec notify-send -t 700 'screenshot' 'please select area' && scrot -s ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
+bindsym --release Shift+Print exec notify-send -t 700 'screenshot taken in ~/Pictures/printscreen/' && scrot ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
+gaps inner 12
+gaps outer 12
+workspace_auto_back_and_forth yes
 
 bar {
-        i3bar_command i3bar
-        font pango:SauceCodePro Nerd Font Mono 15
-        tray_padding 0
+        i3bar_command i3bar -t
+        font pango:Fira Code 15
+        separator_symbol 
+        tray_output none
         position top
         status_command i3blocks
 
         colors {
-            statusline         $fg
-            background         $bg
-            separator          $bg
+            statusline         #9b999e96
+            background         #29334500
+            separator          #29334500
 
             #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $color4 $bg $color1
-            inactive_workspace $bg $bg $white
+            focused_workspace  $color4 $color4 $color1
+            inactive_workspace #29334500 #29334500 $white
             active_workspace   $transparent $transparent $color1
-            urgent_workspace   $fg     $color1     $bg
-            binding_mode       $bg     $color1     $bg
+            urgent_workspace   #9b999e93     $color1     #29334595
+            binding_mode       #29334500     $color1     #29334595
             }
         }
 
@@ -294,5 +296,5 @@ exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
 exec --no-startup-id compton -bfcz
 exec --no-startup-id redshift
-exec --no-startup-id wal -R
+exec --no-startup-id wal -R -a 85
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.jpg

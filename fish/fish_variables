@@ -44,8 +44,10 @@ SETUVAR _fish_abbr_gmff:git\x20merge\x20\x2d\x2dno\x2dff\x20\x2d\x2dno\x2dedit
 SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_grhh:git\x20reset\x20\x2d\x2dhard
 SETUVAR _fish_abbr_gst:git\x20status
-SETUVAR _fish_abbr_gsta:git\x20stash\x20apply
+SETUVAR _fish_abbr_gsta:git\x20stash
+SETUVAR _fish_abbr_gstaa:git\x20stash\x20apply
 SETUVAR _fish_abbr_gstd:git\x20stash\x20drop
+SETUVAR _fish_abbr_gstl:git\x20stash\x20list
 SETUVAR _fish_abbr_l:ls\x20\x2dlah
 SETUVAR _fish_abbr_lock:i3lock\x20\x2di\x20\x7e/login\x2epng
 SETUVAR _fish_abbr_m:mutt

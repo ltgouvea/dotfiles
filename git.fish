@@ -17,8 +17,10 @@ abbr gfa "git fetch --all"
 abbr gcfd "git clean -fd"
 abbr gcod "git checkout -- ."
 abbr gst 'git status'
-abbr gsta 'git stash apply'
 abbr gstd 'git stash drop'
+abbr gstl 'git stash list'
+abbr gsta 'git stash'
+abbr gstaa 'git stash apply'
 abbr glo 'git log --oneline --decorate'
 abbr glola 'git log --graph --pretty --abbrev-commit --all'
 abbr glog 'git log --oneline --decorate --graph'

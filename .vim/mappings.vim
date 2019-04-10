@@ -125,6 +125,10 @@ nnoremap gh "+P
 nnoremap hg "+y
 nnoremap yp Yp
 nnoremap zx ZQ
+nnoremap H ^
+nnoremap L $
+onoremap H ^
+onoremap L $
 onoremap ç <esc>
 tnoremap <F4> <C-w>NZQ
 vnoremap : ;
