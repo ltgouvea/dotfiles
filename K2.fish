@@ -10,8 +10,7 @@ abbr ssn 'sudo shutdown now'
 abbr ticsol 'cd /var/www/tic-sms/'
 abbr ticup 'cd /var/www/tic-sms/ ; and  docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 abbr cmatrix 'cmatrix -bs'
-abbr v 'vim'
-abbr fuck "sudo (cat .local/share/fish/fish_history | grep cmd | sed 's/^.*:.//' | tail -1)" 
+abbr v './vessel'
 abbr l 'ls -lah'
 abbr r 'ranger'
 abbr wr 'wal -R'
@@ -55,3 +54,8 @@ set PATH /home/k2/.npm-packages/bin $PATH
 set PATH $ANDROID_HOME/tools $PATH
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $JAVA_HOME $PATH
+
+export LESS_TERMCAP_mb=(set_color green --bold)
+export LESS_TERMCAP_md=(set_color green --bold)
+export LESS_TERMCAP_so=(set_color yellow --bold)
+export LESS_TERMCAP_us=(set_color red --bold -u)

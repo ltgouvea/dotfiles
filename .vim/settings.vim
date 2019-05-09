@@ -1,5 +1,7 @@
 filetype plugin indent on
+set hidden
 set gdefault
+set nohlsearch
 set suffixesadd=.js,.ts
 set lcs=eol:~,nbsp:>,tab:<<,trail:-
 set backspace=indent,eol,start
@@ -20,14 +22,12 @@ set cwh=20
 set cmdheight=2
 syntax enable
 set background=dark
-set shortmess=atToI
+set shortmess=atToIc
 set complete-=i
 set laststatus=2
 set scrolloff=0
 set sidescrolloff=5
 set display+=lastline
-set relativenumber
-set nu
 set ic
 set incsearch
 set autoread
@@ -58,7 +58,7 @@ let g:user_emmet_leader_key=','
 let NERDTreeMapActivateNode='l'
 let NERDTreeShowLineNumbers=1
 autocmd FileType nerdtree setlocal relativenumber
-let g:UltiSnipsExpandTrigger       = "<tab>"
+let g:UltiSnipsExpandTrigger       = "`"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']

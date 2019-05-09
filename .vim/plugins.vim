@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
-Plug 'ervandew/supertab'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'junegunn/vim-easy-align'
 Plug 'itchyny/lightline.vim'
 Plug 'SirVer/ultisnips'
