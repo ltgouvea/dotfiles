@@ -1,4 +1,5 @@
 #!/bin/sh
+export DISPLAY=:0
 cd /home/k2/dotfiles/
 cp /home/k2/.K2.fish K2.fish
 cp /home/k2/.git.fish git.fish
@@ -13,4 +14,4 @@ DATE=$(date '+%m/%d/%y|%H:%M:%S')
 git add --all .
 git commit -m "Update automatizado diário. Realizado em: $DATE" 
 git push origin master
-/usr/bin/notify-send "Update automatizado diário. Data e Hora $DATE" 
+/usr/bin/notify-send "[CRONJOB]" "Update automatizado diário. Data e Hora $DATE" 
