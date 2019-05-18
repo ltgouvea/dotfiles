@@ -13,7 +13,6 @@ set hi=1000
 set updatetime=200
 set fcs=vert:\│,fold:\ 
 set noswapfile
-set smartindent
 set smarttab
 set expandtab
 set tabstop=4
