@@ -1,8 +1,8 @@
 rofi.modi:                           window,run,ssh
-rofi.width:                          50
-rofi.lines:                          15
+rofi.width:                          100
+rofi.lines:                          20
 rofi.columns:                        1
-rofi.font:                           roboto mono 10
+rofi.font:                           MesloLGMDZ Nerd Font Mono 10
 rofi.color-normal:                   #0b0b0b, #f5f5f5, #0b0b0b, #afaa58, #f5f5f5
 rofi.color-urgent:                   #0b0b0b, #d6b48d, #22231D, #d6b48d, #f5f5f5
 rofi.color-active:                   #0b0b0b, #c75f7c, #0b0b0b, #c75f7c, #0b0b0b
@@ -18,7 +18,7 @@ rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
 rofi.run-command:                    {cmd}
 rofi.parse-hosts:                    true
-rofi.matching:                       normal
+rofi.matching:                       regex
 rofi.separator-style:                none
 rofi.scrollbar-width:                0
 rofi.kb-mode-next:                   Shift+Right,Control+Tab,Alt+l
