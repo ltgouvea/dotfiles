@@ -74,7 +74,7 @@ nnoremap <C-c> "+yy
 nnoremap <C-e> :mksession! ~/.vim.current<CR>
 nnoremap <Down> <C-W><Down>
 nnoremap <F10> :NERDTreeToggle<CR>
-nnoremap <F11> @c
+nnoremap <F12> @c
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
 nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
