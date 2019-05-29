@@ -83,8 +83,8 @@ nnoremap <F4> :bot term<CR>
 nnoremap <F5> :w<CR>
 nnoremap <F6> :wq<CR>
 nnoremap <F7> :e!<CR>
-nnoremap <F8> :CtrlP<CR>
-nnoremap <F9> :FZF<CR>
+nnoremap <F8> :Files<CR>
+nnoremap <F9> :ProjectFiles<CR>
 nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>

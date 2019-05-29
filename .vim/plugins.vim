@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 Plug 'w0rp/ale'
+Plug 'jwalton512/vim-blade'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'posva/vim-vue'
 Plug 'junegunn/vim-easy-align'
 Plug 'itchyny/lightline.vim'
 Plug 'SirVer/ultisnips'
@@ -10,8 +12,8 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'editorconfig/editorconfig-vim'
