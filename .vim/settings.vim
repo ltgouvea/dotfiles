@@ -33,7 +33,6 @@ set autoread
 set linebreak
 set list
 set ruler
-set autochdir
 set ai
 set showcmd
 set wildmenu
