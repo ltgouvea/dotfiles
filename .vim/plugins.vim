@@ -22,4 +22,8 @@ Plug 'dag/vim-fish'
 Plug 'dylanaraps/wal.vim'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+Plug 'thosakwe/vim-flutter'
 call plug#end()

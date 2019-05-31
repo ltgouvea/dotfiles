@@ -51,11 +51,15 @@ source ~/.trocadigital.fish
 set ANDROID_HOME /usr/lib/android-sdk/
 set JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/bin/
 set FLUTTER_HOME /home/k2/.flutter_sdk/bin/
+set DART_HOME /usr/lib/dart/bin/
+set PUB_CACHE_HOME /home/k2/.pub-cache/bin/
 set PATH /home/k2/.npm-packages/bin $PATH 
 set PATH $ANDROID_HOME/tools $PATH
 set PATH $ANDROID_HOME/platform-tools $PATH
 set PATH $JAVA_HOME $PATH
 set PATH $FLUTTER_HOME $PATH
+set PATH $DART_HOME $PATH
+set PATH $PUB_CACHE_HOME $PATH
 
 export LESS_TERMCAP_mb=(set_color green --bold)
 export LESS_TERMCAP_md=(set_color green --bold)
