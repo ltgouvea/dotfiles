@@ -28,20 +28,16 @@ cnoremap vex Vexplore<CR>
 cnoremap çç <Esc>
 iab shrug ¯\_(ツ)_/¯<delete>
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
-inoremap (<CR> (<CR><CR>)<Esc>kI<tab>
 inoremap -. ->
 inoremap 22 @
 inoremap 33 #
 inoremap 44 $
 inoremap 55 %
-inoremap 88 {}<Left>
-inoremap 99 ()<Left>
 inoremap ;; ::
 inoremap <F1> <C-o>
 inoremap <F5> <ESC>:w<CR>i
 inoremap <F6> <ESC>:wq<CR>
 inoremap =. =>
-inoremap [<CR> [<CR><CR>]<Esc>kI<tab>
 inoremap ff <C-x><C-f>
 inoremap hh <C-x><C-l>
 inoremap jj <ESC>I
@@ -53,7 +49,6 @@ inoremap pp <C-p>
 inoremap vv <C-x><C-v>
 inoremap yy <C-y>
 inoremap zz \|
-inoremap {<CR> {<CR><CR>}<Esc>kI<tab>
 inoremap çq <ESC>:wq<CR>
 inoremap çs <ESC>:w<CR>
 inoremap çç <ESC>
@@ -88,6 +83,11 @@ nnoremap <F9> :ProjectFiles<CR>
 nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+nnoremap Q @@
 nnoremap <backspace> :shell<CR>
 nnoremap <c-t> :Texplore<CR>
 nnoremap <leader>. :w<CR>
@@ -215,3 +215,12 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 nnoremap ]c :GitGutterNextHunk<CR>
 nnoremap [c :GitGutterPrevHunk<CR>
 
+inoremap (; (<CR>);<C-c>O
+inoremap (, (<CR>),<C-c>O
+inoremap (<CR> (<CR>)<C-c>O
+inoremap {; {<CR>};<C-c>O
+inoremap {, {<CR>},<C-c>O
+inoremap {<CR> {<CR>}<C-c>O
+inoremap [; [<CR>];<C-c>O
+inoremap [, [<CR>],<C-c>O
+inoremap [<CR> [<CR>]<C-c>O

@@ -11,6 +11,7 @@ SETUVAR _fish_abbr_cwp:rm\x20\x2drf\x20\x7e/\x2ecache/wal/\x3b\x20and\x20wal\x20
 SETUVAR _fish_abbr_cwpt:rm\x20\x2drf\x20\x7e/\x2ecache/wal/\x3b\x20and\x20wal\x20\x2d\x2dtheme\x20random_dark\x20\x2da\x20\x2dg\x2085\x20\x2d\x2dbackend\x20colorthief\x20\x2d\x2dsaturate\x200\x2e5\x20\x2dg
 SETUVAR _fish_abbr_d:docker\x2dcompose\x20exec\x20\x2du\x20laradock\x20workspace
 SETUVAR _fish_abbr_dcd:docker\x2dcompose\x20down
+SETUVAR _fish_abbr_dce:docker\x2dcompose\x20exec
 SETUVAR _fish_abbr_dcu:docker\x2dcompose\x20up
 SETUVAR _fish_abbr_dit:docker\x20exec\x20\x2dit
 SETUVAR _fish_abbr_dps:docker\x20ps
@@ -68,6 +69,9 @@ SETUVAR _fish_abbr_top:glances
 SETUVAR _fish_abbr_u:update_gits\x3b\x20and\x20sudo\x20apt\x20update\x3b\x20and\x20sudo\x20apt\x20upgrade\x20\x2dy\x3b\x20and\x20sudo\x20apt\x20autoclean\x3b\x20and\x20sudo\x20apt\x20autoremove\x20\x2dy
 SETUVAR _fish_abbr_v:\x2e/vessel
 SETUVAR _fish_abbr_vimrc:vim\x20\x7e/\x2evimrc
+SETUVAR _fish_abbr_vipinhouse:\x7e/Projects/Revelare/vip\x2dinhouse/
+SETUVAR _fish_abbr_vippia:\x7e/Projects/Revelare/vip\x2dpia\x2dapp/
+SETUVAR _fish_abbr_vippiaf:\x7e/Projects/Revelare/vip_pia_flutter_app/
 SETUVAR _fish_abbr_vs:vim\x20\x2dS\x20\x7e/\x2evim\x2ecurrent
 SETUVAR _fish_abbr_wr:wal\x20\x2dR
 SETUVAR fish_color_autosuggestion:969896
