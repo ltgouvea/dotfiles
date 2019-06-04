@@ -90,7 +90,6 @@ nnoremap <c-l> <c-w>l
 nnoremap Q @@
 nnoremap <backspace> :shell<CR>
 nnoremap <c-t> :Texplore<CR>
-nnoremap <leader>. :w<CR>
 nnoremap <leader>/ :set hlsearch!<CR>
 nnoremap <leader>0 :exec ToggleSpeedMode()<CR>
 nnoremap <leader>1 :r ! 
