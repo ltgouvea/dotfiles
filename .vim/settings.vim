@@ -30,6 +30,7 @@ set display+=lastline
 set ic
 set incsearch
 set autoread
+set autochdir
 set linebreak
 set list
 set ruler
