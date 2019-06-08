@@ -66,7 +66,7 @@ SETUVAR _fish_abbr_tdportal:\x7e/Projects/Revelare/troca\x2ddigital\x2dportal/
 SETUVAR _fish_abbr_ticsol:cd\x20/var/www/tic\x2dsms/
 SETUVAR _fish_abbr_ticup:cd\x20/var/www/tic\x2dsms/\x20\x3b\x20and\x20\x20docker\x2dcompose\x20up\x20\x2dd\x20workspace\x20postgres\x20pgadmin\x20php\x2dfpm\x20nginx
 SETUVAR _fish_abbr_top:glances
-SETUVAR _fish_abbr_u:update_gits\x3b\x20and\x20sudo\x20apt\x20update\x3b\x20and\x20sudo\x20apt\x20upgrade\x20\x2dy\x3b\x20and\x20sudo\x20apt\x20autoclean\x3b\x20and\x20sudo\x20apt\x20autoremove\x20\x2dy
+SETUVAR _fish_abbr_u:sudo\x20apt\x20update\x3b\x20and\x20sudo\x20apt\x20upgrade\x20\x2dy\x3b\x20and\x20sudo\x20apt\x20autoclean\x3b\x20and\x20sudo\x20apt\x20autoremove\x20\x2dy
 SETUVAR _fish_abbr_v:\x2e/vessel
 SETUVAR _fish_abbr_vimrc:vim\x20\x7e/\x2evimrc
 SETUVAR _fish_abbr_vipinhouse:\x7e/Projects/Revelare/vip\x2dinhouse/

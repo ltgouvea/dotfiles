@@ -13,7 +13,7 @@ abbr l 'ls -lah'
 abbr r 'ranger'
 abbr wr 'wal -R'
 abbr m 'mutt'
-abbr u "update_gits; and sudo apt update; and sudo apt upgrade -y; and sudo apt autoclean; and sudo apt autoremove -y"
+abbr u "sudo apt update; and sudo apt upgrade -y; and sudo apt autoclean; and sudo apt autoremove -y"
 abbr n 'ncmpcpp'
 abbr apt 'sudo apt'
 abbr ai 'sudo apt install'
