@@ -10,7 +10,7 @@ cp -r /home/k2/.config/fish .
 cp /home/k2/.vimrc .
 cp /home/k2/.vim/*.vim .vim/
 cp /home/k2/.Xdefaults .
-DATE=$(date '+Data: %A, %d de %B de %Y. Hora: %H:%M.')
+DATE=$(date '+A, %d de %B de %Y. Hora: %H:%M.')
 
 git add --all .
 git commit -m "Update automatizado diário. Data: $DATE" 
