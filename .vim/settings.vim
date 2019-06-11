@@ -1,4 +1,5 @@
 filetype plugin indent on
+set nu
 set hidden
 set gdefault
 set nohlsearch
