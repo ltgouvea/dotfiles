@@ -130,6 +130,7 @@ onoremap H ^
 onoremap L $
 onoremap ç <esc>
 tnoremap <F4> <C-w>NZQ
+tnoremap <Esc> <C-\><C-n>
 vnoremap : ;
 vnoremap ; :
 vnoremap <C-c> "*y :let @+=@*<CR>
