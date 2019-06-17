@@ -43,9 +43,11 @@ set timeoutlen=700 ttimeoutlen=0
 
 colorscheme wal
 highlight VertSplit cterm=NONE guibg=NONE
-highlight NonText ctermfg=magenta
+highlight NonText ctermfg=grey
 highlight lineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=red
+highlight CocHighlightText ctermbg=grey
+highlight Pmenu ctermbg=darkgray ctermfg=lightgreen
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let mapleader=","

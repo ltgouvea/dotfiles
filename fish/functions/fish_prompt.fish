@@ -5,7 +5,7 @@ function fish_prompt
     and echo (set_color red)"#"
 
     function check_branch
-    echo (set_color green)(git branch ^/dev/null | grep \* | sed 's/* / /')
+    echo (set_color green)(git branch ^/dev/null | grep \* | sed 's/* /  /')
     end
 
     # Main
