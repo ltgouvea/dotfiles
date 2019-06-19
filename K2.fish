@@ -16,6 +16,7 @@ abbr wr 'wal -R'
 abbr m 'mutt'
 abbr u "sudo apt update; and sudo apt upgrade -y; and sudo apt autoclean; and sudo apt autoremove -y"
 abbr n 'ncmpcpp'
+abbr nv 'nvim'
 abbr apt 'sudo apt'
 abbr ai 'sudo apt install'
 abbr mana 'sudo service network-manager restart'

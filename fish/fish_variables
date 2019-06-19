@@ -58,6 +58,7 @@ SETUVAR _fish_abbr_lock:i3lock\x20\x2di\x20\x7e/login\x2epng
 SETUVAR _fish_abbr_m:mutt
 SETUVAR _fish_abbr_mana:sudo\x20service\x20network\x2dmanager\x20restart
 SETUVAR _fish_abbr_n:ncmpcpp
+SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_r:ranger
 SETUVAR _fish_abbr_social:mailutils\x20soc
 SETUVAR _fish_abbr_ssn:sudo\x20shutdown\x20now
