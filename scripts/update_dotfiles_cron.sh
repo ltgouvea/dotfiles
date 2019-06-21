@@ -7,7 +7,9 @@ cp -r /home/k2/config/i3* .
 cp -r /home/k2/.ncmpcpp/ .
 cp -r /home/k2/.config/rofi .
 cp -r /home/k2/.config/fish .
+cp -r /home/k2/.config/nvim/ .
 cp /home/k2/.vimrc .
+cp /home/k2/.lightline.vimrc .
 cp /home/k2/.vim/*.vim .vim/
 cp /home/k2/.Xdefaults .
 DATE=$(date '+%A, %d de %B de %Y. Hora: %H:%M.')

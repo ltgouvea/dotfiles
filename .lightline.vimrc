@@ -1,23 +1,25 @@
 let g:lightline = {
    \ 'colorscheme': 'wal',
    \   'active': {
-   \     'left':[ [ 'mode', 'paste' ],
-   \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
-   \     ],
+   \   'left': [ [ 'rebel', 'mode', 'paste' ],
+   \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ],
+   \    'right': [ [ 'lineinfo', 'syntastic' ],
+   \               [ 'percent' ],
+   \               [ 'gitbranch', 'fileformat', 'fileencoding', 'filetype' ] ]
+   \ },
+   \   'component_function': {
+   \     'gitbranch': 'fugitive#head',
+   \     'cocstatus': 'coc#status',
+   \     'currentfunction': 'CocCurrentFunction',
+   \     'syntastic': 'SyntasticStatuslineFlag',
    \   },
-  \   'component_function': {
-  \     'gitbranch': 'fugitive#head',
-  \   }
+   \  'component': {
+   \    'rebel': "\uf1d0"
+   \  }
    \ }
 let g:lightline.tabline = {
-  \   'left': [ ['tabs'] ],
-  \     'right': [ ], 
-  \ }
-set showtabline=2  " Show tabline
-set guioptions-=e  " Don't use GUI tabline
-let g:lightline.separator = {
-    \   'left': '', 'right': ''
-  \}
-let g:lightline.subseparator = {
-    \   'left': '', 'right': '' 
-  \}
+            \   'left': [ ['tabs'] ],
+            \     'right': [ ], 
+            \ }
+set showtabline=2
+set guioptions-=e
