@@ -41,7 +41,7 @@ set wildignorecase
 set timeoutlen=700 ttimeoutlen=0
 
 colorscheme wal
-highlight VertSplit cterm=NONE guibg=NONE
+highlight VertSplit cterm=none guibg=NONE
 highlight NonText ctermfg=grey
 highlight lineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=red
@@ -74,3 +74,5 @@ endif
 set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set encoding=utf-8
+
+autocmd! VimEnter,ColorScheme * hi VertSplit ctermbg=none ctermfg=white

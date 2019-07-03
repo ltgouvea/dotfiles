@@ -1,7 +1,7 @@
 let g:lightline = {
    \ 'colorscheme': 'wal',
    \   'active': {
-   \   'left': [ [ 'rebel', 'mode', 'paste' ],
+   \   'left': [ [ 'mode' ], [ 'rebel', 'paste' ],
    \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ],
    \    'right': [ [ 'lineinfo', 'syntastic' ],
    \               [ 'percent' ],

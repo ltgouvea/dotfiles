@@ -22,7 +22,7 @@ cnoremap kk <C-f>
 cnoremap kk <C-f>
 cnoremap kl <End>
 cnoremap mks mksession! ~/.vim.current<CR>
-cnoremap pp <C-r>"
+cnoremap ppp <C-r>"
 cnoremap qq q!<CR>
 cnoremap vex Vexplore<CR>
 cnoremap çç <Esc>
@@ -45,7 +45,7 @@ inoremap jk <Right>
 inoremap kj <Left>
 inoremap kk <ESC>A
 inoremap nn <C-n>
-inoremap pp <C-p>
+inoremap ppp <C-p>
 inoremap vv <C-x><C-v>
 inoremap yy <C-y>
 inoremap zz \|
