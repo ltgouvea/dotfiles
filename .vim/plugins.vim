@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'tommcdo/vim-fugitive-blame-ext'
 Plug 'w0rp/ale'
 Plug 'jwalton512/vim-blade'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
