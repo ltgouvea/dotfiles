@@ -52,6 +52,7 @@ inoremap zz \|
 inoremap çq <ESC>:wq<CR>
 inoremap çs <ESC>:w<CR>
 inoremap çç <ESC>
+nmap <leader>rn <Plug>(coc-rename)
 nmap <S-TAB> gT
 nmap <TAB> gt
 nmap ga <Plug>(EasyAlign)
