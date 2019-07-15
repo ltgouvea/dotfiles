@@ -45,6 +45,7 @@ SETUVAR _fish_abbr_glola:git\x20log\x20\x2d\x2dgraph\x20\x2d\x2dpretty\x20\x2d\x
 SETUVAR _fish_abbr_gmff:git\x20merge\x20\x2d\x2dno\x2dff\x20\x2d\x2dno\x2dedit
 SETUVAR _fish_abbr_gp:git\x20push
 SETUVAR _fish_abbr_grhh:git\x20reset\x20\x2d\x2dhard
+SETUVAR _fish_abbr_grv:git\x20remote\x20\x2dv
 SETUVAR _fish_abbr_gst:git\x20status
 SETUVAR _fish_abbr_gsta:git\x20stash
 SETUVAR _fish_abbr_gstaa:git\x20stash\x20apply
