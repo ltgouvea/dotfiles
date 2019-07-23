@@ -300,3 +300,5 @@ exec --no-startup-id compton -bfcCz
 exec --no-startup-id redshift
 exec --no-startup-id wal -R -a 97
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
+
+border_radius 4
