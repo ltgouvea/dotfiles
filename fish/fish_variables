@@ -15,6 +15,7 @@ SETUVAR _fish_abbr_dcd:docker\x2dcompose\x20down
 SETUVAR _fish_abbr_dce:docker\x2dcompose\x20exec
 SETUVAR _fish_abbr_dcu:docker\x2dcompose\x20up
 SETUVAR _fish_abbr_dit:docker\x20exec\x20\x2dit
+SETUVAR _fish_abbr_dl:\x7e/Downloads/
 SETUVAR _fish_abbr_dps:docker\x20ps
 SETUVAR _fish_abbr_e:exit
 SETUVAR _fish_abbr_fuck:
