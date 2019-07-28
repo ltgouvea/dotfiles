@@ -42,6 +42,7 @@ bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+q kill
+bindsym Mod1+q kill
 
 bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+V exec mpv $(find ~/Videos/Torrents/ | grep "\(mp4\)\|\(avi\)\|\(mkv\)" | rofi -dmenu)
@@ -265,6 +266,8 @@ bindsym $mod+n exec $term -e ncmpcpp
 bindsym $mod+Shift+Return exec $term -e tmux
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace next
+bindsym Mod1+Tab workspace back_and_forth
+bindsym Mod1+Shift+Tab workspace next
 bindsym --release Print exec notify-send -t 700 'screenshot' 'please select area' && scrot -s ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
 bindsym --release Shift+Print exec notify-send -t 700 'screenshot taken in ~/Pictures/printscreen/' && scrot ~/Pictures/printscreen/print_%d_%m_%Y_%T.png
 gaps inner 12

@@ -1,10 +1,6 @@
 command=/usr/share/i3blocks/$BLOCK_NAME
 color=#666666
 
-[updates]
-interval=60
-markup=pango
-
 [todolist]
 interval=10
 markup=pango
@@ -35,8 +31,3 @@ markup=pango
 interval=5
 markup=pango
 command=/usr/share/i3blocks/time
-
-
-
-
-

@@ -54,6 +54,7 @@ set PATH $JAVA_HOME $PATH
 set PATH $FLUTTER_HOME $PATH
 set PATH $DART_HOME $PATH
 set PATH $PUB_CACHE_HOME $PATH
+set GTK_IM_MODULE ibus
 
 export LESS_TERMCAP_mb=(set_color green --bold)
 export LESS_TERMCAP_md=(set_color green --bold)
