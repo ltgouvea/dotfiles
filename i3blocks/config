@@ -1,10 +1,6 @@
 command=/usr/share/i3blocks/$BLOCK_NAME
 color=#666666
 
-[todolist]
-interval=10
-markup=pango
-
 # [spotinfo]
 # command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
 # interval=10

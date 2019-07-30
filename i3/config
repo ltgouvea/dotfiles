@@ -3,7 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term termite
+set $term deepin-terminal
 set $coloract "#afaa58"
 set $colorin "#78753c"
 set_from_resource $fg i3wm.color7 #f0f0f0
@@ -30,6 +30,7 @@ client.background       $bg
 font pango:'Inconsolata for Powerline' 10
 for_window [window_role="pop-up"] floating enable
 for_window [title="(?i)steam"] floating enable
+for_window [title="(?i)gsimplecal"] floating enable
 for_window [title="(?i)spotify"] floating enable, move to workspace $ws7
 for_window [class="^.*"] border pixel 0
 new_window 1pixel
@@ -299,9 +300,9 @@ bar {
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id nm-applet
 exec --no-startup-id pulseaudio --start
-exec --no-startup-id compton -bfcCz
+exec --no-startup-id compton -bfz
 exec --no-startup-id redshift
-exec --no-startup-id wal -R -a 97
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
-
+exec --no-startup-id xset r rate 150 40
+exec --no-startup-id wal -R -a 85
+exec --no-startup-id feh --bg-scale $(find ~/Pictures/Wallpapers/ -type f | shuf -n 1)
 border_radius 4

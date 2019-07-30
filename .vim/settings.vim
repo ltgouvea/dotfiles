@@ -51,6 +51,7 @@ highlight CocHighlightText ctermbg=grey
 highlight Pmenu ctermbg=darkgray ctermfg=lightgreen
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
+let NERDTreeChDirMode  = 2
 let mapleader=","
 let g:syntastic_typescript_checkers = [ 'tsc', 'tslint' ]
 let g:syntastic_check_on_open = 0
