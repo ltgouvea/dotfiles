@@ -17,5 +17,7 @@ URxvt.cursorColor:  magenta
 URxvt.keysym.M-u: perl:matcher:select
 
 #include "/home/k2/.colors.Xdefaults"
+
 URxvt.tintColor: #1E2541
-URxvt*.blurRadius: 5
+URxvt.blurRadius: 5
+URxvt.shading: 30

@@ -5,5 +5,6 @@ wal -i (gsettings get org.cinnamon.desktop.background picture-uri | sed "s/file.
 cp ~/.cache/wal/colors-rofi-dark.rasi ~/.config/rofi/config.rasi
 cp ~/.cache/wal/termite ~/config/termite/config
 cp ~/.cache/wal/colors.Xresources ~/.colors.Xdefaults
+cp ~/.cache/wal/deepin-terminal ~/config/deepin/deepin-terminal/themes/wal
 
 
