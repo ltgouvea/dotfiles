@@ -1,5 +1,4 @@
 filetype plugin indent on
-set nu
 set hidden
 set gdefault
 set nohlsearch
@@ -55,7 +54,6 @@ let NERDTreeChDirMode  = 2
 let mapleader=","
 let g:syntastic_typescript_checkers = [ 'tsc', 'tslint' ]
 let g:syntastic_check_on_open = 0
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:syntastic_mode_map = { 'mode': 'passive' }
 set signcolumn=yes
 let g:user_emmet_leader_key=','
@@ -67,12 +65,6 @@ let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 let g:EditorConfig_exec_path = '/usr/bin/editorconfig'
-
-if executable('ag')
-  set grepprg=ag\ --nogroup
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
 
 set dir=$HOME/.vim_tmp/swap
 if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif

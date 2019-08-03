@@ -6,8 +6,6 @@ abbr dcd 'docker-compose down'
 abbr vimrc 'vim ~/.vimrc'
 abbr ssn 'sudo shutdown now'
 abbr cat 'bat'
-abbr ticsol 'cd /var/www/tic-sms/'
-abbr ticup 'cd /var/www/tic-sms/ ; and  docker-compose up -d workspace postgres pgadmin php-fpm nginx'
 abbr cmatrix 'cmatrix -bs'
 abbr v './vessel'
 abbr l 'ls -lah'
@@ -37,7 +35,7 @@ bind \cr up-or-search
 end
 
 export EDITOR='vim'
-export FZF_DEFAULT_COMMAND='ag --ignore node_modules -g ""'
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore node_modules --ignore .git --ignore vendor -g ""'
 
 source ~/.trocadigital.fish
 source ~/.inhouse.fish
