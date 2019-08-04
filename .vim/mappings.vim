@@ -1,10 +1,5 @@
-cabbrev tdapp ~/Projects/Revelare/troca-digital-aplicativo/
-cabbrev tdcore ~/Projects/Revelare/troca-digital-core/
-cabbrev tdpainel ~/Projects/Revelare/troca-digital-painel/
-cabbrev tdportal ~/Projects/Revelare/troca-digital-portal/
 cnoremap --- <C-R>=expand("%:p:h")<CR>
 cnoremap ... cd ../../<CR>
-cnoremap 00 _
 cnoremap 11 !
 cnoremap 22 @
 cnoremap 33 #
@@ -58,9 +53,6 @@ nmap <TAB> gt
 nmap ga <Plug>(EasyAlign)
 nnoremap + <C-a>
 nnoremap - <C-x>
-nnoremap -a :exec ToggleAim()<CR>
-nnoremap -f :exec ToggleFolding()<CR>
-nnoremap -n :exec ToggleNumbers()<CR>
 nnoremap -s :vimgrep /<C-r><C-w>/g **/*<CR>
 nnoremap -t :retab<CR>
 nnoremap -w :help <C-r><C-w><CR>
@@ -109,12 +101,10 @@ nnoremap <space><F10> :NERDTreeFind<CR>
 nnoremap <space><space> :w<CR>
 nnoremap <space>e :e #<CR>
 nnoremap <space>f :copen<CR>
-nnoremap <space>g :Gst<CR>
 nnoremap <space>h :split<CR>
 nnoremap <space>n :cn<CR>
 nnoremap <space>p :cp<CR>
 nnoremap <space>q :q<CR>
-nnoremap <space>r :so ~/.vimrc<CR>:e<CR>
 nnoremap <space>s :%s/
 nnoremap <space>t :tabe<CR>
 nnoremap <space>v :vsplit<CR>

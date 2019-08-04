@@ -3,7 +3,7 @@ set hidden
 set gdefault
 set nohlsearch
 set suffixesadd=.js,.ts
-set lcs=eol:~,nbsp:>,tab:<<,trail:-
+set lcs=nbsp:>,tab:<<,trail:-
 set backspace=indent,eol,start
 set nobackup
 set nomore
@@ -16,8 +16,6 @@ set fcs=vert:\│,fold:\
 set noswapfile
 set smarttab
 set expandtab
-set tabstop=4
-set shiftwidth=4
 set cwh=20
 set cmdheight=2
 syntax enable
@@ -48,6 +46,7 @@ highlight lineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=red
 highlight CocHighlightText ctermbg=grey
 highlight Pmenu ctermbg=darkgray ctermfg=lightgreen
+
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeChDirMode  = 2
@@ -58,8 +57,6 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 set signcolumn=yes
 let g:user_emmet_leader_key=','
 let NERDTreeMapActivateNode='l'
-let NERDTreeShowLineNumbers=1
-autocmd FileType nerdtree setlocal relativenumber
 let g:UltiSnipsExpandTrigger       = "`"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"

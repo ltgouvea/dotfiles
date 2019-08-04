@@ -9,18 +9,6 @@ function! ToggleSpeedMode()
     :e
 endfunction
 
-function! ToggleAim()
-    :set cursorcolumn! cursorline!
-endfunction
-
-function! ToggleNumbers()
-    :set nu! relativenumber!
-endfunction
-
-function! ToggleFolding()
-    :if &foldcolumn ==# 0 | set foldcolumn=1 foldmethod=indent | else | set foldcolumn=0 foldmethod=manual | endif
-endfunction
-
 function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
