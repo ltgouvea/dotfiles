@@ -53,8 +53,8 @@ SETUVAR _fish_abbr_gstaa:git\x20stash\x20apply
 SETUVAR _fish_abbr_gstd:git\x20stash\x20drop
 SETUVAR _fish_abbr_gstl:git\x20stash\x20list
 SETUVAR _fish_abbr_gstp:git\x20stash\x20pop
-SETUVAR _fish_abbr_inoutapi:\x7e/Projects/Revelare/inout\x2dapi/docker\x2dsubmodule
-SETUVAR _fish_abbr_inoutspa:\x7e/Projects/Revelare/inout\x2dspa
+SETUVAR _fish_abbr_inoutapi:\x7e/Projects/Revelare/inout/inout\x2dapi/docker\x2dsubmodule
+SETUVAR _fish_abbr_inoutspa:\x7e/Projects/Revelare/inout/inout\x2dspa
 SETUVAR _fish_abbr_l:ls\x20\x2dlah
 SETUVAR _fish_abbr_lock:i3lock\x20\x2di\x20\x7e/login\x2epng
 SETUVAR _fish_abbr_m:mutt
