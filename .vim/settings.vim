@@ -68,4 +68,3 @@ if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set encoding=utf-8
 
 autocmd! VimEnter,ColorScheme * hi VertSplit ctermbg=none ctermfg=white
-autocmd BufWritePost *.php silent !phpcbf -q % > /dev/null || true
