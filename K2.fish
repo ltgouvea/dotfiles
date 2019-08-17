@@ -37,7 +37,6 @@ end
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore node_modules --ignore .git --ignore vendor -g ""'
 
-source ~/.trocadigital.fish
 source ~/.inhouse.fish
 
 set ANDROID_HOME /usr/lib/android-sdk/
