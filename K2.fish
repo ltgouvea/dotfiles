@@ -37,8 +37,6 @@ end
 export EDITOR='vim'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore node_modules --ignore .git --ignore vendor -g ""'
 
-source ~/.inhouse.fish
-
 set ANDROID_HOME /usr/lib/android-sdk/
 set JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/bin/
 set FLUTTER_HOME /home/k2/.flutter_sdk/bin/

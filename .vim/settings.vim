@@ -39,7 +39,6 @@ set wildmenu
 set wildignorecase
 set timeoutlen=700 ttimeoutlen=0
 
-colorscheme wal
 highlight VertSplit cterm=none guibg=NONE
 highlight NonText ctermfg=grey
 highlight lineNr ctermfg=darkgray
