@@ -8,6 +8,7 @@ cp -r /home/k2/.ncmpcpp/ .
 cp -r /home/k2/.config/rofi .
 cp -r /home/k2/.config/fish .
 cp -r /home/k2/.config/nvim/ .
+cp -r /home/k2/.vim/UltiSnips/ .vim/UltiSnips
 cp /home/k2/.vimrc .
 cp /home/k2/.lightline.vimrc .
 cp /home/k2/.vim/*.vim .vim/

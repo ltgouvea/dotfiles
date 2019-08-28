@@ -9,6 +9,7 @@ dotfiles_push()
     cp -r ~/.ncmpcpp/ .
     cp -r ~/.config/rofi .
     cp -r ~/.config/fish .
+    cp -r ~/.vim/UltiSnips/ .vim/UltiSnips
     cp ~/.vimrc .
     cp ~/.vim/*.vim .vim/
     cp ~/.Xdefaults .
