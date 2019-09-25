@@ -1,3 +1,9 @@
+configuration {
+    display-drun: "Apps";
+    display-window: "Window";
+    show-icons: true;
+}
+
 * {
     active-background: #5af78e;
     active-foreground: @foreground;

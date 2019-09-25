@@ -18,3 +18,8 @@ URxvt.keysym.M-u: perl:matcher:select
 
 #include "/home/k2/.colors.Xdefaults"
 
+! Set depth to make transparency work.
+URxvt.shading: 30
+URxvt.tintColor: #2F343F00
+URxvt.blurRadius: 5
+URxvt.transparent: true

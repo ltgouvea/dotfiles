@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tommcdo/vim-fugitive-blame-ext'
 Plug 'jwalton512/vim-blade'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'posva/vim-vue'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim'

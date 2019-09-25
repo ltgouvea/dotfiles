@@ -76,10 +76,6 @@ nnoremap <F9> :ProjectFiles<CR>
 nnoremap <Left> <C-W><Left>
 nnoremap <Right> <C-W><Right>
 nnoremap <Up> <C-W><Up>
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
 nnoremap Q @@
 nnoremap <backspace> :shell<CR>
 nnoremap <c-t> :Texplore<CR>
