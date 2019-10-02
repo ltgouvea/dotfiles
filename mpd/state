@@ -1,0 +1,63 @@
+sw_volume: 53
+audio_device_state:1:My Pulse Output
+audio_device_state:1:visualizador
+state: stop
+current: 8
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 5
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+song_begin: http://ice1.somafm.com/lush-128-aac
+Title: Eivor - Waves And The Wind
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/lush-128-aac
+Title: Natalie Walker - Galapogos
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/sonicuniverse-256-mp3
+Title: Eivind Aarset - Superstrings (Remix By Illumination)
+Name: Sonic Universe: Nu Jazz plus avant-garde Euro Jazz: Transcending the boundaries of jazz with experimental takes on tradition. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/sonicuniverse-256-mp3
+Title: Ty Showers - Jamaree
+Name: Sonic Universe: Nu Jazz plus avant-garde Euro Jazz: Transcending the boundaries of jazz with experimental takes on tradition. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/groovesalad-256-mp3
+Title: Thomas Lemmer - Ah!
+Name: Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/groovesalad-256-mp3
+Title: Bullitnuts - Dark Horse
+Name: Groove Salad: a nicely chilled plate of ambient beats and grooves. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/lush-128-aac
+Title: Lovers And Poets - The Things We Do For Love
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/lush-128-aac
+Title: Lonesome Animals - Speak
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Firefall - Love Isn't All
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+playlist_end

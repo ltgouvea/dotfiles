@@ -5,6 +5,7 @@ cp /home/k2/.K2.fish K2.fish
 cp /home/k2/.git.fish git.fish
 cp -r /home/k2/config/i3* .
 cp -r /home/k2/.ncmpcpp/ .
+cp -r /home/k2/.config/mpd/ .
 cp -r /home/k2/.config/rofi .
 cp -r /home/k2/.config/fish .
 cp -r /home/k2/.config/nvim/ .
