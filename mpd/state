@@ -1,8 +1,8 @@
-sw_volume: 53
+sw_volume: 71
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 8
+current: 16
 random: 0
 repeat: 0
 single: 0
@@ -53,6 +53,42 @@ mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/seventies-320-mp3
 Title: Firefall - Love Isn't All
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/poptron-128-aac
+Title: Dirty Vegas - Weekend
+Name: PopTron: Electro-Pop and Indie Dance Rock [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/poptron-128-aac
+Title: SomaFM: PopTron (#2  ): Electropop and indie dance rock with sparkle and pop.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/missioncontrol-128-aac
+Title: Esa Ruoho - Pond Assemblage
+Name: Mission Control: Celebrating NASA and space explorers everywhere. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/missioncontrol-128-aac
+Title: SomaFM: Mission Control (#2  ): Celebrating NASA and Space Explorers everywhere.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Dane Donohue - Whatever Happened
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Toto - 99
 Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end

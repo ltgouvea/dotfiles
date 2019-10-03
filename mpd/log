@@ -3823,3 +3823,18 @@ Sep 26 21:10 : client: [3] closed
 Sep 29 21:50 : zeroconf: No global port, disabling zeroconf
 Oct 01 18:33 : zeroconf: No global port, disabling zeroconf
 Oct 02 12:58 : zeroconf: No global port, disabling zeroconf
+Oct 02 21:25 : client: [0] opened from 127.0.0.1:46968
+Oct 02 21:26 : client: [0] closed
+Oct 02 21:26 : client: [1] opened from 127.0.0.1:46976
+Oct 02 21:27 : update: added Estudo/Kiko-Loureiro-Feliz-Desilusao-Guitar-Backing-Track.mp3
+Oct 02 21:27 : update: added Estudo/Kiko-Loureiro-Endangered-Species-Backing-Track-HQ.mp3
+Oct 02 21:27 : update: added Recs/Milhouse/atchim_13_07_19_1.mp3
+Oct 02 21:27 : update: added Recs/Milhouse/atchim_13_07_19_0.mp3
+Oct 02 21:28 : client: [2] opened from 127.0.0.1:46990
+Oct 02 21:28 : player: Decoder is too slow; playing silence to avoid xrun
+Oct 02 21:28 : player: Decoder is too slow; playing silence to avoid xrun
+Oct 02 21:28 : exception: Not seekable
+Oct 02 21:29 : client: [2] closed
+Oct 02 21:53 : player: played "http://ice1.somafm.com/seventies-320-mp3"
+Oct 02 21:53 : client: [1] closed
+Oct 03 12:41 : zeroconf: No global port, disabling zeroconf
