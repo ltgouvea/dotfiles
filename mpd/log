@@ -3838,3 +3838,5 @@ Oct 02 21:29 : client: [2] closed
 Oct 02 21:53 : player: played "http://ice1.somafm.com/seventies-320-mp3"
 Oct 02 21:53 : client: [1] closed
 Oct 03 12:41 : zeroconf: No global port, disabling zeroconf
+Oct 04 23:33 : zeroconf: No global port, disabling zeroconf
+Oct 05 10:50 : zeroconf: No global port, disabling zeroconf
