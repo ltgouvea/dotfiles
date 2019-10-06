@@ -1,8 +1,8 @@
-sw_volume: 71
+sw_volume: 100
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 16
+current: 26
 random: 0
 repeat: 0
 single: 0
@@ -84,11 +84,57 @@ Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [Som
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/seventies-320-mp3
-Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+Title: Far Cry - The One And Lonely
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/seventies-320-mp3
 Title: Toto - 99
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/defcon-256-mp3
+Title: Borealis - Helical Flutter
+Name: Def Con Radio: SomaFM's special mix for Def Con [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/defcon-256-mp3
+Title: SomaFM: DEF CON Radio (#2  ): Music for Hacking. The DEF CON Year-Round Channel.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/u80s-256-mp3
+Title: Minimal Compact - Nil Nil
+Name: Underground Eighties: UK Synthpop and a bit of New Wave. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/u80s-256-mp3
+Title: SomaFM: Underground 80s (#2  ): Early 80s UK Synthpop and a bit of New Wave.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/suburbsofgoa-128-aac
+Title: Makyo - Mystic Fire (feat. Shahin Badar)
+Name: Suburbs of Goa [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/suburbsofgoa-128-aac
+Title: SomaFM: Suburbs of Goa (#2  ): Desi-influenced Asian world beats and beyond.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/sonicuniverse-256-mp3
+Title: Robin Guthrie & Harold Budd - Turn Off The Sun
+Name: Sonic Universe: Nu Jazz plus avant-garde Euro Jazz: Transcending the boundaries of jazz with experimental takes on tradition. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/sonicuniverse-256-mp3
+Title: SomaFM: Sonic Universe (#2  ): Transcending the world of jazz with eclectic, avant-garde takes on tradition.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Todd Rundgren - Marlene
 Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end
