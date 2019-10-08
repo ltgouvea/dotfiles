@@ -4,19 +4,17 @@
 
 set $mod Mod4
 set $term deepin-terminal
-set $coloract "#afaa58"
-set $colorin "#78753c"
-set_from_resource $fg i3wm.color7 #f0f0f0
-set_from_resource $bg i3wm.color0 #f0f0f0
-set_from_resource $color15 i3wm.color15 "#f5f5f5"
-set_from_resource $split i3wm.color10 "#bb4c40"
-set_from_resource $coloru i3wm.color2 "#87433e"
-set_from_resource $color1 i3wm.color2 #f0f0f0
-set_from_resource $color3 i3wm.color3 "#d9b270"
-set_from_resource $color4 i3wm.color4 "#7a7a7a"
-set_from_resource $color5 i3wm.color5 "#a66c9a"
-set_from_resource $color0 i3wm.color0 "#0b0b0b"
-set_from_resource $color8 i3wm.color8 "#1e1e1e"
+set_from_resource $fg i3wm.color7
+set_from_resource $bg i3wm.color0
+set_from_resource $color15 i3wm.color15
+set_from_resource $split i3wm.color10
+set_from_resource $coloru i3wm.color2
+set_from_resource $color1 i3wm.color2
+set_from_resource $color3 i3wm.color3
+set_from_resource $color4 i3wm.color4
+set_from_resource $color5 i3wm.color5
+set_from_resource $color0 i3wm.color0
+set_from_resource $color8 i3wm.color8
 
 # class                 border  backgr. text indicator child_border
 client.focused          $color1     $bg     $fg  $color1       $color1
@@ -48,7 +46,7 @@ bindsym Mod1+q kill
 bindsym $mod+Shift+f exec google-chrome
 bindsym $mod+Shift+V exec mpv $(find ~/Videos/Torrents/ | grep "\(mp4\)\|\(avi\)\|\(mkv\)" | rofi -dmenu)
 
-bindsym $mod+d exec rofi -bw 2 -yoffset -2 -sidebar-mode -show run -terminal rxvt-unicode
+bindsym $mod+d exec rofi -modi '' -show drun -matching fuzzy
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -284,16 +282,16 @@ bar {
         status_command i3blocks
 
         colors {
-            statusline         #9b999e96
-            background         $bg
-            separator          $bg
+            statusline         $fg
+            background         $bg90
+            separator          $bg90
 
             #                          BORDER       BACKGROUND   TEXT
-            focused_workspace  $color0 $color0 $color1
-            inactive_workspace $bg $bg $white
+            focused_workspace  $color160 $color060 $color1
+            inactive_workspace $bg85 $bg85 $color395
             active_workspace   $transparent $transparent $color1
-            urgent_workspace   #9b999e93     $color1     #29334595
-            binding_mode       #29334500     $color1     #29334595
+            urgent_workspace   $color4     $color1     $color5
+            binding_mode       $color4     $color1     $color5
             }
         }
 

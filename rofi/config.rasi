@@ -1,15 +1,14 @@
 configuration {
-    display-drun: "Apps";
-    display-window: "Window";
     show-icons: true;
+    icon-theme: "Paper";
 }
 
 * {
-    active-background: #5af78e;
+    active-background: #ffcc1b;
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: #ff5c57;
+    urgent-background: #f08e48;
     urgent-foreground: @foreground;
 
     alternate-active-background: @background;
@@ -19,16 +18,16 @@ configuration {
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: #ff5c57;
+    selected-active-background: #f08e48;
     selected-active-foreground: @foreground;
-    selected-normal-background: #5af78e;
+    selected-normal-background: #ffcc1b;
     selected-normal-foreground: @foreground;
-    selected-urgent-background: #f3f99d;
+    selected-urgent-background: #7fc06e;
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
-    background: #282a36;
-    foreground: #eff0eb;
+    background: #002635;
+    foreground: #ff5a67;
     border-color: @background;
     spacing: 2;
 }

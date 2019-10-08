@@ -2,7 +2,7 @@ rofi.modi:                           window,run,ssh
 rofi.width:                          100
 rofi.lines:                          20
 rofi.columns:                        1
-rofi.font:                           MesloLGMDZ Nerd Font Mono 10
+rofi.font:                           MesloLGMDZ Nerd Font Mono 11
 rofi.bw:                             5
 rofi.location:                       0
 rofi.padding:                        5
