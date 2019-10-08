@@ -275,20 +275,18 @@ workspace_auto_back_and_forth yes
 
 bar {
         i3bar_command i3bar -t
-        font pango:Fira Code 15
-        separator_symbol 
+        font pango:SauceCodePro Nerd Font Mono 14
         tray_output none
         position top
         status_command i3blocks
 
         colors {
             statusline         $fg
-            background         $bg90
-            separator          $bg90
+            background         $bg00
 
             #                          BORDER       BACKGROUND   TEXT
             focused_workspace  $color160 $color060 $color1
-            inactive_workspace $bg85 $bg85 $color395
+            inactive_workspace $bg00 $bg00 $color395
             active_workspace   $transparent $transparent $color1
             urgent_workspace   $color4     $color1     $color5
             binding_mode       $color4     $color1     $color5
@@ -302,5 +300,5 @@ exec --no-startup-id compton -bfz
 exec --no-startup-id redshift
 exec --no-startup-id xset r rate 150 40
 exec --no-startup-id wal -R -a 85
-exec --no-startup-id feh --bg-scale $(find ~/Pictures/Wallpapers/ -type f | shuf -n 1)
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 border_radius 4

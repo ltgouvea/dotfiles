@@ -1,5 +1,5 @@
 command=/usr/share/i3blocks/$BLOCK_NAME
-color=#666666
+separator_block_width=0
 
 # [spotinfo]
 # command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
