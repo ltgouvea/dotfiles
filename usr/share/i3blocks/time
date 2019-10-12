@@ -4,4 +4,8 @@
 
 OUTPUT=$(date '+%d/%m/%Y %H:%M')
 
-echo "<span foreground=\"$color2\"> $OUTPUT</span>"
+case $BLOCK_BUTTON in
+  1) gsimplecal
+esac
+
+echo "<span foreground=\"${color2}90\"></span><span background=\"${color2}90\" foreground=\"$background\">  $OUTPUT </span>"

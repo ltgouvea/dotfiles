@@ -3,7 +3,7 @@
 . "/home/k2/.cache/wal/colors.sh"
 
 print_todos() {
-  cat ~/.todolist | wc -l
+  wc -l ~/.todolist | sed 's/ .*$//'
 }
 
 

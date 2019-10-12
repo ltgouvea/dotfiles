@@ -12,7 +12,7 @@ case $BLOCK_BUTTON in
   5) light -U 5 ;; # scroll down, decrease
 esac
 
-echo "<span foreground=\"$color9\"> $(print_light)</span>"
+echo "<span foreground=\"${color5}90\"></span><span background=\"${color5}90\" foreground=\"$background\"> $(print_light) </span> "
 
 
 

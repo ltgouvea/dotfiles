@@ -130,10 +130,10 @@ do
     fi
 
     if [[ "$BLOCK_BUTTON" -eq 1 ]]; then 
-        message="$message ${statuses[$i]} <span foreground=\"$color\">${percentages[$i]}%${remainings[i]}</span>"
+        message="$message ${statuses[$i]} <span background=\"$color3\" foreground=\"$background\">${percentages[$i]}%${remainings[i]}</span>"
     fi
 
-        message="$message <span foreground=\"$color\"> $squares</span>" 
+        message="$message <span foreground=\"${color3}90\"></span><span background=\"${color3}90\" foreground=\"$background\">  $squares </span>"
 done
 
-echo $message
+echo "$message "

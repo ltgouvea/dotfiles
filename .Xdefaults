@@ -1,6 +1,6 @@
 URxvt.scrollBar_right: false
-URxvt.font:     xft:MesloLGMDZ Nerd Font Mono:pixelsize=15
-URxvt.boldFont: xft:MesloLGMDZ Nerd Font Mono:pixelsize=15
+URxvt.font:     xft:Meslo LGMDZ Nerd Font Mono:pixelsize=15
+URxvt.boldFont: xft:Meslo LGMDZ Nerd Font Mono:pixelsize=15
 URxvt.scrollBar: false
 URxvt.letterSpace: -1
 URxvt.perl-ext-common: default,matcher,font-size,url-select

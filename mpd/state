@@ -1,8 +1,8 @@
-sw_volume: 100
+sw_volume: 74
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 28
+current: 37
 random: 0
 repeat: 0
 single: 0
@@ -143,4 +143,50 @@ Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yach
 mtime: 0
 song_end
 28:12 Rare 80s Albums [Part 68] Post-Punk, New Wave, Synthwave/Los Microwaves - Life After Breakfast [1982]/13. radio heart.mp3
+song_begin: http://ice1.somafm.com/seventies-128-aac
+Title: Boz Scaggs - There Is Someone Else
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-128-aac
+Title: The Doobie Brothers - Black Water
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/sonicuniverse-256-mp3
+Title: Chat Noir - Crisi di Assenza
+Name: Sonic Universe: Nu Jazz plus avant-garde Euro Jazz: Transcending the boundaries of jazz with experimental takes on tradition. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/sonicuniverse-256-mp3
+Title: SomaFM: Sonic Universe (#2  ): Transcending the world of jazz with eclectic, avant-garde takes on tradition.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/suburbsofgoa-128-aac
+Title: Banabila - Uav Sanjana Remix
+Name: Suburbs of Goa [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/suburbsofgoa-128-aac
+Title: SomaFM: Suburbs of Goa (#2  ): Desi-influenced Asian world beats and beyond.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/metal-128-aac
+Title: Lethal Creed - Armageddon
+Name: Metal Detector: From black to doom, prog to sludge, thrash to post, stoner to crossover, punk to industrial. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/metal-128-aac
+Title: SomaFM: Metal Detector (#2  ): From black to doom, prog to sludge, thrash to post, stoner to crossover, punk to industrial.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/lush-128-aac
+Title: Sade - Skin
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/lush-128-aac
+Title: SomaFM: Lush (#2  ): Sensuous and mellow vocals, mostly female, with an electronic influence.
+mtime: 0
+song_end
 playlist_end

@@ -51,6 +51,10 @@ volume() {
   amixer -D $MIXER get $SCONTROL $(capability)
 }
 
+now_playing() {
+  ncmpcpp --current-song='%t' | sed '2p'
+}
+
 format() {
   perl_filter='if (/.*\[(\d+%)\] (\[(-?\d+.\d+dB)\] )?\[(on|off)\]/)'
   perl_filter+='{CORE::say $4 eq "off" ? "MUTE" : "'
@@ -69,4 +73,4 @@ case $BLOCK_BUTTON in
   5) amixer -q -D pulse sset Master 5%- ;; # scroll down, decrease
 esac
 
-echo "<span foreground=\"$color3\">♪ $(volume | format)</span>"
+echo "<span foreground=\"${color1}90\"></span><span background=\"${color1}90\" foreground=\"$background\">vol $(volume | format)  $(now_playing)   </span>"

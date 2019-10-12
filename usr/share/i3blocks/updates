@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. "/home/k2/.cache/wal/colors.sh"
+
+print_updates() {
+  cat ~/.config/update_counter
+}
+
+echo "<span foreground=\"$color3\"> $(print_updates)</span>"
+
+
+
