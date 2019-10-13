@@ -282,7 +282,7 @@ bar {
 
         colors {
             statusline         $fg
-            background         $bg00
+            background         $bg60
 
             #                          BORDER       BACKGROUND   TEXT
             focused_workspace  $color160 $color060 $color1

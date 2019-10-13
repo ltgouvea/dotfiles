@@ -1,8 +1,8 @@
-sw_volume: 74
+sw_volume: 36
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 37
+current: 39
 random: 0
 repeat: 0
 single: 0
@@ -186,7 +186,17 @@ Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/lush-128-aac
-Title: SomaFM: Lush (#2  ): Sensuous and mellow vocals, mostly female, with an electronic influence.
+Title: Echo - I've Got You Under My Skin (Karsh Kale Mix)
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Joe Walsh - Happy Ways
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
 mtime: 0
 song_end
 playlist_end
