@@ -3,7 +3,8 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term deepin-terminal
+set $term rxvt-unicode
+set $browser firefox
 set_from_resource $fg i3wm.color7
 set_from_resource $bg i3wm.color0
 set_from_resource $color15 i3wm.color15
@@ -43,7 +44,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 bindsym Mod1+q kill
 
-bindsym $mod+Shift+f exec google-chrome
+bindsym $mod+Shift+f exec $browser
 bindsym $mod+Shift+V exec mpv $(find ~/Videos/Torrents/ | grep "\(mp4\)\|\(avi\)\|\(mkv\)" | rofi -dmenu)
 
 bindsym $mod+d exec rofi -show drun -matching fuzzy
@@ -97,7 +98,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
 
 set $ws1   "  "
-set $ws2   "  "
+set $ws2   "  "
 set $ws3   "  "
 set $ws4   "  "
 set $ws5   "  "
@@ -275,7 +276,7 @@ workspace_auto_back_and_forth yes
 
 bar {
         i3bar_command i3bar -t
-        font pango: SauceCodePro Nerd Font Mono 15
+        font pango: SauceCodePro Nerd Font Mono 16
         tray_output none
         position top
         status_command i3blocks

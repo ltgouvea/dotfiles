@@ -32,6 +32,7 @@ function fish_user_key_bindings
 bind ç forward-char execute
 bind \cs down-or-search
 bind \cr up-or-search
+fzf_key_bindings
 end
 
 export EDITOR='vim'
