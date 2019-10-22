@@ -62,6 +62,7 @@ SETUVAR _fish_abbr_mana:sudo\x20service\x20network\x2dmanager\x20restart
 SETUVAR _fish_abbr_n:ncmpcpp
 SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_r:ranger
+SETUVAR _fish_abbr_smci:sudo\x20make\x20clean\x20install
 SETUVAR _fish_abbr_social:mailutils\x20soc
 SETUVAR _fish_abbr_ssn:sudo\x20shutdown\x20now
 SETUVAR _fish_abbr_swclean:sudo\x20ls\x20\x3b\x20and\x20\x20htop\x20\x3b\x20and\x20\x3b\x20sudo\x20swapoff\x20\x2da\x20\x2dg\x20\x3b\x20and\x20\x20sudo\x20swapon\x20\x2da

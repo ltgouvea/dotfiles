@@ -22,6 +22,7 @@ abbr lock 'i3lock -i ~/login.png'
 abbr swclean 'sudo ls ; and  htop ; and ; sudo swapoff -a -g ; and  sudo swapon -a'
 abbr chx 'chmod +x '
 abbr gentags "ctags -R --exclude '.git' --exclude 'node_modules' --exclude 'vendor' --exclude 'public' --exclude 'laradock' --exclude '*.js'"
+abbr smci "sudo make clean install"
 
 function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')
