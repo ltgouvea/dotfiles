@@ -1,8 +1,8 @@
-sw_volume: 60
+sw_volume: 28
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 53
+current: 103
 random: 0
 repeat: 0
 single: 0
@@ -260,6 +260,230 @@ mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/seventies-128-aac
 Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/fluid-128-aac
+Title: Nutrition - Eyes
+Name: Fluid: Drown in the electronic sound of instrumental hiphop, future soul and chilled trap. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/fluid-128-aac
+Title: SomaFM: Fluid (#2  ): Drown in the electronic sound of instrumental hiphop, future soul and liquid trap.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/brfm-128-aac
+Title: Virgox - Green Ping Orange Pong
+Name: SomaFM's Black Rock FM: From the Playa to the world, where every Saturday night is Burn Night [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/brfm-128-aac
+Title: SomaFM: Black Rock FM (#2  ): From the Playa to the world, for the annual Burning Man festival.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/illstreet-128-aac
+Title: Harry Breuer - Re-Entry To The Moon
+Name: Illinois Street Lounge [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/illstreet-128-aac
+Title: SomaFM: Illinois Street Lounge (#2  ): Classic bachelor pad, playful exotica and vintage music of tomorrow.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/sf1033-128-aac
+Title: Gas - Zauberberg Ii
+Name: SF 10-33: Ambient music mixed with the sounds of San Francisco public safety radio traffic. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/sf1033-128-aac
+Title: SomaFM: SF 10-33 (#2  ): Ambient music mixed with the sounds of San Francisco public safety radio traffic.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/suburbsofgoa-128-aac
+Title: Gaudi - Meena
+Name: Suburbs of Goa [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/suburbsofgoa-128-aac
+Title: SomaFM: Suburbs of Goa (#2  ): Desi-influenced Asian world beats and beyond.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/spacestation-128-aac
+Title: Banco De Gaia - Celestine
+Name: Space Station Soma from SomaFM.com [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/spacestation-128-aac
+Title: SomaFM: Space Station Soma (#2  ): Tune in, turn on, space out. Spaced-out ambient and mid-tempo electronica.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/u80s-256-mp3
+Title: Heaven 17 - I'm Your Money [12 Version]
+Name: Underground Eighties: UK Synthpop and a bit of New Wave. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/u80s-256-mp3
+Title: SomaFM: Underground 80s (#2  ): Early 80s UK Synthpop and a bit of New Wave.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/thetrip-128-aac
+Title: Sun Decade - Have It All (Original Mix)
+Name: The Trip:  Tip top tunes. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/thetrip-128-aac
+Title: SomaFM: The Trip (#2  ): Progressive house / trance. Tip top tunes.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/sf1033-128-aac
+Title: Gas - Zauberberg Ii
+Name: SF 10-33: Ambient music mixed with the sounds of San Francisco public safety radio traffic. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/sf1033-128-aac
+Title: SomaFM: SF 10-33 (#2  ): Ambient music mixed with the sounds of San Francisco public safety radio traffic.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/deepspaceone-128-aac
+Title: Jim Ottaway - Deep Space Blue
+Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/deepspaceone-128-aac
+Title: SomaFM: Deep Space One (#2  ): Deep ambient electronic, experimental and space music. For inner and outer space exploration.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/bagel-128-aac
+Title: Helen Love - Debbie Loves Joey
+Name: BAGeL Radio: What alternative rock radio should sound like. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/bagel-128-aac
+Title: Marilyn Manson - Four Rusted Horses
+Name: BAGeL Radio: What alternative rock radio should sound like. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/fluid-128-aac
+Title: Blue Sky Black Death - Farewell To the Former World
+Name: Fluid: Drown in the electronic sound of instrumental hiphop, future soul and chilled trap. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/fluid-128-aac
+Title: SomaFM: Fluid (#2  ): Drown in the electronic sound of instrumental hiphop, future soul and liquid trap.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/covers-128-aac
+Title: SomaFM: Covers (#1  ): Just covers. Songs you know by artists you don't. We've got you covered.
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/covers-128-aac
+Title: SomaFM: Covers (#2  ): Just covers. Songs you know by artists you don't. We've got you covered.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/covers-128-aac
+Title: Kelley Polar - Magic Dance
+Name: Covers: Just covers. Songs you know by artists you don't. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/covers-128-aac
+Title: SomaFM: Covers (#2  ): Just covers. Songs you know by artists you don't. We've got you covered.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/bagel-128-aac
+Title: Flaamingos - All I Wanna Do Is Live
+Name: BAGeL Radio: What alternative rock radio should sound like. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/bagel-128-aac
+Title: SomaFM: BAGeL Radio (#2  ): What alternative rock radio should sound like.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/cliqhop-256-mp3
+Title: Aphex Twin - Produk 29
+Name: <-- cliqhop --> blips'n'bleeps backed w/ beats. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/cliqhop-256-mp3
+Title: SomaFM: cliqhop idm (#2  ): Blips'n'beeps backed mostly w/beats. Intelligent Dance Music.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/covers-128-aac
+Title: Kelley Polar - Magic Dance
+Name: Covers: Just covers. Songs you know by artists you don't. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/covers-128-aac
+Title: SomaFM: Covers (#2  ): Just covers. Songs you know by artists you don't. We've got you covered.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/deepspaceone-128-aac
+Title: David Gerard - Another Distant Star
+Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/deepspaceone-128-aac
+Title: SomaFM: Deep Space One (#2  ): Deep ambient electronic, experimental and space music. For inner and outer space exploration.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/defcon-256-mp3
+Title: Autechre - Nil
+Name: Def Con Radio: SomaFM's special mix for Def Con [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/defcon-256-mp3
+Title: SomaFM: DEF CON Radio (#2  ): Music for Hacking. The DEF CON Year-Round Channel.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/digitalis-128-aac
+Name: Digitalis: Digitally affected analog rock to calm the agitated heart. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/digitalis-128-aac
+Title: SomaFM: Digitalis (#2  ): Digitally affected analog rock to calm the agitated heart.
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/dronezone-256-mp3
+Title: Andrew Lahiff - Vanishing Cities
+Name: Drone Zone: Atmospheric ambient space music. Serve Best Chilled. Safe with most medications. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/dronezone-256-mp3
+Title: SomaFM: Drone Zone (#1  ): Served best chilled, safe with most medications. Atmospheric textures with minimal beats.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Terence Boylan - Shame
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Steve Winwood - Vacant Chair
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Supertramp - Hide In Your Shell
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/lush-128-aac
+Title: Daughter Darling - Sweet Shadows
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/lush-128-aac
+Title: SomaFM: Lush (#2  ): Sensuous and mellow vocals, mostly female, with an electronic influence.
 mtime: 0
 song_end
 playlist_end

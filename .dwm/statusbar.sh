@@ -1,10 +1,10 @@
 #!/bin/bash
 
-status() {
-        while :; do
-                xsetroot -name "$(date '+%H:%M | %d/%m/%Y')"
-                sleep 1m
-        done
+getDate() {
+        echo " $(date '+%H:%M | %d/%m/%Y')"
 }
 
-status
+while :; do
+        xsetroot -name " $(getDate)"
+        sleep 1m
+done
