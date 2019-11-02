@@ -67,3 +67,6 @@ if !isdirectory(&dir) | call mkdir(&dir, 'p', 0700) | endif
 set encoding=utf-8
 
 autocmd! VimEnter,ColorScheme * hi VertSplit ctermbg=none ctermfg=white
+autocmd! BufWritePost config.h,config.def.h !sudo make install
+autocmd! BufWritePost plugins.vim so % | PlugInstall | PlugUpdate
+autocmd! BufWritePost settings.vim,macros.vim,functions.vim,mappings.vim so %

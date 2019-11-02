@@ -25,4 +25,5 @@ Plug 'dag/vim-fish'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 Plug 'natebosch/vim-lsc'
+Plug 'aquach/vim-http-client'
 call plug#end()

@@ -1,8 +1,8 @@
-sw_volume: 28
+sw_volume: 50
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 103
+current: 113
 random: 0
 repeat: 0
 single: 0
@@ -434,11 +434,13 @@ Title: SomaFM: DEF CON Radio (#2  ): Music for Hacking. The DEF CON Year-Round C
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/digitalis-128-aac
+Title: Manual - Summer Haze
 Name: Digitalis: Digitally affected analog rock to calm the agitated heart. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/digitalis-128-aac
-Title: SomaFM: Digitalis (#2  ): Digitally affected analog rock to calm the agitated heart.
+Title: Lali Puna - Beatx
+Name: Digitalis: Digitally affected analog rock to calm the agitated heart. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/dronezone-256-mp3
@@ -456,7 +458,8 @@ Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [Som
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/seventies-320-mp3
-Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+Title: Dane Donohue - Whatever Happened
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/seventies-320-mp3
@@ -469,7 +472,45 @@ Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yach
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/seventies-320-mp3
-Title: Supertramp - Hide In Your Shell
+Title: Greg Guidry - Heart to Heart
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/seventies-320-mp3
+Title: J.D. Souther - The Last In Love
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/lush-128-aac
+Title: Bush - Letting The Cables Sleep (The N.O.W Remix)
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/lush-128-aac
+Title: Yumi Zouma - In Blue
+Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/bootliquor-320-mp3
+Title: Beat Farmers - Lonesome Hound
+Name: Boot Liquor: Americana roots music for Cowhands, Cowpokes and Cowtippers. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/bootliquor-320-mp3
+Title: SomaFM: Boot Liquor (#2  ): Americana Roots music for Cowhands, Cowpokes and Cowtippers
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/illstreet-128-aac
+Title: Andre Popp - La Polka Du Colonel
+Name: Illinois Street Lounge [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/illstreet-128-aac
+Title: SomaFM: Illinois Street Lounge (#2  ): Classic bachelor pad, playful exotica and vintage music of tomorrow.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/seventies-320-mp3
+Title: Dane Donohue - Whatever Happened
 Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end
@@ -477,13 +518,22 @@ song_begin: http://ice3.somafm.com/seventies-320-mp3
 Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
 mtime: 0
 song_end
-song_begin: http://ice1.somafm.com/lush-128-aac
-Title: Daughter Darling - Sweet Shadows
-Name: Lush: Mostly female vocals with an electronic influence. [SomaFM]
+song_begin: http://ice1.somafm.com/thetrip-128-aac
+Title: Energy 52 - Cafe Del Mar (Kid Paul's Peace Mix)
+Name: The Trip:  Tip top tunes. [SomaFM]
 mtime: 0
 song_end
-song_begin: http://ice3.somafm.com/lush-128-aac
-Title: SomaFM: Lush (#2  ): Sensuous and mellow vocals, mostly female, with an electronic influence.
+song_begin: http://ice3.somafm.com/thetrip-128-aac
+Title: SomaFM: The Trip (#2  ): Progressive house / trance. Tip top tunes.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/u80s-256-mp3
+Title: The Tubes - Talk To Ya Later
+Name: Underground Eighties: UK Synthpop and a bit of New Wave. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/u80s-256-mp3
+Title: SomaFM: Underground 80s (#2  ): Early 80s UK Synthpop and a bit of New Wave.
 mtime: 0
 song_end
 playlist_end
