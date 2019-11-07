@@ -7,10 +7,9 @@ set lcs=nbsp:>,tab:<<,trail:-
 set backspace=indent,eol,start
 set nobackup
 set nomore
-set nocompatible
 set nowrap
 set guicursor=
-set hi=1000
+set history=1000
 set updatetime=200
 set fcs=vert:\│,fold:\ 
 set noswapfile
