@@ -19,5 +19,4 @@ Plug 'tpope/vim-surround'
 Plug 'dag/vim-fish'
 Plug 'tpope/vim-fugitive'
 Plug 'aquach/vim-http-client'
-Plug 'vim-vdebug/vdebug'
 call plug#end()
