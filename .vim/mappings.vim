@@ -1,37 +1,32 @@
-cnoremap --- <C-R>=expand("%:p:h")<CR>
-cnoremap ... cd ../../<CR>
-cnoremap 11 !
-cnoremap 22 @
-cnoremap 33 #
-cnoremap 55 %
+cabbrev --- <C-R>=expand("%:p:h")<CR>
+cabbrev ... cd ../../<CR>
+cabbrev 11 !
+cabbrev 22 @
+cabbrev 33 #
+cabbrev 55 %
 cnoremap <leader>. w !sudo tee %<CR>
-cnoremap gco Git checkout 
-cnoremap glo Git log --stat<CR><CR>
-cnoremap gp Git push origin
-cnoremap gpm Git push origin master<CR>
-cnoremap grhh Git reset --hard HEAD<CR>
+cabbrev gco Git checkout 
+cabbrev glo Git log --stat<CR><CR>
+cabbrev gp Git push origin
+cabbrev gpm Git push origin master<CR>
+cabbrev grhh Git reset --hard HEAD<CR>
 cnoremap jj <Home>
 cnoremap jk <Right>
 cnoremap kj <Left>
 cnoremap kk <C-f>
 cnoremap kk <C-f>
 cnoremap kl <End>
-cnoremap mks mksession! ~/.vim.current<CR>
-cnoremap ppp <C-r>"
+cabbrev ppp <C-r>"
 cnoremap qq q!<CR>
-cnoremap vex Vexplore<CR>
 cnoremap çç <Esc>
 iab shrug ¯\_(ツ)_/¯<delete>
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 inoremap -. ->
-inoremap 22 @
-inoremap 33 #
-inoremap 44 $
-inoremap 55 %
+iabbrev 22 @
+iabbrev 33 #
+iabbrev 44 $
+iabbrev 55 %
 inoremap ;; ::
-inoremap <F1> <C-o>
-inoremap <F5> <ESC>:w<CR>i
-inoremap <F6> <ESC>:wq<CR>
 inoremap =. =>
 inoremap ff <C-x><C-f>
 inoremap hh <C-x><C-l>
@@ -39,17 +34,14 @@ inoremap jj <ESC>I
 inoremap jk <Right>
 inoremap kj <Left>
 inoremap kk <ESC>A
-inoremap nn <C-n>
-inoremap ppp <C-p>
 inoremap vv <C-x><C-v>
-inoremap yy <C-y>
-inoremap zz \|
+iabbrev zz \|
 inoremap çq <ESC>:wq<CR>
 inoremap çs <ESC>:w<CR>
 inoremap çç <ESC>
 nmap <leader>rn <Plug>(coc-rename)
-nmap <S-TAB> gT
-nmap <TAB> gt
+nnoremap <S-TAB> gT
+nnoremap <TAB> gt
 nmap ga <Plug>(EasyAlign)
 nnoremap + <C-a>
 nnoremap - <C-x>
@@ -65,12 +57,8 @@ nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <F12> @c
 nnoremap <F1> @g<CR>
 nnoremap <F2> @p<CR>
-nnoremap <F2><F2>  :Gmerge --no-ff --no-edit 
 nnoremap <F3> :Gstatus<CR>
 nnoremap <F4> :bot term<CR>
-nnoremap <F5> :w<CR>
-nnoremap <F6> :wq<CR>
-nnoremap <F7> :e!<CR>
 nnoremap <F8> :Files<CR>
 nnoremap <F9> :ProjectFiles<CR>
 nnoremap <Left> <C-W><Left>
@@ -88,7 +76,6 @@ nnoremap <leader><F2> :exec UpdateBranch()<CR>
 nnoremap <leader><F4> :qa<CR>
 nnoremap <leader><space> @@
 nnoremap <leader>fj :%!python -m json.tool<CR>
-nnoremap <leader>k K
 nnoremap <leader>n :next<CR>
 nnoremap <leader>p :prev<CR>
 nnoremap <leader>t :%s///g<Left><Left>
