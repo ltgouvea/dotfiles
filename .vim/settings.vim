@@ -19,6 +19,7 @@ set cwh=20
 set cmdheight=2
 syntax enable
 set background=dark
+colorscheme wal
 set shortmess=atToIc
 set complete-=i
 set laststatus=2
@@ -43,7 +44,6 @@ highlight NonText ctermfg=grey
 highlight lineNr ctermfg=darkgray
 highlight CursorLineNr ctermfg=red
 highlight CocHighlightText ctermbg=grey
-highlight Pmenu ctermbg=darkgray ctermfg=lightgreen
 
 let NERDTreeAutoDeleteBuffer = 1
 let NERDTreeQuitOnOpen = 1

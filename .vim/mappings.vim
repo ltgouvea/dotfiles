@@ -51,7 +51,7 @@ nnoremap -w :help <C-r><C-w><CR>
 nnoremap : ;
 nnoremap ; :
 nnoremap <C-c> "+yy
-nnoremap <C-e> :mksession! ~/.vim.current<CR>
+" nnoremap <C-e> :mksession! ~/.vim.current<CR>
 nnoremap <Down> <C-W><Down>
 nnoremap <F10> :NERDTreeToggle<CR>
 nnoremap <F12> @c

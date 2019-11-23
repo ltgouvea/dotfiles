@@ -1,8 +1,8 @@
-sw_volume: 38
+sw_volume: 32
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 0
+current: 4
 random: 0
 repeat: 0
 single: 0
@@ -17,7 +17,26 @@ Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [Som
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/seventies-320-mp3
-Title: SomaFM: Left Coast 70s (#2  ): Mellow album rock from the Seventies. Yacht not required.
+Title: Jackson Browne - The Pretender
+Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/thetrip-128-aac
+Title: BT Feat. Kirsty Hawkshaw - Dreaming (Science Department's Friends And Family Mix)
+Name: The Trip:  Tip top tunes. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/thetrip-128-aac
+Title: SomaFM: The Trip (#2  ): Progressive house / trance. Tip top tunes.
+mtime: 0
+song_end
+song_begin: http://ice1.somafm.com/deepspaceone-128-aac
+Title: Steve Roach - Trance Genealogy
+Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
+mtime: 0
+song_end
+song_begin: http://ice3.somafm.com/deepspaceone-128-aac
+Title: SomaFM: Deep Space One (#2  ): Deep ambient electronic, experimental and space music. For inner and outer space exploration.
 mtime: 0
 song_end
 playlist_end

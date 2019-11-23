@@ -19,4 +19,5 @@ Plug 'tpope/vim-surround'
 Plug 'dag/vim-fish'
 Plug 'tpope/vim-fugitive'
 Plug 'aquach/vim-http-client'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
