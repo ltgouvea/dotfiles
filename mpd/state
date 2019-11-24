@@ -1,8 +1,8 @@
-sw_volume: 32
+sw_volume: 60
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 4
+current: 1
 random: 0
 repeat: 0
 single: 0
@@ -17,7 +17,7 @@ Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [Som
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/seventies-320-mp3
-Title: Jackson Browne - The Pretender
+Title: J.D. Souther - You're Only Lonely
 Name: Left Coast 70s: Mellow album rock from the Seventies. Yacht friendly. [SomaFM]
 mtime: 0
 song_end
@@ -31,12 +31,13 @@ Title: SomaFM: The Trip (#2  ): Progressive house / trance. Tip top tunes.
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/deepspaceone-128-aac
-Title: Steve Roach - Trance Genealogy
+Title: Louigi Verona - Subaquatic Realm
 Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/deepspaceone-128-aac
-Title: SomaFM: Deep Space One (#2  ): Deep ambient electronic, experimental and space music. For inner and outer space exploration.
+Title: Radical Realm - Spirals
+Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
 mtime: 0
 song_end
 playlist_end
