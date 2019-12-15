@@ -1,8 +1,8 @@
-sw_volume: 60
+sw_volume: 54
 audio_device_state:1:My Pulse Output
 audio_device_state:1:visualizador
 state: stop
-current: 1
+current: 4
 random: 0
 repeat: 0
 single: 0
@@ -31,12 +31,12 @@ Title: SomaFM: The Trip (#2  ): Progressive house / trance. Tip top tunes.
 mtime: 0
 song_end
 song_begin: http://ice1.somafm.com/deepspaceone-128-aac
-Title: Louigi Verona - Subaquatic Realm
+Title: Sigesmundsen - Forest Tales
 Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
 mtime: 0
 song_end
 song_begin: http://ice3.somafm.com/deepspaceone-128-aac
-Title: Radical Realm - Spirals
+Title: Loscil - Rorschach
 Name: Deep Space One: Deep ambient electronic and space music. [SomaFM]
 mtime: 0
 song_end
