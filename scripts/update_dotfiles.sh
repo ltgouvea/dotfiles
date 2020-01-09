@@ -2,10 +2,10 @@
 
 dotfiles_push()
 {
-    cd ~/dotfiles/
+    cd ~/.dotfiles/
     cp ~/.K2.fish K2.fish
     cp ~/.git.fish git.fish
-    cp -r ~/config/i3* .
+    cp -r ~/.config/i3* .
     cp -r ~/.ncmpcpp/ .
     cp -r ~/.config/rofi .
     cp -r ~/.config/fish .

@@ -3,7 +3,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $term rxvt-unicode
+set $term st
 set $browser firefox
 set_from_resource $fg i3wm.color7
 set_from_resource $bg i3wm.color0
@@ -26,12 +26,12 @@ client.placeholder      $color1     $bg     $fg  $color1       $color1
 
 client.background       $bg
 
-font pango:'Inconsolata for Powerline' 10
+font pango:'SauceCodePro Nerd Font Mono' 10
 for_window [window_role="pop-up"] floating enable
 for_window [title="(?i)steam"] floating enable
 for_window [title="(?i)gsimplecal"] floating enable
 for_window [title="(?i)spotify"] floating enable, move to workspace $ws7
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -276,7 +276,7 @@ workspace_auto_back_and_forth yes
 
 bar {
         i3bar_command i3bar -t
-        font pango: SauceCodePro Nerd Font Mono 16
+        font pango: SauceCodePro Nerd Font Mono 17
         tray_output none
         position top
         status_command i3blocks
@@ -292,7 +292,7 @@ bar {
             urgent_workspace   $color4     $color1     $color5
             binding_mode       $color4     $color1     $color5
             }
-        }
+}
 
 exec --no-startup-id /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id nm-applet
@@ -301,5 +301,4 @@ exec --no-startup-id compton -bfz
 exec --no-startup-id redshift
 exec --no-startup-id xset r rate 150 40
 exec --no-startup-id wal -R -a 85
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
-border_radius 4
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/wallpaper.png
