@@ -5,7 +5,7 @@ abbr dcu 'docker-compose up'
 abbr dcd 'docker-compose down'
 abbr vimrc 'vim ~/.vimrc'
 abbr ssn 'sudo shutdown now'
-abbr cat 'bat'
+# abbr cat 'bat'
 abbr cmatrix 'cmatrix -bs'
 abbr v './vessel'
 abbr l 'ls -lah'
@@ -23,6 +23,8 @@ abbr swclean 'sudo ls ; and  htop ; and ; sudo swapoff -a -g ; and  sudo swapon 
 abbr chx 'chmod +x '
 abbr gentags "ctags -R --exclude '.git' --exclude 'node_modules' --exclude 'vendor' --exclude 'public' --exclude 'laradock' --exclude '*.js'"
 abbr smci "sudo make clean install"
+abbr recvkeys 'sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys '
+
 
 function current_branch
   set branch (git status | grep On | sed 's/^.*branch.//')
@@ -58,3 +60,4 @@ export LESS_TERMCAP_mb=(set_color green --bold)
 export LESS_TERMCAP_md=(set_color green --bold)
 export LESS_TERMCAP_so=(set_color yellow --bold)
 export LESS_TERMCAP_us=(set_color red --bold -u)
+export WALLPAPER=/home/k2/Pictures/wallpaper.png

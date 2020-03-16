@@ -1,0 +1,137 @@
+snippet mutator
+/**
+ * Mutator para o atributo ${1}
+ */
+ public function get$1Attribute($${2:value})
+ {
+    return $$2;
+ }
+endsnippet
+
+snippet scope
+/**
+ * Scope para filtrar por ${1}
+ */
+ public function scope$1($query)
+ {
+    return $query->where('$2', );
+ }
+endsnippet
+
+snippet $
+$this->${1}
+endsnippet
+
+snippet l//
+{{-- ${1} --}}
+endsnippet
+
+snippet //l
+{{-- ${1} --}}
+endsnippet
+
+snippet logs
+\Log::info("\n${1}");
+endsnippet
+
+snippet logv
+\Log::info(json_encode($${1}));
+endsnippet
+
+snippet apu
+array_push($${1:array_name}, $${2:value});
+endsnippet
+
+snippet st
+Schema::table('${1:table}', function(Blueprint $table) {
+	$table->$2;
+});
+endsnippet
+
+snippet sct
+Schema::create('${1:table}', function(Blueprint $table) {
+	$table->$2;
+});
+endsnippet
+
+snippet rt
+return true;
+endsnippet
+
+snippet ran
+rand(0, 1234567)
+endsnippet
+
+snippet fdt
+$faker->dateTime()
+endsnippet
+
+snippet dsql
+dd($query->toSql());
+endsnippet
+
+snippet lsql
+\Log::info("\n$query->toSql()");
+endsnippet
+
+snippet authorme
+@author Lucas Gouvêa <lgouvea@revelare.com.br>
+endsnippet
+
+snippet dbar
+\Barryvdh\Debugbar\Facade::info(${1});
+endsnippet
+
+snippet dropcol
+if (Schema::hasColumn('${1}', '${2}')) {
+	Schema::table('$1', function(Blueprint $table) {
+		$table->dropColumn('$2');
+	});
+}
+endsnippet
+
+snippet fk
+	Schema::table('${1}', function(Blueprint $table) {
+		$table->integer('${2}')->unsigned()->nullable();
+		$table->foreign('$2')->references('id')->on('${3}');
+	});
+endsnippet
+
+snippet globalscope
+<?php
+
+namespace App\Scopes;
+
+use Illuminate\Database\Eloquent\Scope;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
+
+class ${1} implements Scope
+{
+    /**
+     * Apply the scope to a given Eloquent query builder.
+     *
+     * @param  \Illuminate\Database\Eloquent\Builder  $builder
+     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @return void
+     */
+    public function apply(Builder $builder, Model $model)
+    {
+        $builder->where('${2}', '${3}', ${4});
+    }
+}
+endsnippet
+
+snippet addglobalscope
+/**
+ * The "booting" method of the model.
+ *
+ * @return void
+ */
+protected static function boot()
+{
+    parent::boot();
+
+    static::addGlobalScope(new ${1});
+}
+endsnippet

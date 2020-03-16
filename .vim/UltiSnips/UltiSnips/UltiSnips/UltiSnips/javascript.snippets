@@ -1,0 +1,99 @@
+snippet filter
+const ${1} = ${2}.filter(${3} => ${4});
+endsnippet
+
+snippet rnc
+import React, { Component } from 'react';
+import { View } from 'react-native';
+// import { Container } from './styles';
+
+export default class ${1:${TM_DIRECTORY/^.*(\\/|\\\\)([^(\\/|\\\\)]+)$/$2/}} extends Component {
+  render() {
+    return <View />;
+  }
+}
+endsnippet
+
+snippet desc "describe"
+describe('${1}', function() {
+  describe('${2}', function() {
+    it('${3}', function(done) {
+      done();
+    });
+  });
+});
+endsnippet
+
+snippet it "it"
+it('${1:It}', () => {
+  $0
+});
+endsnippet
+
+snippet bee "beforeEach"
+beforeEach(() => {
+  $0
+});
+endsnippet
+
+snippet afe "afterEach"
+afterEach(() => {
+  $0
+});
+endsnippet
+
+snippet before "before"
+before(() => {
+  $0
+});
+endsnippet
+
+snippet after "after"
+after(() => {
+  $0
+});
+endsnippet
+
+
+# expect
+
+snippet ebe "expect(x).toBe(y)"
+expect($1).toBe($2);
+endsnippet
+
+snippet eeq "expect(x).toEqual(y)"
+expect($1).toEqual($2);
+endsnippet
+
+snippet ethre "expect(x).toThrowError(y)"
+expect(() => $1).toThrowError($2);
+endsnippet
+
+snippet etruthy "expect(x).toBeTruthy(y)"
+expect($1).toBeTruthy($2);
+endsnippet
+
+snippet efalsy "expect(x).toBeFalsy(y)"
+expect($1).toBeFalsy($2);
+endsnippet
+
+# assert
+snippet aeq "assert.equal"
+assert.equal($1, $2);
+endsnippet
+
+snippet adeq "assert.deepEqual"
+assert.deepEqual($1, $2);
+endsnippet
+
+snippet atrue "assert.isTrue"
+assert.isTrue($1);
+endsnippet
+
+snippet afalse "assert.isFalse"
+assert.isFalse($1);
+endsnippet
+
+snippet athr "assert.throws"
+assert.throws(() => $1, $2);
+endsnippet

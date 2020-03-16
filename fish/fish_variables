@@ -6,7 +6,6 @@ SETUVAR __fish_init_3_x:\x1d
 SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_ai:sudo\x20apt\x20install
 SETUVAR _fish_abbr_apt:sudo\x20apt
-SETUVAR _fish_abbr_cat:bat
 SETUVAR _fish_abbr_chx:chmod\x20\x2bx\x20
 SETUVAR _fish_abbr_cmatrix:cmatrix\x20\x2dbs
 SETUVAR _fish_abbr_cwp:rm\x20\x2drf\x20\x7e/\x2ecache/wal/\x3b\x20and\x20wal\x20\x2di\x20\x7e/Pictures/wallpaper\x2ejpg\x20\x2da\x20\x2dg\x2085\x20\x2d\x2dbackend\x20colorthief\x20\x2d\x2dsaturate\x200\x2e5\x20\x2dg
@@ -63,6 +62,7 @@ SETUVAR _fish_abbr_mana:sudo\x20service\x20network\x2dmanager\x20restart
 SETUVAR _fish_abbr_n:ncmpcpp
 SETUVAR _fish_abbr_nv:nvim
 SETUVAR _fish_abbr_r:ranger
+SETUVAR _fish_abbr_recvkeys:sudo\x20apt\x2dkey\x20adv\x20\x2d\x2dkeyserver\x20keyserver\x2eubuntu\x2ecom\x20\x2d\x2drecv\x2dkeys\x20
 SETUVAR _fish_abbr_smci:sudo\x20make\x20clean\x20install
 SETUVAR _fish_abbr_social:mailutils\x20soc
 SETUVAR _fish_abbr_ssn:sudo\x20shutdown\x20now
