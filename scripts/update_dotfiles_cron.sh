@@ -1,9 +1,9 @@
 #!/bin/sh
 export DISPLAY=:0
-cd /home/k2/dotfiles/
+cd /home/k2/.dotfiles/
 cp /home/k2/.K2.fish K2.fish
 cp /home/k2/.git.fish git.fish
-cp -r /home/k2/config/i3* .
+cp -r /home/k2/.config/i3* .
 cp -r /home/k2/.dwm/ .
 cp -r /home/k2/.ncmpcpp/ .
 cp -r /home/k2/.config/mpd/ .

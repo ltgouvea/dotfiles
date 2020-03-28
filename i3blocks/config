@@ -1,7 +1,6 @@
 command=/usr/share/i3blocks/$BLOCK_NAME
-separator_block_width=-27
-full_text=''
-
+separator_block_width=-20
+full_text=' '
 # [spotinfo]
 # command=/usr/share/i3blocks/spotinfo -i "%artist - %title"
 # interval=10

@@ -18,12 +18,12 @@ dotfiles_push()
 dotfiles_pull()
 {
     cd ~
-    cp -r ~/.dotfiles/i3* ./.config/
+    cp -r ~/.dotfiles/.config/i3* ./.config/
     cp -r ~/.dotfiles/.ncmpcpp/ .
-    cp -r ~/.dotfiles/rofi ./.config/
-    cp -r ~/.dotfiles/fish/ ./.config/
+    cp -r ~/.dotfiles/.config/rofi ./.config/
+    cp -r ~/.dotfiles/.config/fish/ ./.config/
     cp ~/.dotfiles/.vimrc .
-    cp -r ~/.dotfiles/.vim/* ~/.vim/
+    cp ~/.dotfiles/.vim/* ~/.vim/
     cp ~/.dotfiles/.Xdefaults .
     cp ~/.dotfiles/K2.fish ~/.K2.fish
     cp ~/.dotfiles/git.fish ~/.git.fish
