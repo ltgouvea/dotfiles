@@ -31,6 +31,10 @@ function current_branch
   echo $branch 
 end
 
+function current_cinnamon_wallpaper
+        gsettings get org.cinnamon.desktop.background picture-uri | sed "s/file...//;s/'//g"
+end
+
 function fish_user_key_bindings
 bind ç forward-char execute
 bind \cs down-or-search
@@ -53,6 +57,7 @@ set PATH $JAVA_HOME $PATH
 set PATH $FLUTTER_HOME $PATH
 set PATH $DART_HOME $PATH
 set PATH $PUB_CACHE_HOME $PATH
+set PATH /home/k2/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/ $PATH
 set PATH /home/linuxbrew/.linuxbrew/bin/ $PATH
 set GTK_IM_MODULE ibus
 
