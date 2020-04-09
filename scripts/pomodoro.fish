@@ -1,5 +1,5 @@
 #!/usr/bin/fish
-set DING /home/k2/config/audiofiles/ding.wav
+set DING /home/k2/.config/audiofiles/ding.wav
 while true
     for x in (seq 3)
         notify-send "Pomodoro Starting" (uptime | sed 's/,.*$//')
